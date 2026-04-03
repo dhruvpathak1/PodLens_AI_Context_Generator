@@ -5,12 +5,19 @@ PodLens is an AI-powered context generator for podcasts. It listens to audio, tr
 ## Features
 
 - **Audio Transcription:** Powered by OpenAI's Whisper for accurate, timestamped transcripts.
+
+https://github.com/user-attachments/assets/4b8ee1bf-2946-4abc-87b3-8432aa8f52d6
+  
 - **Entity Extraction:** Automatically identifies entities like People, Companies, Locations, and Events using either spaCy or Anthropic's Claude.
 - **Context Enrichment:**
   - **Wikipedia:** Pulls summaries and thumbnails for identified entities.
   - **OpenStreetMap (Nominatim):** Generates interactive map previews for mentioned locations.
   - **Unsplash:** Finds high-quality, relevant stock photos to visualize the discussion.
+
+https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
+
 - **Interactive UI:** A modern React interface to view transcripts alongside their enriched context "cards".
+
 
 ## APIs & Technology Stack
 
