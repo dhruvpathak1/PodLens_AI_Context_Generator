@@ -88,8 +88,3 @@ npm run dev
 - **Backend API:** [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 The first time you run a transcription, the Whisper model (default: `base`) will be downloaded automatically. This may take a few minutes depending on your internet connection.
-
----
-
-## License
-[Specify License, e.g., MIT]
