@@ -42,7 +42,7 @@ PodLens is an AI-powered context generator for podcasts. It listens to audio, tr
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/dhruvpathak1/podlens
+git clone https://github.com/dhruvpathak1/PodLens
 cd podlens
 ```
 
