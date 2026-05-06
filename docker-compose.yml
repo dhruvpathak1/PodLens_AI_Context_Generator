@@ -1,0 +1,29 @@
+# PodLens — run UI + API together (single container).
+#
+#   docker compose up --build
+#   Open http://localhost:8080
+#
+# Optional: copy `.env.example` → `.env` in this folder. Compose reads `.env` for
+# variable substitution and passes the values below into the container.
+
+services:
+  podlens:
+    build: .
+    ports:
+      - "8080:8000"
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      UNSPLASH_ACCESS_KEY: ${UNSPLASH_ACCESS_KEY:-}
+      UNSPLASH_SECRET_KEY: ${UNSPLASH_SECRET_KEY:-}
+      ENTITY_BACKEND: ${ENTITY_BACKEND:-}
+      SPACY_MODEL: ${SPACY_MODEL:-}
+      WHISPER_MODEL: ${WHISPER_MODEL:-base}
+      CLAUDE_MODEL: ${CLAUDE_MODEL:-}
+      CLAUDE_ENTITY_BATCH: ${CLAUDE_ENTITY_BATCH:-}
+      NOMINATIM_USER_AGENT: ${NOMINATIM_USER_AGENT:-}
+      CORS_EXTRA_ORIGINS: ${CORS_EXTRA_ORIGINS:-http://localhost:8080,http://127.0.0.1:8080}
+    volumes:
+      - podlens-data:/data
+
+volumes:
+  podlens-data:

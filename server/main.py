@@ -483,3 +483,12 @@ def health():
         "entity_backend": resolve_entity_backend(None),
         "unsplash_configured": uk,
     }
+
+
+_static_dir_raw = os.environ.get("STATIC_DIST_DIR", "").strip()
+if _static_dir_raw:
+    _static_dir = Path(_static_dir_raw)
+    if _static_dir.is_dir():
+        from fastapi.staticfiles import StaticFiles
+
+        app.mount("/", StaticFiles(directory=str(_static_dir), html=True), name="spa")
