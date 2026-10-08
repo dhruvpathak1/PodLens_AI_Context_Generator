@@ -23,3 +23,9 @@ server/torch_home/
 .DS_Store
 *.swp
 .idea/
+
+# Local working folders and media
+_backup/
+_to_delete/
+/*.mp3
+.pytest_cache/

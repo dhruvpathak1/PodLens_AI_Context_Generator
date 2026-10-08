@@ -21,6 +21,8 @@ export default defineConfig({
       '/api': {
         target: `http://127.0.0.1:${apiPort}`,
         changeOrigin: true,
+        // /api/live is a WebSocket (OpenAI Realtime transcription relay)
+        ws: true,
       },
     },
   },

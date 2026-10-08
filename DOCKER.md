@@ -8,7 +8,7 @@ One container serves the **built React UI** and the **FastAPI** backend (Whisper
 docker compose up --build
 ```
 
-Open **http://localhost:8080**. The first transcription downloads the Whisper model — expect a long delay and **several GB** of disk/RAM (CPU image).
+Open **http://localhost:8080**. The first transcription downloads the Whisper model, so expect a long delay and **several GB** of disk/RAM (CPU image).
 
 ## Optional configuration
 

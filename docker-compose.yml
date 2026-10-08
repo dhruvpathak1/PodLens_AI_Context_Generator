@@ -1,4 +1,4 @@
-# PodLens — run UI + API together (single container).
+# PodLens: run UI + API together (single container).
 #
 #   docker compose up --build
 #   Open http://localhost:8080
@@ -13,6 +13,7 @@ services:
       - "8080:8000"
     environment:
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       UNSPLASH_ACCESS_KEY: ${UNSPLASH_ACCESS_KEY:-}
       UNSPLASH_SECRET_KEY: ${UNSPLASH_SECRET_KEY:-}
       ENTITY_BACKEND: ${ENTITY_BACKEND:-}

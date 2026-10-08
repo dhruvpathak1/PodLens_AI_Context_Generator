@@ -1,9 +1,25 @@
-python-dotenv>=1.0.0
+# PodLens API runtime dependencies.
+# Install from the repo root:  venv/bin/python -m pip install -r server/requirements.txt
+# Whisper is installed separately (large PyTorch download):  pip install openai-whisper
+
+# --- Web framework ---
 fastapi>=0.115.0
 uvicorn[standard]>=0.32.0
-python-multipart>=0.0.9
+python-multipart>=0.0.9          # multipart/form-data uploads (/api/transcribe)
+python-dotenv>=1.0.0             # loads the repo-root .env
+
+# --- Entity extraction ---
 spacy>=3.7.0
-# English NER model (installs as package en-core-web-sm; needed for ENTITY_BACKEND=spacy)
+# English NER model (installs as package en-core-web-sm; used when ENTITY_BACKEND=spacy)
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
-anthropic>=0.40.0
+anthropic>=0.40.0                # Claude NER backend
+
+# --- Enrichment (Wikipedia / OpenStreetMap / Unsplash) ---
 httpx>=0.27.0
+
+# --- AI features: timeline + ask (LangChain -> OpenAI structured output, embeddings) ---
+langchain-core>=1.0
+langchain-openai>=1.0
+
+# --- Parked live mode (app/live): OpenAI Realtime WebSocket client ---
+websockets>=14.0

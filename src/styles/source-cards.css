@@ -1,0 +1,310 @@
+/* Source cards (Wikipedia / photo / map) and the source-cards grid, incl. expand/collapse. */
+
+.entity-cards-section {
+  margin-bottom: 1.25rem;
+}
+
+.entity-cards-section__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.entity-cards-section__lead {
+  margin: 0 0 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.45;
+  max-width: 62ch;
+}
+
+.entity-cards-section__lead strong {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.entity-cards-section__empty {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: 48ch;
+}
+
+.entity-cards-section__empty strong {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.entity-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 1rem;
+}
+
+.entity-source-card {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1rem 1.05rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.entity-source-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.entity-source-card__badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: var(--purple-bg);
+  color: var(--purple);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.entity-source-card__badge[data-entity-type='PERSON'] {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--accent);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.entity-source-card__badge[data-entity-type='PLACE'] {
+  background: rgba(52, 211, 153, 0.12);
+  color: var(--hue-green);
+  border-color: rgba(52, 211, 153, 0.35);
+}
+
+.entity-source-card__badge[data-entity-type='COMPANY'] {
+  background: rgba(251, 191, 36, 0.12);
+  color: var(--hue-amber);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+.entity-source-card__badge[data-entity-type='TECHNOLOGY'] {
+  background: rgba(236, 72, 153, 0.12);
+  color: var(--hue-pink);
+  border-color: rgba(236, 72, 153, 0.3);
+}
+
+.entity-source-card__badge[data-entity-type='EVENT'] {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--status-blue);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.entity-source-card__badge[data-entity-type='MISC'] {
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--hue-teal);
+  border-color: rgba(20, 184, 166, 0.35);
+}
+
+.entity-source-card__time {
+  font-size: 0.65rem;
+  font-family: var(--mono);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.entity-source-card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-h);
+}
+
+.entity-source-card__cols {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.entity-source-card__label {
+  margin: 0 0 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.entity-source-card__block {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.entity-source-card__block:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.entity-source-card__wiki {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.entity-source-card__thumb {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.entity-source-card__thumb--unsplash {
+  max-height: 180px;
+}
+
+.entity-source-card__unsplash {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.entity-source-card__unsplash-credit {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.entity-source-card__unsplash-credit a {
+  color: var(--status-blue);
+  text-decoration: none;
+}
+
+.entity-source-card__unsplash-credit a:hover {
+  text-decoration: underline;
+}
+
+.entity-source-card__extract {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.entity-source-card__link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--status-blue);
+  text-decoration: none;
+}
+
+.entity-source-card__link:hover {
+  text-decoration: underline;
+}
+
+.entity-source-card__geo {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.entity-source-card__map {
+  width: 100%;
+  height: 160px;
+  border: none;
+  border-radius: 8px;
+  background: var(--code-bg);
+  margin-bottom: 0.35rem;
+}
+
+.entity-source-card__empty {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.entity-cards-grid {
+  align-items: start;
+}
+
+.entity-source-card__head-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.entity-source-card__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.entity-source-card__toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent-ring);
+}
+
+.entity-source-card--expanded .entity-source-card__toggle {
+  transform: rotate(180deg);
+  color: var(--accent);
+  border-color: var(--accent-ring);
+}
+
+.entity-source-card:not(.entity-source-card--expanded) .entity-source-card__extract {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.entity-source-card__more {
+  align-self: flex-start;
+  margin-top: -0.2rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.entity-source-card__more:hover {
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .entity-source-card--expanded .entity-source-card__cols {
+    animation: card-open 0.22s ease-out;
+  }
+}
+
+@keyframes card-open {
+  from {
+    opacity: 0.4;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

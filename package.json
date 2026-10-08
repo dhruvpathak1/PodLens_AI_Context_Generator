@@ -9,6 +9,9 @@
     "dev:api": "cd server && ../venv/bin/python -m uvicorn main:app --reload --host 127.0.0.1 --port ${API_PORT:-8000}",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "typecheck": "tsc -b",
+    "test:api": "cd server && ../venv/bin/python -m pytest",
+    "check": "npm run typecheck && npm run lint && npm run test:api",
     "preview": "vite preview"
   },
   "dependencies": {

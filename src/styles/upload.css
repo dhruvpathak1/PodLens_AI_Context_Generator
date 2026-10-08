@@ -1,0 +1,95 @@
+/* Audio upload drop zone. */
+
+.drop-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.drop-zone {
+  width: 100%;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 1rem;
+  border: 2px dashed var(--border-strong);
+  border-radius: 10px;
+  background: var(--code-bg);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.drop-zone--compact {
+  min-height: 88px;
+  padding: 0.75rem;
+}
+
+.drop-zone--compact .drop-zone__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.drop-zone--compact .drop-zone__text strong {
+  font-size: 0.85rem;
+}
+
+.drop-zone--compact .drop-zone__hint,
+.drop-zone--compact .drop-zone__meta {
+  font-size: 0.72rem;
+}
+
+.drop-zone:hover:not(:disabled),
+.drop-zone:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-ring);
+}
+
+.drop-zone:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.drop-zone--active {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.drop-zone--has-file {
+  border-style: solid;
+  border-color: var(--border-strong);
+}
+
+.drop-zone__icon {
+  color: var(--accent);
+  opacity: 0.95;
+}
+
+.drop-zone__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-align: center;
+  max-width: 100%;
+}
+
+.drop-zone__name {
+  font-size: 0.88rem;
+  word-break: break-word;
+}
+
+.drop-zone__meta,
+.drop-zone__hint {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 400;
+}

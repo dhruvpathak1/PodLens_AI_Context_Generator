@@ -12,6 +12,16 @@
       rel="stylesheet"
     />
     <title>PodLens</title>
+    <!-- Apply the saved theme before first paint to avoid a light/dark flash (see features/theme/useTheme.ts). -->
+    <script>
+      try {
+        var t = localStorage.getItem('podlens-theme')
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+        document.documentElement.dataset.theme = t
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

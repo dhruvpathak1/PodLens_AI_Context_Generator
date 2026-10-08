@@ -1,0 +1,101 @@
+/* Design tokens: colors, shadows, fonts. Dark is the default; [data-theme='light'] overrides.
+   The theme attribute is set on <html> by index.html (before first paint) and by useTheme(). */
+
+:root {
+  /* Dark theme (default). Every color in the app comes from these variables. */
+  --text: #a1a8b8;
+  --text-h: #f1f5f9;
+  --muted: #6b7280;
+  --bg: #06080f;
+  --dash-bg: #06080f;
+  --dash-sidebar: #0c1019;
+  --surface: #131a26;
+  --panel-bg: #131a26;
+  --border: #1e293b;
+  --border-strong: #334155;
+  --code-bg: #0f1419;
+  --accent: #3b82f6;
+  --accent-dim: rgba(59, 130, 246, 0.15);
+  --accent-bg: rgba(59, 130, 246, 0.12);
+  --accent-ring: rgba(59, 130, 246, 0.35);
+  --on-accent: #ffffff;
+  --purple: #8b5cf6;
+  --purple-bg: rgba(139, 92, 246, 0.12);
+  --status-blue: #38bdf8;
+  --err-bg: rgba(127, 29, 29, 0.35);
+  --err-border: rgba(248, 113, 113, 0.35);
+  --err-text: #fecaca;
+  --shadow: 0 4px 24px rgb(0 0 0 / 0.35);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.35);
+  --danger: #c96b6b;
+  --danger-border: rgba(200, 90, 90, 0.45);
+
+  /* Category hues (entity badges, live tags, timeline) */
+  --hue-blue: #3b82f6;
+  --hue-violet: #a78bfa;
+  --hue-cyan: #22d3ee;
+  --hue-green: #34d399;
+  --hue-amber: #fbbf24;
+  --hue-pink: #f472b6;
+  --hue-teal: #2dd4bf;
+  --hue-red: #f87171;
+  --hue-orange: #fb923c;
+  --hue-slate: #94a3b8;
+
+  --sans: 'Inter', ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Consolas, monospace;
+
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Light theme: set by the header toggle (data-theme on <html>), persisted in localStorage. */
+:root[data-theme='light'] {
+  --text: #475569;
+  --text-h: #0f172a;
+  --muted: #64748b;
+  --bg: #f4f6fb;
+  --dash-bg: #f4f6fb;
+  --dash-sidebar: #ffffff;
+  --surface: #ffffff;
+  --panel-bg: #ffffff;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --code-bg: #f1f5f9;
+  --accent: #2563eb;
+  --accent-dim: rgba(37, 99, 235, 0.1);
+  --accent-bg: rgba(37, 99, 235, 0.08);
+  --accent-ring: rgba(37, 99, 235, 0.35);
+  --on-accent: #ffffff;
+  --purple: #7c3aed;
+  --purple-bg: rgba(124, 58, 237, 0.1);
+  --status-blue: #0284c7;
+  --err-bg: #fef2f2;
+  --err-border: #fecaca;
+  --err-text: #991b1b;
+  --shadow: 0 4px 24px rgb(15 23 42 / 0.08);
+  --shadow-sm: 0 1px 3px rgb(15 23 42 / 0.12);
+  --danger: #b91c1c;
+  --danger-border: rgba(185, 28, 28, 0.35);
+
+  /* Darker hues so category text stays readable on white */
+  --hue-blue: #2563eb;
+  --hue-violet: #7c3aed;
+  --hue-cyan: #0891b2;
+  --hue-green: #059669;
+  --hue-amber: #b45309;
+  --hue-pink: #db2777;
+  --hue-teal: #0d9488;
+  --hue-red: #dc2626;
+  --hue-orange: #ea580c;
+  --hue-slate: #64748b;
+
+  color-scheme: light;
+}

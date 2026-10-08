@@ -8,7 +8,7 @@ RUN npm ci
 COPY tsconfig.json tsconfig.app.json tsconfig.node.json vite.config.ts index.html ./
 COPY public ./public
 COPY src ./src
-# Same-origin /api/* in the browser — no VITE_TRANSCRIBE_URL needed.
+# The UI calls same-origin /api/*, so VITE_TRANSCRIBE_URL is not needed.
 RUN npm run build
 
 FROM python:3.11-slim-bookworm
@@ -41,4 +41,5 @@ WORKDIR /app/server
 
 EXPOSE 8000
 
+# server/main.py re-exports app.main:app, so the classic entry point still works.
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
