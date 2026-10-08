@@ -2,6 +2,22 @@
 
 PodLens is an AI-powered context engine for podcasts. It transcribes an episode, identifies the people, companies, places and technologies mentioned, and surfaces each one as a source card with a summary, map and image, timed to the moment it is spoken. It can also build a chronological timeline of the episode and answer questions about it, with citations that jump to the exact moment.
 
+## 🧰 Built With
+
+| Category | Technologies |
+|---|---|
+| **Languages** | TypeScript, Python, CSS, HTML, YAML, Shell |
+| **Frontend** | React 19, Vite, HTML5 Audio, Fetch API, CSS custom properties (design tokens, light/dark theme), Inter (Google Fonts) |
+| **Backend** | FastAPI, Uvicorn, Pydantic, httpx (async HTTP), python-multipart, python-dotenv, asyncio |
+| **Speech and audio** | OpenAI Whisper (local, on PyTorch), FFmpeg |
+| **NLP / entity tagging** | spaCy (`en_core_web_sm`, optional `md` / `lg`), Anthropic Claude (Haiku 4.5) via the `anthropic` SDK, custom disambiguation rules |
+| **LLM and AI** | LangChain (`langchain-core`, `langchain-openai`), OpenAI chat models (`gpt-5.4-mini`) with strict JSON-schema structured output, OpenAI embeddings (`text-embedding-3-small`), in-memory vector retrieval |
+| **External APIs** | Wikipedia Action API and REST API, Nominatim (OpenStreetMap) geocoding, OpenStreetMap map embeds, Unsplash Search API |
+| **Live mode (parked)** | OpenAI Realtime transcription over WebSockets, Web Audio API (AudioWorklet), MediaRecorder |
+| **Testing and quality** | pytest, TypeScript strict mode, ESLint (`typescript-eslint`, `eslint-plugin-react-hooks`) |
+| **DevOps and tooling** | Docker (multi-stage build), Docker Compose, GitHub Actions, GitHub Pages, npm, Node.js, `concurrently`, Python venv, Git |
+| **Data and storage** | JSON entity exports, timestamped `.txt` transcripts, local file storage |
+
 ![PodLens Architecture](public/architecture_diagram.png)
 
 ### See it in Action
@@ -13,6 +29,7 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 
 ## 📑 Contents
 
+- [Built With](#-built-with)
 - [Key Features](#-key-features)
 - [How It Works](#%EF%B8%8F-how-it-works)
 - [Episode Timeline](#-episode-timeline)
