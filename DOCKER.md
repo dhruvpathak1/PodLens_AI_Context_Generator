@@ -13,6 +13,8 @@ Open **http://localhost:8080**. The first transcription downloads the Whisper mo
 ## Optional configuration
 
 - Copy `.env.example` to `.env` next to `docker-compose.yml` and fill in keys. Docker Compose reads that file for `${VAR}` substitution and forwards common variables into the container.
+- Set `OPENAI_API_KEY` to enable the Episode timeline and Ask the episode; `UNSPLASH_ACCESS_KEY` for photos on source cards.
+- Live microphone mode is parked; `ENABLE_LIVE_MODE=true` mounts its endpoints (see `server/app/live/README.md`).
 - Override CORS for another browser origin:  
   `CORS_EXTRA_ORIGINS=https://example.com docker compose up`
 

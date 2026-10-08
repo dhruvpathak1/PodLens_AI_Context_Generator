@@ -22,6 +22,12 @@ services:
       CLAUDE_MODEL: ${CLAUDE_MODEL:-}
       CLAUDE_ENTITY_BATCH: ${CLAUDE_ENTITY_BATCH:-}
       NOMINATIM_USER_AGENT: ${NOMINATIM_USER_AGENT:-}
+      # Episode timeline + Ask the episode (need OPENAI_API_KEY)
+      OPENAI_TIMELINE_MODEL: ${OPENAI_TIMELINE_MODEL:-}
+      OPENAI_ASK_MODEL: ${OPENAI_ASK_MODEL:-}
+      OPENAI_EMBED_MODEL: ${OPENAI_EMBED_MODEL:-}
+      # Live mic mode is parked (future scope); true mounts /api/live
+      ENABLE_LIVE_MODE: ${ENABLE_LIVE_MODE:-false}
       CORS_EXTRA_ORIGINS: ${CORS_EXTRA_ORIGINS:-http://localhost:8080,http://127.0.0.1:8080}
     volumes:
       - podlens-data:/data

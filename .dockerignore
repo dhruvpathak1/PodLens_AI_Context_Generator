@@ -17,3 +17,14 @@ adhoc
 *.md
 !DOCKER.md
 .DS_Store
+
+# Local-only folders and media (keep the build context small)
+_backup
+_to_delete
+*.mp3
+*.mov
+*.mp4
+.pytest_cache
+server/tests
+server/pytest.ini
+server/requirements-dev.txt
