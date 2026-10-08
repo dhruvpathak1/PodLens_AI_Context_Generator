@@ -1,0 +1,37 @@
+/* PARKED live mode styles (not imported). Import from features/live when re-enabling. */
+
+.transcript-sidebar__live {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--border);
+}
+
+.transcript-sidebar__live-lead {
+  margin: 0 0 0.65rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.transcript-sidebar__live-btn {
+  margin-top: 0;
+}
+
+.transcript-sidebar__live-btn--stop {
+  border-color: var(--danger-border);
+  color: var(--danger);
+}
+
+.transcript-sidebar__live-mic-err {
+  margin: 0.5rem 0 0;
+  font-size: 0.76rem;
+  color: var(--err-text);
+}
+
+/* Realtime transcription: in-progress (not yet committed) text */
+.transcript-sentence--partial {
+  cursor: default;
+  opacity: 0.7;
+  font-style: italic;
+  border-style: dashed;
+}

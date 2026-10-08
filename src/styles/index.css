@@ -1,0 +1,17 @@
+/* Global stylesheet entry. Imported once by main.tsx.
+   Order matters: tokens and base first, then layout and shared controls, then features. */
+
+@import './tokens.css';
+@import './base.css';
+@import './layout.css';
+@import './controls.css';
+@import './theme.css';
+@import './upload.css';
+@import './player.css';
+@import './transcript.css';
+@import './entities.css';
+@import './source-cards.css';
+@import './live-cards.css';
+@import './timeline.css';
+@import './rail.css';
+@import './ask.css';

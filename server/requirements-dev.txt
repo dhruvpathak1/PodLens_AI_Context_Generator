@@ -1,0 +1,3 @@
+# Test/dev tooling (does not include Whisper or spaCy models; tests stub them out).
+-r requirements.txt
+pytest>=8.0
