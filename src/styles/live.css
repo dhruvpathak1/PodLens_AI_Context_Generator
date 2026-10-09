@@ -158,6 +158,9 @@
   min-height: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: safe center; /* centred, but never clipped when the text overflows */
+  text-align: center;
   gap: 0.4rem;
   padding: 1rem 1.1rem;
   border: 1px solid var(--line);
@@ -195,14 +198,16 @@
   display: grid;
   gap: 0.35rem;
   margin: 0;
-  padding-left: 1.1rem;
+  padding: 0;
+  list-style: none;
   font-size: 0.84rem;
   line-height: 1.45;
   color: var(--text-2);
 }
 
-.intro-card__list li::marker {
-  color: var(--accent);
+.intro-card__text,
+.intro-card__list {
+  max-width: 44ch;
 }
 
 .intro-card--note .intro-card__kicker {
@@ -210,9 +215,6 @@
 }
 
 .intro-card--logo {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   gap: 0.2rem;
 }
 
