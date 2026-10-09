@@ -6,10 +6,15 @@
 #
 # Required repository configuration:
 # 1) Settings → Pages → Build and deployment: Source = "GitHub Actions"
-# 2) Settings → Secrets and variables → Actions → add secret:
-#    VITE_TRANSCRIBE_URL = https://<your-api-host>/api/transcribe
-#    (Your FastAPI server must allow this site's origin; set CORS_EXTRA_ORIGINS on the server,
-#     e.g. https://<github-username>.github.io )
+#
+# By default the site is built in DEMO MODE: it plays the pre-processed episodes committed in
+# public/demo/ (create them with `npm run demo:build`) and never calls an API, so no server or
+# API keys are needed and nothing costs money.
+#
+# Only if you host the FastAPI server yourself:
+# - Settings → Secrets and variables → Actions → Variables: VITE_DEMO_MODE = false
+# - Secrets: VITE_TRANSCRIBE_URL = https://<your-api-host>/api/transcribe
+#   (the server must allow this site's origin via CORS_EXTRA_ORIGINS)
 #
 # The workflow sets VITE_BASE_PATH to /${{ github.event.repository.name }}/ so asset URLs match
 # https://<user>.github.io/<repo>/.
@@ -47,6 +52,9 @@ jobs:
       - name: Install and build
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          # Demo mode: serve the pre-processed episodes in public/demo/ with no API and no keys.
+          # Set the repository variable VITE_DEMO_MODE=false only if you host the API yourself.
+          VITE_DEMO_MODE: ${{ vars.VITE_DEMO_MODE || 'true' }}
           VITE_TRANSCRIBE_URL: ${{ secrets.VITE_TRANSCRIBE_URL }}
         run: |
           npm ci

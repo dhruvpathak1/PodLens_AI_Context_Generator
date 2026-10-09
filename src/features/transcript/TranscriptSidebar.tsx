@@ -1,4 +1,4 @@
-import type { RefObject } from 'react'
+import type { ReactNode, RefObject } from 'react'
 import { ErrorAlert } from '../../shared/components/Alert'
 import { SearchIcon } from '../../shared/icons'
 import type { EpisodeState } from '../episode/useEpisodeProcessing'
@@ -18,6 +18,8 @@ type Props = {
   onFileChange: (file: File | null) => void
   /** Called by the PodLens button. */
   onRun: () => void
+  /** Replaces the upload box and PodLens button (demo mode shows an episode picker here). */
+  ingest?: ReactNode
 }
 
 /** Short status shown under the sidebar title. */
@@ -38,7 +40,16 @@ function runButtonLabel(episode: EpisodeState): string {
  * Left column: title/status, theme + search buttons, upload and PodLens button, audio player,
  * error messages, and the transcript feed.
  */
-export function TranscriptSidebar({ episode, view, playerRef, audioUrl, onPlaybackTick, onFileChange, onRun }: Props) {
+export function TranscriptSidebar({
+  episode,
+  view,
+  playerRef,
+  audioUrl,
+  onPlaybackTick,
+  onFileChange,
+  onRun,
+  ingest,
+}: Props) {
   const { busy } = episode
   return (
     <aside className="transcript-sidebar" aria-label="Live transcript">
@@ -79,15 +90,19 @@ export function TranscriptSidebar({ episode, view, playerRef, audioUrl, onPlayba
       )}
 
       <div className="transcript-sidebar__ingest">
-        <AudioDropZone file={episode.file} onFileChange={onFileChange} disabled={busy} compact />
-        <button
-          type="button"
-          className="btn btn--primary btn--block btn--podlens"
-          disabled={!episode.file || busy}
-          onClick={onRun}
-        >
-          {runButtonLabel(episode)}
-        </button>
+        {ingest ?? (
+          <>
+            <AudioDropZone file={episode.file} onFileChange={onFileChange} disabled={busy} compact />
+            <button
+              type="button"
+              className="btn btn--primary btn--block btn--podlens"
+              disabled={!episode.file || busy}
+              onClick={onRun}
+            >
+              {runButtonLabel(episode)}
+            </button>
+          </>
+        )}
       </div>
 
       <MiniAudioPlayer key={audioUrl ?? 'no-audio'} ref={playerRef} src={audioUrl} onPlaybackTick={onPlaybackTick} />

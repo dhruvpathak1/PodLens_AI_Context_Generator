@@ -2,10 +2,14 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import type { MiniAudioPlayerHandle } from './MiniAudioPlayer'
 
 /**
- * Playback state for the uploaded file: an object URL for `<audio>`, the current time and
- * duration (reported by `MiniAudioPlayer`), and a `seekTo` that any panel can call.
+ * Playback state: an audio URL for `<audio>`, the current time and duration (reported by
+ * `MiniAudioPlayer`), and a `seekTo` that any panel can call.
+ *
+ * `source` is either an uploaded `File` (played through an object URL) or a plain URL string
+ * (demo episodes served from `public/demo/`).
  */
-export function useAudioPlayback(file: File | null) {
+export function useAudioPlayback(source: File | string | null) {
+  const file = source instanceof File ? source : null
   const playerRef = useRef<MiniAudioPlayerHandle>(null)
   /** Object URL paired with the file it was made for, so a stale URL is never returned. */
   const [objectUrl, setObjectUrl] = useState<{ file: File; url: string } | null>(null)
@@ -23,7 +27,8 @@ export function useAudioPlayback(file: File | null) {
     return () => URL.revokeObjectURL(url)
   }, [file])
 
-  const audioUrl = objectUrl && objectUrl.file === file ? objectUrl.url : null
+  const audioUrl =
+    typeof source === 'string' ? source : objectUrl && objectUrl.file === file ? objectUrl.url : null
 
   // A new file starts at 0:00 (state adjusted during render, React's recommended pattern).
   const [timedUrl, setTimedUrl] = useState(audioUrl)

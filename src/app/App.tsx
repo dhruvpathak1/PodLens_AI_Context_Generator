@@ -1,7 +1,11 @@
-import { useCallback, useEffect, useMemo } from 'react'
-import { APP_TITLE, ENTITY_BACKEND, MISSING_PROD_API_URL } from '../config/env'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { APP_TITLE, DEMO_MODE, ENTITY_BACKEND, MISSING_PROD_API_URL } from '../config/env'
 import { suggestQuestions } from '../features/ask/suggestions'
-import { useEpisodeChat } from '../features/ask/useEpisodeChat'
+import { useEpisodeChat, type AnswerFn } from '../features/ask/useEpisodeChat'
+import { DemoBanner } from '../features/demo/DemoBanner'
+import { demoAnswer, demoAudioUrl, demoTimeline } from '../features/demo/demoData'
+import { DemoPicker } from '../features/demo/DemoPicker'
+import { useDemoCatalog } from '../features/demo/useDemoCatalog'
 import { EntityFilterBar } from '../features/entities/EntityFilterBar'
 import { LiveCardsPanel } from '../features/entities/LiveCardsPanel'
 import { SourceCardsSection } from '../features/entities/SourceCardsSection'
@@ -13,6 +17,7 @@ import { EpisodeRail } from '../features/rail/EpisodeRail'
 import { useEpisodeTimeline } from '../features/timeline/useEpisodeTimeline'
 import { TranscriptSidebar } from '../features/transcript/TranscriptSidebar'
 import { useTranscriptView } from '../features/transcript/useTranscriptView'
+import type { DemoEpisode } from '../types/demo'
 import { DeployHint } from './DeployHint'
 
 /**
@@ -21,6 +26,10 @@ import { DeployHint } from './DeployHint'
  *
  * Data flow: upload -> useEpisodeProcessing (transcript, entities, cards) -> playback time drives
  * the transcript highlight, Live cards and timeline reveal -> Timeline/Ask call the LLM endpoints.
+ *
+ * Demo mode (`VITE_DEMO_MODE=true`, the public site): a picker loads pre-processed episodes from
+ * `public/demo/` into the same state, and Timeline/Ask answer from the stored results. The rest
+ * of the UI is identical and never calls the API.
  */
 export default function App() {
   useEffect(() => {
@@ -29,7 +38,9 @@ export default function App() {
 
   // --- Core pipeline and playback -------------------------------------------------------
   const episode = useEpisodeProcessing({ backend: ENTITY_BACKEND })
-  const playback = useAudioPlayback(episode.file)
+  /** The loaded demo episode (demo mode only). */
+  const [demoEpisode, setDemoEpisode] = useState<DemoEpisode | null>(null)
+  const playback = useAudioPlayback(demoEpisode ? demoAudioUrl(demoEpisode) : episode.file)
   const entities = episode.entityDoc?.entities ?? []
 
   // --- Views over the results -----------------------------------------------------------
@@ -51,15 +62,34 @@ export default function App() {
   })
 
   // --- AI features (available once transcription and tagging finished) ----------------------
-  const episodeReady = !!episode.file && episode.segments.length > 0 && episode.entityDoc != null && !episode.busy
+  const episodeReady = !!episode.sourceName && episode.segments.length > 0 && episode.entityDoc != null && !episode.busy
+  // A demo built without an OpenAI key has no timeline to show.
+  const timelineReady = episodeReady && (!DEMO_MODE || demoEpisode?.timeline != null)
+  // In demo mode the LLM calls are replaced by the pre-computed results.
+  const demoGenerate = useMemo(() => (demoEpisode ? () => demoTimeline(demoEpisode) : undefined), [demoEpisode])
+  const demoAnswerFn = useMemo<AnswerFn | undefined>(
+    () => (demoEpisode ? (question) => demoAnswer(demoEpisode, question) : undefined),
+    [demoEpisode]
+  )
   const timeline = useEpisodeTimeline({
-    ready: episodeReady,
+    ready: timelineReady,
     segments: episode.segments,
     entities,
-    sourceLabel: episode.file?.name ?? null,
+    sourceLabel: episode.sourceName,
+    generate: demoGenerate,
   })
-  const chat = useEpisodeChat(() => ({ segments: episode.segments, entities, sourceLabel: episode.file?.name ?? null }))
-  const askSuggestions = useMemo(() => suggestQuestions(episode.entityDoc?.entities ?? []), [episode.entityDoc])
+  const chat = useEpisodeChat(
+    () => ({ segments: episode.segments, entities, sourceLabel: episode.sourceName }),
+    demoAnswerFn
+  )
+  // Demo suggestions are exactly the questions that have stored answers.
+  const askSuggestions = useMemo(
+    () =>
+      demoEpisode?.qa.length
+        ? demoEpisode.qa.map((qa) => qa.question)
+        : suggestQuestions(episode.entityDoc?.entities ?? []),
+    [demoEpisode, episode.entityDoc]
+  )
   const showRail = episodeReady || timeline.timeline != null || timeline.busy || timeline.error != null
 
   // --- User actions -----------------------------------------------------------------------
@@ -67,7 +97,7 @@ export default function App() {
   const { reset: resetChat } = chat
   const { resetFilter } = entityFilter
   const { clearSelection } = transcriptView
-  const { selectFile, run } = episode
+  const { selectFile, run, loadPrepared } = episode
 
   /** A different file invalidates the timeline and conversation. */
   const handleFileChange = useCallback(
@@ -90,9 +120,31 @@ export default function App() {
     void run()
   }, [resetTimeline, resetChat, resetFilter, clearSelection, run])
 
+  /** Demo episode picked: clear per-episode views, then show its pre-computed results. */
+  const handleDemoLoaded = useCallback(
+    (demo: DemoEpisode) => {
+      resetTimeline()
+      resetChat()
+      resetFilter()
+      clearSelection()
+      setDemoEpisode(demo)
+      loadPrepared({
+        name: demo.title,
+        transcript: demo.transcript,
+        segments: demo.segments,
+        document: demo.document,
+        cards: demo.cards,
+        unsplashEnabled: demo.unsplash_enabled,
+      })
+    },
+    [resetTimeline, resetChat, resetFilter, clearSelection, loadPrepared]
+  )
+  const demoCatalog = useDemoCatalog(DEMO_MODE, handleDemoLoaded)
+
   return (
     <div className="dashboard">
       {MISSING_PROD_API_URL && <DeployHint />}
+      {DEMO_MODE && <DemoBanner credit={demoEpisode?.credit || null} />}
       <div className={`dashboard__grid${showRail ? ' dashboard__grid--rail' : ''}`}>
         <TranscriptSidebar
           episode={episode}
@@ -102,6 +154,7 @@ export default function App() {
           onPlaybackTick={playback.handlePlaybackTick}
           onFileChange={handleFileChange}
           onRun={handleRun}
+          ingest={DEMO_MODE ? <DemoPicker catalog={demoCatalog} /> : undefined}
         />
 
         <main className="main-stage">
@@ -120,7 +173,8 @@ export default function App() {
                 entityDoc={episode.entityDoc}
                 filter={entityFilter}
                 entitySavedPath={episode.entitySavedPath}
-                unsplashHint={episode.unsplashHint}
+                // The "add an Unsplash key" hint is server setup advice; meaningless on the public demo.
+                unsplashHint={DEMO_MODE ? null : episode.unsplashHint}
                 hasCards={episode.enrichedCards.length > 0}
               />
             )}
@@ -130,9 +184,9 @@ export default function App() {
 
         {showRail && (
           <EpisodeRail
-            fileName={episode.file?.name ?? null}
+            fileName={episode.sourceName}
             timeline={timeline}
-            timelineReady={episodeReady}
+            timelineReady={timelineReady}
             chat={chat}
             askSuggestions={askSuggestions}
             playbackTime={playback.playbackTime}

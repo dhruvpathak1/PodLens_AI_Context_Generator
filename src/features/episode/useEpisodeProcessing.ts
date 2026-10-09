@@ -7,6 +7,16 @@ import type { TranscriptSegment } from '../../types/transcript'
 /** Which stage of the upload pipeline is running. */
 export type JobState = 'idle' | 'transcribing' | 'enriching'
 
+/** Results computed elsewhere (demo mode): loaded straight into state, no API calls. */
+export type PreparedEpisode = {
+  name: string
+  transcript: string
+  segments: TranscriptSegment[]
+  document: EntityDocument
+  cards: EnrichedEntityCard[]
+  unsplashEnabled: boolean
+}
+
 type Options = {
   /** NER backend override forwarded to the server. */
   backend?: 'spacy' | 'claude'
@@ -18,9 +28,12 @@ type Options = {
  *   2. `enriching`:    send the tagged entities to `/api/enrich-entities` for source cards
  *
  * Owns the selected file and every piece of state those two requests produce.
+ * `loadPrepared()` fills the same state from pre-computed results (demo mode).
  */
 export function useEpisodeProcessing({ backend }: Options = {}) {
   const [file, setFile] = useState<File | null>(null)
+  /** Name of a pre-computed episode loaded with `loadPrepared` (demo mode). */
+  const [preparedName, setPreparedName] = useState<string | null>(null)
   const [job, setJob] = useState<JobState>('idle')
   const [error, setError] = useState<string | null>(null)
 
@@ -52,6 +65,21 @@ export function useEpisodeProcessing({ backend }: Options = {}) {
     setEnrichError(null)
     setUnsplashHint(null)
   }, [])
+
+  /** Show pre-computed results (demo mode) exactly as if the pipeline had just produced them. */
+  const loadPrepared = useCallback(
+    (prepared: PreparedEpisode) => {
+      clearResults()
+      setFile(null)
+      setPreparedName(prepared.name)
+      setTranscript(prepared.transcript)
+      setSegments(prepared.segments)
+      setEntityDoc(prepared.document)
+      setEnrichedCards(prepared.cards)
+      setUnsplashHint(prepared.unsplashEnabled)
+    },
+    [clearResults]
+  )
 
   /** Run transcription, then enrichment, for the selected file. No-op while already busy. */
   const run = useCallback(async () => {
@@ -89,6 +117,9 @@ export function useEpisodeProcessing({ backend }: Options = {}) {
   return {
     file,
     selectFile: setFile,
+    /** Display name of the current episode: the uploaded file or the loaded demo. */
+    sourceName: file?.name ?? preparedName,
+    loadPrepared,
     job,
     busy,
     error,

@@ -27,10 +27,25 @@ export function apiUrl(path: string): string {
 }
 
 /**
- * True for a production build with no API URL configured. A static host (GitHub Pages) cannot
- * run the API, so the app shows a setup banner instead of failing silently.
+ * Demo mode (`VITE_DEMO_MODE=true`): the app plays pre-processed episodes from `public/demo/`
+ * instead of calling the API. Used for the public GitHub Pages site, which has no server and
+ * must not spend anyone's API keys. Build the episodes with `npm run demo:build`.
  */
-export const MISSING_PROD_API_URL = import.meta.env.PROD && !transcribeUrl
+export const DEMO_MODE = (import.meta.env.VITE_DEMO_MODE ?? '').trim().toLowerCase() === 'true'
+
+/** URL of a file under `public/demo/`, respecting Vite's base path (e.g. `/<repo>/` on Pages). */
+export function demoUrl(path: string): string {
+  return `${import.meta.env.BASE_URL}demo/${path}`
+}
+
+/** Public source repository, linked from the demo banner. */
+export const REPO_URL = 'https://github.com/dhruvpathak1/PodLens_AI_Context_Generator'
+
+/**
+ * True for a production build with no API URL configured (and not in demo mode). A static host
+ * cannot run the API, so the app shows a setup banner instead of failing silently.
+ */
+export const MISSING_PROD_API_URL = import.meta.env.PROD && !transcribeUrl && !DEMO_MODE
 
 /** Optional client-side override of the NER backend (`VITE_ENTITY_BACKEND=spacy|claude`). */
 export const ENTITY_BACKEND: 'spacy' | 'claude' | undefined = (() => {

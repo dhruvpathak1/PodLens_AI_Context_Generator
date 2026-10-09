@@ -7,6 +7,8 @@ interface ImportMetaEnv {
   readonly VITE_TRANSCRIBE_URL?: string
   /** Force the NER backend from the UI: "spacy" | "claude". */
   readonly VITE_ENTITY_BACKEND?: string
+  /** "true" serves pre-processed episodes from public/demo/ with no API calls (public site). */
+  readonly VITE_DEMO_MODE?: string
 }
 
 interface ImportMeta {
