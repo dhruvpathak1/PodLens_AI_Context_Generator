@@ -1,28 +1,31 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { APP_TITLE, DEMO_MODE, ENTITY_BACKEND, MISSING_PROD_API_URL } from '../config/env'
-import { suggestQuestions } from '../features/ask/suggestions'
 import { useEpisodeChat, type AnswerFn } from '../features/ask/useEpisodeChat'
-import { DemoBanner } from '../features/demo/DemoBanner'
+import { AboutPanel } from '../features/about/AboutPanel'
+import { AskEpisode } from '../features/ask/AskEpisode'
 import { demoAnswer, demoAudioUrl, demoTimeline } from '../features/demo/demoData'
 import { DemoPicker } from '../features/demo/DemoPicker'
 import { useDemoCatalog } from '../features/demo/useDemoCatalog'
-import { EntityFilterBar } from '../features/entities/EntityFilterBar'
-import { LiveCardsPanel } from '../features/entities/LiveCardsPanel'
-import { SourceCardsSection } from '../features/entities/SourceCardsSection'
+import { EntitiesPanel } from '../features/entities/EntitiesPanel'
+import { LiveGrid } from '../features/entities/LiveGrid'
 import { useEntityFilter } from '../features/entities/useEntityFilter'
 import { useLiveRollingCards } from '../features/entities/useLiveRollingCards'
 import { useEpisodeProcessing } from '../features/episode/useEpisodeProcessing'
 import { useAudioPlayback } from '../features/playback/useAudioPlayback'
-import { EpisodeRail } from '../features/rail/EpisodeRail'
+import { TimelinePanel } from '../features/timeline/TimelinePanel'
 import { useEpisodeTimeline } from '../features/timeline/useEpisodeTimeline'
-import { TranscriptSidebar } from '../features/transcript/TranscriptSidebar'
+import { TranscriptPanel } from '../features/transcript/TranscriptPanel'
 import { useTranscriptView } from '../features/transcript/useTranscriptView'
 import type { DemoEpisode } from '../types/demo'
+import { AudioDropZone } from '../features/upload/AudioDropZone'
 import { DeployHint } from './DeployHint'
 
 /**
  * Root component. Owns no UI logic of its own: it wires the feature hooks together and lays
- * out the three columns (transcript sidebar | main stage | Episode AI rail).
+ * out the dashboard as three columns, each split vertically:
+ *
+ *   | Transcript (player + text) | Live cards (2 x 2)  | Timeline        |
+ *   | PodLens (about + samples)  | Entities (NER)      | Ask the episode |
  *
  * Data flow: upload -> useEpisodeProcessing (transcript, entities, cards) -> playback time drives
  * the transcript highlight, Live cards and timeline reveal -> Timeline/Ask call the LLM endpoints.
@@ -52,13 +55,12 @@ export default function App() {
     audioUrl: playback.audioUrl,
     seekTo: playback.seekTo,
   })
-  const entityFilter = useEntityFilter(episode.entityDoc, episode.enrichedCards)
+  const entityFilter = useEntityFilter(episode.entityDoc)
   const liveCards = useLiveRollingCards({
     entities: entityFilter.filteredEntities,
     playbackTime: playback.playbackTime,
     cards: episode.enrichedCards,
     enabled: !!playback.audioUrl,
-    resetKey: `${playback.audioUrl}|${entityFilter.filter}|${episode.entityDoc?.extracted_at ?? ''}`,
   })
 
   // --- AI features (available once transcription and tagging finished) ----------------------
@@ -82,15 +84,6 @@ export default function App() {
     () => ({ segments: episode.segments, entities, sourceLabel: episode.sourceName }),
     demoAnswerFn
   )
-  // Demo suggestions are exactly the questions that have stored answers.
-  const askSuggestions = useMemo(
-    () =>
-      demoEpisode?.qa.length
-        ? demoEpisode.qa.map((qa) => qa.question)
-        : suggestQuestions(episode.entityDoc?.entities ?? []),
-    [demoEpisode, episode.entityDoc]
-  )
-  const showRail = episodeReady || timeline.timeline != null || timeline.busy || timeline.error != null
 
   // --- User actions -----------------------------------------------------------------------
   const { reset: resetTimeline } = timeline
@@ -135,65 +128,110 @@ export default function App() {
         document: demo.document,
         cards: demo.cards,
         unsplashEnabled: demo.unsplash_enabled,
+        review: demo.review ?? null,
       })
     },
     [resetTimeline, resetChat, resetFilter, clearSelection, loadPrepared]
   )
   const demoCatalog = useDemoCatalog(DEMO_MODE, handleDemoLoaded)
 
+  const hasEpisode = episode.segments.length > 0
+  const timelineUnavailable = !hasEpisode
+    ? 'Load an episode first.'
+    : DEMO_MODE && !demoEpisode?.timeline
+      ? 'This sample was published without a timeline.'
+      : episode.busy
+        ? 'Waiting for transcription to finish.'
+        : undefined
+
   return (
-    <div className="dashboard">
+    <div className="app">
       {MISSING_PROD_API_URL && <DeployHint />}
-      {DEMO_MODE && <DemoBanner credit={demoEpisode?.credit || null} />}
-      <div className={`dashboard__grid${showRail ? ' dashboard__grid--rail' : ''}`}>
-        <TranscriptSidebar
-          episode={episode}
-          view={transcriptView}
-          playerRef={playback.playerRef}
-          audioUrl={playback.audioUrl}
-          onPlaybackTick={playback.handlePlaybackTick}
-          onFileChange={handleFileChange}
-          onRun={handleRun}
-          ingest={DEMO_MODE ? <DemoPicker catalog={demoCatalog} /> : undefined}
-        />
-
-        <main className="main-stage">
-          <div className="main-stage__canvas" role="region" aria-label="Workspace, entities, and source cards">
-            {entities.length > 0 && (
-              <LiveCardsPanel
-                cards={liveCards}
-                hasMatchingEntities={entityFilter.filteredEntities.length > 0}
-                hasAudio={!!playback.audioUrl}
-                playbackTime={playback.playbackTime}
-                playbackDuration={playback.playbackDuration}
-              />
+      <div className="board">
+        <div className="board__col board__col--left">
+          <TranscriptPanel
+            episode={episode}
+            view={transcriptView}
+            playerRef={playback.playerRef}
+            audioUrl={playback.audioUrl}
+            onPlaybackTick={playback.handlePlaybackTick}
+          />
+          <AboutPanel
+            note={
+              DEMO_MODE ? (
+                <>
+                  {demoEpisode?.credit ? (
+                    <>
+                      {demoEpisode.credit}
+                      <br />
+                    </>
+                  ) : null}
+                  Samples were processed ahead of time. Run PodLens locally to analyse your own audio.
+                </>
+              ) : null
+            }
+          >
+            {DEMO_MODE ? (
+              <DemoPicker catalog={demoCatalog} />
+            ) : (
+              <>
+                <AudioDropZone file={episode.file} onFileChange={handleFileChange} disabled={episode.busy} compact />
+                <button
+                  type="button"
+                  className="btn btn--primary btn--block"
+                  disabled={!episode.file || episode.busy}
+                  onClick={handleRun}
+                >
+                  {episode.job === 'transcribing'
+                    ? 'Transcribing and tagging…'
+                    : episode.job === 'enriching'
+                      ? 'Fetching sources…'
+                      : 'Analyse episode'}
+                </button>
+              </>
             )}
-            {episode.entityDoc && (
-              <EntityFilterBar
-                entityDoc={episode.entityDoc}
-                filter={entityFilter}
-                entitySavedPath={episode.entitySavedPath}
-                // The "add an Unsplash key" hint is server setup advice; meaningless on the public demo.
-                unsplashHint={DEMO_MODE ? null : episode.unsplashHint}
-                hasCards={episode.enrichedCards.length > 0}
-              />
-            )}
-            {episode.enrichedCards.length > 0 && <SourceCardsSection cards={entityFilter.visibleCards} />}
-          </div>
-        </main>
+          </AboutPanel>
+        </div>
 
-        {showRail && (
-          <EpisodeRail
-            fileName={episode.sourceName}
-            timeline={timeline}
-            timelineReady={timelineReady}
-            chat={chat}
-            askSuggestions={askSuggestions}
+        <div className="board__col board__col--mid">
+          <LiveGrid
+            cards={liveCards}
+            hasAudio={!!playback.audioUrl}
             playbackTime={playback.playbackTime}
-            seekTo={playback.seekTo}
+            playbackDuration={playback.playbackDuration}
+          />
+          <EntitiesPanel
+            entityDoc={episode.entityDoc}
+            filter={entityFilter}
+            playbackTime={playback.playbackTime}
+            onSeek={playback.seekTo}
+            review={episode.review}
+            // Server setup advice is meaningless on the public demo.
+            note={
+              !DEMO_MODE && episode.unsplashHint === false && episode.enrichedCards.length > 0
+                ? 'Photos are off: add UNSPLASH_ACCESS_KEY to .env and restart the API.'
+                : null
+            }
+          />
+        </div>
+
+        <div className="board__col board__col--right">
+          <TimelinePanel
+            timeline={timeline}
+            ready={timelineReady}
+            unavailableReason={timelineUnavailable}
+            onSeek={playback.seekTo}
+          />
+          <AskEpisode
+            messages={chat.messages}
+            busy={chat.busy}
+            enabled={episodeReady}
+            onAsk={(q) => void chat.ask(q)}
+            onStop={chat.stop}
+            onClear={chat.reset}
             onCite={transcriptView.jumpToCitation}
           />
-        )}
+        </div>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 /** Shapes of the static demo files written by `npm run demo:build` (server/app/services/demo_bundle.py). */
 
 import type { AskResponse } from './ask'
-import type { EnrichedEntityCard, EntityDocument } from './entities'
+import type { EnrichedEntityCard, EntityDocument, EntityReviewReport } from './entities'
 import type { EpisodeTimelineData } from './timeline'
 import type { TranscriptSegment } from './transcript'
 
@@ -51,6 +51,8 @@ export type DemoEpisode = {
   document: EntityDocument
   cards: EnrichedEntityCard[]
   unsplash_enabled: boolean
+  /** What the AI entity review changed (absent in bundles built before the review existed). */
+  review?: EntityReviewReport | null
   /** Null when the demo was built without an OpenAI key. */
   timeline: EpisodeTimelineData | null
   qa: DemoQA[]

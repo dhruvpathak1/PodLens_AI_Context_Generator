@@ -36,7 +36,7 @@ def _steps(calls: list[str]) -> dict:
         calls.append("extract")
         return {"backend": "spacy", "source_label": "/Users/me/secret/path.mp3", "chunks": segments, "entities": ENTITIES}
 
-    async def enrich(entities):
+    async def enrich(entities, **_kw):
         """Return one card per entity."""
         calls.append("enrich")
         return {"cards": [{"id": e["text"], **e} for e in entities], "unsplash_enabled": False}
@@ -74,7 +74,7 @@ def test_slugify() -> None:
 
 
 def test_default_questions_match_frontend_rules() -> None:
-    """Questions follow suggestQuestions(): summary, top person, top company, top place."""
+    """Default questions: summary, top person, top company, top place."""
     assert default_questions(ENTITIES) == [
         "Summarize this episode in 3 points.",
         "Who is Neil Armstrong and why are they mentioned?",

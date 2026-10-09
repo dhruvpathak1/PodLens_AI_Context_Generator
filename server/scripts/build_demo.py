@@ -49,6 +49,10 @@ def parse_args(argv: list[str] | None = None) -> DemoOptions:
     p.add_argument("--out", type=Path, default=DEFAULT_OUT_DIR, help="Output folder (default public/demo)")
     p.add_argument("--skip-timeline", action="store_true", help="Do not call OpenAI for the timeline")
     p.add_argument("--skip-ask", action="store_true", help="Do not call OpenAI for preset answers")
+    p.add_argument(
+        "--no-review", action="store_true",
+        help="Skip the LLM review of entities and source cards (on by default with an OpenAI key)",
+    )  # fmt: skip
     a = p.parse_args(argv)
 
     if not a.audio.is_file():
@@ -66,6 +70,7 @@ def parse_args(argv: list[str] | None = None) -> DemoOptions:
         out_dir=a.out.resolve(),
         skip_timeline=a.skip_timeline,
         skip_ask=a.skip_ask,
+        review=False if a.no_review else None,
     )
 
 

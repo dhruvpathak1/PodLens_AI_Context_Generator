@@ -137,6 +137,9 @@ class Settings:
     ask_chunk_sec: float = field(default_factory=lambda: env_float("ASK_CHUNK_SEC", 60.0))
     ask_chunk_overlap_sec: float = field(default_factory=lambda: env_float("ASK_CHUNK_OVERLAP_SEC", 15.0))
     ask_top_k: int = field(default_factory=lambda: env_int("ASK_TOP_K", 8))
+    #: LLM review of extracted entities before/after building source cards (needs OPENAI_API_KEY).
+    entity_review: bool = field(default_factory=lambda: env_bool("ENTITY_REVIEW", True))
+    review_model: str = field(default_factory=lambda: env_str("OPENAI_REVIEW_MODEL", "gpt-5.4-mini"))
 
     # --- HTTP / deployment ---
     cors_extra_origins: tuple[str, ...] = field(default_factory=lambda: tuple(env_list("CORS_EXTRA_ORIGINS")))

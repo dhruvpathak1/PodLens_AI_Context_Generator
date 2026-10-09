@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react'
 import { enrichEntityCards } from '../../api/entities'
 import { transcribeAudio } from '../../api/transcribe'
-import type { EnrichedEntityCard, EntityDocument } from '../../types/entities'
+import type { EnrichedEntityCard, EntityDocument, EntityReviewReport } from '../../types/entities'
 import type { TranscriptSegment } from '../../types/transcript'
 
 /** Which stage of the upload pipeline is running. */
@@ -15,6 +15,7 @@ export type PreparedEpisode = {
   document: EntityDocument
   cards: EnrichedEntityCard[]
   unsplashEnabled: boolean
+  review?: EntityReviewReport | null
 }
 
 type Options = {
@@ -25,7 +26,8 @@ type Options = {
 /**
  * The core PodLens pipeline for one uploaded file:
  *   1. `transcribing`: upload to `/api/transcribe` (Whisper + entity tagging on the server)
- *   2. `enriching`:    send the tagged entities to `/api/enrich-entities` for source cards
+ *   2. `enriching`:    send the tagged entities (with the transcript, for the AI review) to
+ *                      `/api/enrich-entities` for source cards
  *
  * Owns the selected file and every piece of state those two requests produce.
  * `loadPrepared()` fills the same state from pre-computed results (demo mode).
@@ -49,6 +51,8 @@ export function useEpisodeProcessing({ backend }: Options = {}) {
   const [enrichError, setEnrichError] = useState<string | null>(null)
   /** `false` when the server reports Unsplash is not configured (shows a setup hint). */
   const [unsplashHint, setUnsplashHint] = useState<boolean | null>(null)
+  /** What the AI entity review changed, if it ran. */
+  const [review, setReview] = useState<EntityReviewReport | null>(null)
 
   const busy = job !== 'idle'
 
@@ -64,6 +68,7 @@ export function useEpisodeProcessing({ backend }: Options = {}) {
     setEnrichedCards([])
     setEnrichError(null)
     setUnsplashHint(null)
+    setReview(null)
   }, [])
 
   /** Show pre-computed results (demo mode) exactly as if the pipeline had just produced them. */
@@ -77,6 +82,7 @@ export function useEpisodeProcessing({ backend }: Options = {}) {
       setEntityDoc(prepared.document)
       setEnrichedCards(prepared.cards)
       setUnsplashHint(prepared.unsplashEnabled)
+      setReview(prepared.review ?? null)
     },
     [clearResults]
   )
@@ -100,7 +106,13 @@ export function useEpisodeProcessing({ backend }: Options = {}) {
 
       setJob('enriching')
       try {
-        const enriched = await enrichEntityCards(entities)
+        const enriched = await enrichEntityCards(entities, { segments: result.segments, sourceLabel: file.name })
+        // The AI review may have corrected, merged or dropped entities: show the reviewed list.
+        if (enriched.entities) {
+          const reviewed = enriched.entities
+          setEntityDoc((doc) => (doc ? { ...doc, entities: reviewed } : doc))
+        }
+        setReview(enriched.review ?? null)
         setEnrichedCards(enriched.cards)
         setUnsplashHint(enriched.unsplash_enabled ?? null)
       } catch (e) {
@@ -132,6 +144,7 @@ export function useEpisodeProcessing({ backend }: Options = {}) {
     enrichedCards,
     enrichError,
     unsplashHint,
+    review,
     run,
   }
 }

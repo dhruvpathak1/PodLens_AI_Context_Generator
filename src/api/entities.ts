@@ -1,7 +1,8 @@
 /** Entity endpoints: tag existing chunks, and enrich entities into source cards. */
 
 import { apiUrl } from '../config/env'
-import type { EnrichedEntityCard, EntityDocument, EntityRecord } from '../types/entities'
+import type { EnrichedEntityCard, EntityDocument, EntityRecord, EntityReviewReport } from '../types/entities'
+import type { TranscriptSegment } from '../types/transcript'
 import { postJson } from './http'
 
 /** A transcript chunk to tag. */
@@ -21,6 +22,15 @@ export type EnrichEntitiesResponse = {
   count: number
   /** False when the server has no Unsplash key (photos skipped). */
   unsplash_enabled?: boolean
+  /** Reviewed entity mentions to display (present when the AI review ran). */
+  entities?: EntityRecord[]
+  review?: EntityReviewReport
+}
+
+export type EnrichOptions = {
+  /** Transcript segments: lets the server review entities in context before the lookups. */
+  segments?: TranscriptSegment[]
+  sourceLabel?: string | null
 }
 
 /** `POST /api/extract-entities`: tag entities in caller-supplied chunks. */
@@ -40,8 +50,12 @@ export async function extractEntities(
   return data
 }
 
-/** `POST /api/enrich-entities`: one source card per unique entity (Wikipedia, map, photo). */
-export function enrichEntityCards(entities: EntityRecord[]): Promise<EnrichEntitiesResponse> {
+/**
+ * `POST /api/enrich-entities`: one source card per unique entity (Wikipedia, map, photo).
+ * With `segments`, the server first has an LLM review the entities in context (when it has an
+ * OpenAI key) and returns the reviewed list in `entities`.
+ */
+export function enrichEntityCards(entities: EntityRecord[], options: EnrichOptions = {}): Promise<EnrichEntitiesResponse> {
   return postJson<EnrichEntitiesResponse>(apiUrl('/api/enrich-entities'), {
     entities: entities.map(({ type, text, start_sec, end_sec, chunk_id }) => ({
       type,
@@ -50,5 +64,7 @@ export function enrichEntityCards(entities: EntityRecord[]): Promise<EnrichEntit
       end_sec,
       chunk_id,
     })),
+    segments: (options.segments ?? []).map(({ id, start, end, text }) => ({ id, start, end, text })),
+    source_label: options.sourceLabel ?? null,
   })
 }

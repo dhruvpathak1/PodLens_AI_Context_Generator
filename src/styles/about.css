@@ -1,0 +1,132 @@
+/* PodLens panel: project explanation, sample episodes (demo) or upload box (local). */
+
+.about__lead {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.about__controls {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.about__note {
+  margin-top: 0.7rem;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: var(--text-3);
+}
+
+/* ---- Sample episodes ------------------------------------------------------------------------ */
+.samples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+
+.sample {
+  display: grid;
+  gap: 0.1rem;
+  align-content: start;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-2);
+  text-align: left;
+  cursor: pointer;
+}
+
+.sample:hover {
+  border-color: var(--line-2);
+  background: var(--panel-3);
+}
+
+.sample--active {
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+.sample[aria-busy='true'] {
+  cursor: progress;
+}
+
+.sample__index {
+  font-size: 0.7rem;
+  color: var(--text-3);
+}
+
+.sample__title {
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.sample__meta {
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-3);
+}
+
+/* ---- Upload box (local mode) --------------------------------------------------------------- */
+.drop-wrap {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.drop-zone {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px dashed var(--line-2);
+  border-radius: var(--radius);
+  background: var(--panel-2);
+  text-align: left;
+  cursor: pointer;
+}
+
+.drop-zone:hover:not(:disabled),
+.drop-zone--active {
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+.drop-zone:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.drop-zone__icon {
+  color: var(--text-3);
+}
+
+.drop-zone__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.drop-zone__text {
+  display: grid;
+  min-width: 0;
+  font-size: 0.82rem;
+}
+
+.drop-zone__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.drop-zone__hint,
+.drop-zone__meta {
+  font-size: 0.72rem;
+  color: var(--text-3);
+}
+
+.drop-wrap .btn-text {
+  justify-self: start;
+}

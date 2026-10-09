@@ -5,15 +5,10 @@ export type Theme = 'light' | 'dark'
 /** localStorage key; also read by the inline script in index.html before first paint. */
 const STORAGE_KEY = 'podlens-theme'
 
-/** Starting theme: whatever index.html already applied, else the OS preference. */
+/** Starting theme: whatever index.html already applied (saved choice), else dark. */
 function initialTheme(): Theme {
   const fromDom = document.documentElement.dataset.theme
-  if (fromDom === 'light' || fromDom === 'dark') return fromDom
-  try {
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
-  } catch {
-    return 'dark'
-  }
+  return fromDom === 'light' ? 'light' : 'dark'
 }
 
 /**
@@ -28,7 +23,7 @@ export function useTheme() {
   }, [theme])
 
   const toggleTheme = useCallback(() => {
-    // Briefly enable color transitions so the switch cross-fades (see styles/theme.css).
+    // Briefly enable color transitions so the switch cross-fades (see .theme-anim in styles/base.css).
     const root = document.documentElement
     root.classList.add('theme-anim')
     window.setTimeout(() => root.classList.remove('theme-anim'), 300)

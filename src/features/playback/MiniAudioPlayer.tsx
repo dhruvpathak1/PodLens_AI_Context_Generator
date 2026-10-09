@@ -1,6 +1,11 @@
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import { formatClock } from '../../shared/format'
 import { PauseIcon, PlayIcon } from '../../shared/icons'
+import { useWaveformPeaks } from './useWaveformPeaks'
+import { Waveform } from './Waveform'
+
+/** Bars in the waveform scrubber. */
+const WAVE_BARS = 64
 
 /** Imperative API exposed to parents through a ref. */
 export type MiniAudioPlayerHandle = {
@@ -17,7 +22,7 @@ type Props = {
   emptyHint?: string | null
 }
 
-/** Play/pause button, scrubber and clock for the uploaded episode. */
+/** Play/pause button, waveform scrubber and clock for the current episode. */
 export const MiniAudioPlayer = forwardRef<MiniAudioPlayerHandle, Props>(function MiniAudioPlayer(
   { src, onPlaybackTick, emptyHint },
   ref
@@ -27,6 +32,7 @@ export const MiniAudioPlayer = forwardRef<MiniAudioPlayerHandle, Props>(function
   const [playing, setPlaying] = useState(false)
   const [current, setCurrent] = useState(0)
   const [duration, setDuration] = useState(0)
+  const peaks = useWaveformPeaks(src, WAVE_BARS)
 
   useEffect(() => {
     tickCbRef.current = onPlaybackTick
@@ -96,7 +102,7 @@ export const MiniAudioPlayer = forwardRef<MiniAudioPlayerHandle, Props>(function
   if (!src) {
     return (
       <div className="mini-player mini-player--empty" aria-live="polite">
-        <span className="mini-player__hint">{emptyHint?.trim() || 'Add an audio file to enable playback'}</span>
+        <span className="mini-player__hint">{emptyHint?.trim() || 'Pick a sample or add an audio file to play it here'}</span>
       </div>
     )
   }
@@ -124,17 +130,7 @@ export const MiniAudioPlayer = forwardRef<MiniAudioPlayerHandle, Props>(function
       </button>
 
       <div className="mini-player__track-wrap">
-        <input
-          type="range"
-          className="mini-player__range"
-          min={0}
-          max={duration > 0 ? duration : 1}
-          step="any"
-          disabled={duration <= 0}
-          value={duration > 0 ? Math.min(current, duration) : 0}
-          onChange={(e) => onScrub(Number(e.target.value))}
-          aria-label="Seek in audio"
-        />
+        <Waveform peaks={peaks} bars={WAVE_BARS} current={current} duration={duration} onSeek={onScrub} />
         <div className="mini-player__times">
           <span className="mini-player__t">{formatClock(current)}</span>
           <span className="mini-player__t mini-player__t--muted">{formatClock(duration)}</span>

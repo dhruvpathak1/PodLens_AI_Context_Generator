@@ -47,6 +47,11 @@ class EnrichEntitiesRequest(BaseModel):
     """Body of `POST /api/enrich-entities`."""
 
     entities: list[EntityRefIn]
+    #: Transcript segments; enables the LLM entity review (it needs the context lines).
+    segments: list[ChunkIn] = []
+    source_label: str | None = None
+    #: Force the review on/off; null = server default (ENTITY_REVIEW and an OpenAI key).
+    review: bool | None = None
 
 
 class TimelineRequest(BaseModel):

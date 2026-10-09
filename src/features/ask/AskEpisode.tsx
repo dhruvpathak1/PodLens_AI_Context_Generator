@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
-import { formatTimestamp } from '../../shared/format'
+import { Panel } from '../../shared/components/Panel'
+import { formatClock } from '../../shared/format'
+import { ArrowUpIcon, StopIcon } from '../../shared/icons'
 import type { ChatMessage } from './useEpisodeChat'
 
 type Props = {
   messages: ChatMessage[]
   busy: boolean
-  suggestions: string[]
+  /** False until an episode is loaded; the box is disabled with an explanation. */
+  enabled: boolean
   onAsk: (question: string) => void
   onStop: () => void
   onClear: () => void
@@ -17,78 +20,128 @@ type Props = {
 const MAX_LEN = 500
 
 /**
- * Ask tab: suggested questions, the conversation (answers with clickable citations),
- * and the question box (Enter sends, Shift+Enter adds a new line).
+ * Right column, bottom: "Ask the episode". The conversation (answers with clickable citations)
+ * on the page's dotted background, and the question box pinned to the bottom (Enter sends,
+ * Shift+Enter adds a line).
  */
-export function AskEpisode({ messages, busy, suggestions, onAsk, onStop, onClear, onCite }: Props) {
+export function AskEpisode({ messages, busy, enabled, onAsk, onStop, onClear, onCite }: Props) {
   const [draft, setDraft] = useState('')
   const listRef = useRef<HTMLDivElement>(null)
 
   // Keep the newest message in view.
   useEffect(() => {
-    const el = listRef.current
+    const el = listRef.current?.closest('.panel__body')
     if (el) el.scrollTop = el.scrollHeight
   }, [messages.length, busy])
 
   /** Send a trimmed, non-empty question and clear the box. */
   const submit = (q: string) => {
     const question = q.trim()
-    if (!question || busy) return
+    if (!question || busy || !enabled) return
     onAsk(question)
     setDraft('')
   }
 
   return (
-    <section className="ask" aria-label="Ask the episode">
-      <div className="ask__list" ref={listRef} aria-live="polite">
+    <Panel
+      className="panel--chat"
+      title="Ask the episode"
+      actions={
+        messages.length > 0 && !busy ? (
+          <button type="button" className="link-quiet" onClick={onClear}>
+            Clear
+          </button>
+        ) : null
+      }
+      footer={
+        <form
+          className="ask-bar"
+          onSubmit={(e) => {
+            e.preventDefault()
+            submit(draft)
+          }}
+        >
+          <textarea
+            className="ask-bar__input"
+            value={draft}
+            maxLength={MAX_LEN}
+            rows={1}
+            disabled={!enabled}
+            placeholder={enabled ? 'Ask a question' : 'Load an episode to ask questions'}
+            onChange={(e) => setDraft(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault()
+                submit(draft)
+              }
+            }}
+            aria-label="Question about this episode"
+          />
+          {busy ? (
+            <button type="button" className="ask-bar__send" onClick={onStop} aria-label="Stop answering">
+              <StopIcon />
+            </button>
+          ) : (
+            <button type="submit" className="ask-bar__send" disabled={!draft.trim() || !enabled} aria-label="Send question">
+              <ArrowUpIcon />
+            </button>
+          )}
+        </form>
+      }
+    >
+      <div className="ask" ref={listRef} aria-live="polite">
         {messages.length === 0 ? (
-          <div className="ask__intro">
-            <p className="ask__intro-lead">
-              Ask anything about this episode. Answers come only from the transcript, with timestamps you can play.
-            </p>
-            <div className="ask__suggestions">
-              {suggestions.map((s) => (
-                <button key={s} type="button" className="ask__suggestion" onClick={() => submit(s)} disabled={busy}>
-                  {s}
-                </button>
-              ))}
-            </div>
-          </div>
+          <p className="empty">
+            {enabled
+              ? 'Ask anything about this episode. Answers come only from the transcript, with timestamps you can play.'
+              : 'Questions about the episode are answered here, with the moments they come from.'}
+          </p>
         ) : (
           messages.map((m) =>
             m.role === 'user' ? (
-              <div key={m.id} className="ask__msg ask__msg--user">
+              <div key={m.id} className="msg msg--user">
                 {m.content}
               </div>
             ) : m.role === 'error' ? (
-              <div key={m.id} className="ask__msg ask__msg--error" role="alert">
+              <div key={m.id} className="msg msg--error" role="alert">
                 {m.content}
               </div>
             ) : (
-              <div key={m.id} className={`ask__msg ask__msg--bot${m.found ? '' : ' ask__msg--notfound'}`}>
-                <p className="ask__answer">{m.content}</p>
+              <div key={m.id} className={`msg msg--bot${m.found ? '' : ' msg--notfound'}`}>
+                <p className="msg__text">{m.content}</p>
                 {m.citations.length > 0 ? (
-                  <ul className="ask__cites" aria-label="Sources in the episode">
+                  <ul className="cites" aria-label="Moments in the episode">
                     {m.citations.map((c) => (
                       <li key={c.start_sec}>
-                        <button type="button" className="ask__cite" onClick={() => onCite(c.start_sec, c.quote)} title="Play this moment">
-                          <span className="ask__cite-time">▶ {formatTimestamp(c.start_sec)}</span>
-                          <span className="ask__cite-quote">“{c.quote}”</span>
+                        <button type="button" className="cite" onClick={() => onCite(c.start_sec, c.quote)} title="Play this moment">
+                          <span className="cite__time num">{formatClock(c.start_sec)}</span>
+                          <span className="cite__quote">{c.quote}</span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {m.followups.length > 0 ? (
+                  <ul className="followups" aria-label="Questions with answers">
+                    {m.followups.map((q) => (
+                      <li key={q}>
+                        <button type="button" className="followup" onClick={() => submit(q)} disabled={busy}>
+                          {q}
                         </button>
                       </li>
                     ))}
                   </ul>
                 ) : null}
                 {m.unverified ? (
-                  <p className="ask__warn">Could not match this answer to a moment in the transcript. Treat with care.</p>
+                  <p className="msg__warn">This answer could not be matched to a moment in the transcript.</p>
                 ) : null}
               </div>
             )
           )
         )}
         {busy ? (
-          <div className="ask__msg ask__msg--bot ask__msg--pending" aria-label="Answering">
-            <span className="ask__dots" aria-hidden>
+          <div className="msg msg--bot msg--pending" aria-label="Answering">
+            <span className="dots" aria-hidden>
               <i />
               <i />
               <i />
@@ -96,48 +149,6 @@ export function AskEpisode({ messages, busy, suggestions, onAsk, onStop, onClear
           </div>
         ) : null}
       </div>
-
-      <form
-        className="ask__form"
-        onSubmit={(e) => {
-          e.preventDefault()
-          submit(draft)
-        }}
-      >
-        <textarea
-          className="ask__input"
-          value={draft}
-          maxLength={MAX_LEN}
-          rows={2}
-          placeholder="Ask about this episode…"
-          onChange={(e) => setDraft(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-              e.preventDefault()
-              submit(draft)
-            }
-          }}
-          aria-label="Question about this episode"
-        />
-        <div className="ask__actions">
-          {messages.length > 0 && !busy ? (
-            <button type="button" className="ask__clear" onClick={onClear}>
-              Clear
-            </button>
-          ) : (
-            <span />
-          )}
-          {busy ? (
-            <button type="button" className="btn btn--ghost btn--sm" onClick={onStop}>
-              Stop
-            </button>
-          ) : (
-            <button type="submit" className="btn btn--primary btn--sm" disabled={!draft.trim()}>
-              Ask
-            </button>
-          )}
-        </div>
-      </form>
-    </section>
+    </Panel>
   )
 }

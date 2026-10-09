@@ -2,7 +2,7 @@
  "schema_version": 1,
  "slug": "the-history-of-earth",
  "title": "The History of Earth",
- "description": "4.5 billion years, from formation to the first humans.",
+ "description": "",
  "credit": "Audio: Dhruv Pathak",
  "audio": "audio.mp3",
  "duration_sec": 243.04,
@@ -252,7 +252,7 @@
  ],
  "document": {
   "schema_version": 1,
-  "extracted_at": "2026-10-09T04:08:22.014717+00:00",
+  "extracted_at": "2026-10-09T06:11:16.624901+00:00",
   "backend": "claude",
   "source_label": "The History of Earth",
   "chunks": [
@@ -538,15 +538,17 @@
     "end_sec": 11.455,
     "chunk_id": 2,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Earth planet"
    },
    {
     "type": "MISC",
-    "text": "great oxidation event",
+    "text": "Great Oxidation Event",
     "start_sec": 46.31,
     "end_sec": 47.417,
     "chunk_id": 8,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Great Oxidation Event"
    },
    {
     "type": "MISC",
@@ -554,7 +556,8 @@
     "start_sec": 53.421,
     "end_sec": 54.652,
     "chunk_id": 9,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Cambrian explosion"
    },
    {
     "type": "PLACE",
@@ -563,7 +566,8 @@
     "end_sec": 71.792,
     "chunk_id": 12,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Earth planet"
    },
    {
     "type": "MISC",
@@ -571,7 +575,8 @@
     "start_sec": 72.898,
     "end_sec": 74.321,
     "chunk_id": 12,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Permian extinction"
    },
    {
     "type": "MISC",
@@ -579,7 +584,8 @@
     "start_sec": 84.3,
     "end_sec": 85.05,
     "chunk_id": 14,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Mesozoic Era"
    },
    {
     "type": "MISC",
@@ -587,7 +593,8 @@
     "start_sec": 88.87,
     "end_sec": 90.02,
     "chunk_id": 15,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Triassic Period"
    },
    {
     "type": "MISC",
@@ -595,7 +602,8 @@
     "start_sec": 96.763,
     "end_sec": 97.819,
     "chunk_id": 16,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Jurassic Period"
    },
    {
     "type": "PLACE",
@@ -604,7 +612,8 @@
     "end_sec": 105.46,
     "chunk_id": 17,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Pangaea supercontinent"
    },
    {
     "type": "MISC",
@@ -612,7 +621,8 @@
     "start_sec": 106.64,
     "end_sec": 108.0,
     "chunk_id": 18,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Cretaceous Period"
    },
    {
     "type": "PLACE",
@@ -621,7 +631,8 @@
     "end_sec": 127.285,
     "chunk_id": 21,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Mexico country"
    },
    {
     "type": "MISC",
@@ -629,7 +640,8 @@
     "start_sec": 145.928,
     "end_sec": 146.845,
     "chunk_id": 24,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Mesozoic Era"
    },
    {
     "type": "PLACE",
@@ -638,7 +650,8 @@
     "end_sec": 163.541,
     "chunk_id": 26,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Africa continent"
    },
    {
     "type": "MISC",
@@ -646,7 +659,8 @@
     "start_sec": 166.815,
     "end_sec": 167.081,
     "chunk_id": 27,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Homo genus"
    },
    {
     "type": "MISC",
@@ -654,7 +668,8 @@
     "start_sec": 172.909,
     "end_sec": 173.735,
     "chunk_id": 28,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Homo erectus"
    },
    {
     "type": "PLACE",
@@ -663,7 +678,8 @@
     "end_sec": 176.557,
     "chunk_id": 28,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Africa continent"
    },
    {
     "type": "PLACE",
@@ -672,7 +688,8 @@
     "end_sec": 177.451,
     "chunk_id": 28,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Eurasia continent"
    },
    {
     "type": "MISC",
@@ -680,7 +697,8 @@
     "start_sec": 180.507,
     "end_sec": 181.446,
     "chunk_id": 29,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Homo sapiens"
    },
    {
     "type": "PLACE",
@@ -689,31 +707,35 @@
     "end_sec": 183.167,
     "chunk_id": 29,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Africa continent"
    },
    {
     "type": "MISC",
-    "text": "meanderthals",
+    "text": "Neanderthals",
     "start_sec": 195.169,
     "end_sec": 195.868,
     "chunk_id": 31,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Neanderthals"
    },
    {
     "type": "MISC",
-    "text": "denisavans",
+    "text": "Denisovans",
     "start_sec": 196.159,
     "end_sec": 196.742,
     "chunk_id": 31,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Denisovans"
    },
    {
     "type": "MISC",
-    "text": "industrial revolution",
+    "text": "Industrial Revolution",
     "start_sec": 211.654,
     "end_sec": 213.182,
     "chunk_id": 34,
-    "source": "claude"
+    "source": "claude",
+    "search_query": "Industrial Revolution"
    },
    {
     "type": "PLACE",
@@ -722,7 +744,8 @@
     "end_sec": 218.717,
     "chunk_id": 35,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Earth planet"
    },
    {
     "type": "PLACE",
@@ -731,7 +754,8 @@
     "end_sec": 234.857,
     "chunk_id": 37,
     "source": "claude",
-    "original_label": "LOC"
+    "original_label": "LOC",
+    "search_query": "Earth planet"
    }
   ]
  },
@@ -751,8 +775,8 @@
    },
    "location": null,
    "unsplash": {
-    "image_url": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxFYXJ0aHxlbnwwfDB8fHwxNzkxNTE4OTAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "thumb_url": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxFYXJ0aHxlbnwwfDB8fHwxNzkxNTE4OTAyfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_url": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxFYXJ0aHxlbnwwfDB8fHwxNzkxNTI2MjgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxFYXJ0aHxlbnwwfDB8fHwxNzkxNTI2MjgzfDA&ixlib=rb-4.1.0&q=80&w=400",
     "alt": "Earth with clouds above the African continent",
     "photographer_name": "NASA",
     "photographer_url": "https://unsplash.com/@nasa",
@@ -760,9 +784,9 @@
    }
   },
   {
-   "id": "d848126175abfc23",
+   "id": "1dd01f40c8f6d72a",
    "type": "MISC",
-   "text": "great oxidation event",
+   "text": "Great Oxidation Event",
    "start_sec": 46.31,
    "end_sec": 47.417,
    "chunk_id": 8,
@@ -773,14 +797,7 @@
     "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Precambrian_Evolution_of_Life.png/330px-Precambrian_Evolution_of_Life.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
    },
    "location": null,
-   "unsplash": {
-    "image_url": "https://images.unsplash.com/photo-1783646080254-d1dd44a6eef8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxHcmVhdCUyME94aWRhdGlvbiUyMEV2ZW50fGVufDB8MHx8fDE3OTE1MTg5MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "thumb_url": "https://images.unsplash.com/photo-1783646080254-d1dd44a6eef8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxHcmVhdCUyME94aWRhdGlvbiUyMEV2ZW50fGVufDB8MHx8fDE3OTE1MTg5MDN8MA&ixlib=rb-4.1.0&q=80&w=400",
-    "alt": "Pink sphere with a wavy line and \"quantum\" text background",
-    "photographer_name": "Brecht Corbeel",
-    "photographer_url": "https://unsplash.com/@brechtcorbeel",
-    "unsplash_url": "https://unsplash.com/photos/pink-sphere-with-a-wavy-line-and-quantum-text-background-BWIHrCj5P5g"
-   }
+   "unsplash": null
   },
   {
    "id": "5f0b54b60229ab60",
@@ -796,14 +813,7 @@
     "thumbnail": null
    },
    "location": null,
-   "unsplash": {
-    "image_url": "https://images.unsplash.com/photo-1588281345136-9893252095bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDYW1icmlhbiUyMGV4cGxvc2lvbnxlbnwwfDB8fHwxNzkxNTE4OTA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "thumb_url": "https://images.unsplash.com/photo-1588281345136-9893252095bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDYW1icmlhbiUyMGV4cGxvc2lvbnxlbnwwfDB8fHwxNzkxNTE4OTA0fDA&ixlib=rb-4.1.0&q=80&w=400",
-    "alt": "A series of large orange and yellow fireballs erupting against a clear blue sky",
-    "photographer_name": "Luke Jernejcic",
-    "photographer_url": "https://unsplash.com/@jernejcic",
-    "unsplash_url": "https://unsplash.com/photos/fireballs-erupting-against-blue-sky-Oi31uKsnM1Q"
-   }
+   "unsplash": null
   },
   {
    "id": "3a51d281d606684f",
@@ -835,14 +845,7 @@
     "thumbnail": null
    },
    "location": null,
-   "unsplash": {
-    "image_url": "https://images.unsplash.com/photo-1583307359900-dbefeb18e3cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXNvem9pY3xlbnwwfDB8fHwxNzkxNTE4OTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "thumb_url": "https://images.unsplash.com/photo-1583307359900-dbefeb18e3cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXNvem9pY3xlbnwwfDB8fHwxNzkxNTE4OTA2fDA&ixlib=rb-4.1.0&q=80&w=400",
-    "alt": "brown horse running on brown field during daytime",
-    "photographer_name": "Leo_Visions",
-    "photographer_url": "https://unsplash.com/@leo_visions_",
-    "unsplash_url": "https://unsplash.com/photos/brown-horse-running-on-brown-field-during-daytime-XqzLUKzg49c"
-   }
+   "unsplash": null
   },
   {
    "id": "b575acac9b5aec72",
@@ -859,8 +862,8 @@
    },
    "location": null,
    "unsplash": {
-    "image_url": "https://images.unsplash.com/photo-1606108631580-78be7884b0f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxUcmlhc3NpY3xlbnwwfDB8fHwxNzkxNTE4OTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "thumb_url": "https://images.unsplash.com/photo-1606108631580-78be7884b0f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxUcmlhc3NpY3xlbnwwfDB8fHwxNzkxNTE4OTA2fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_url": "https://images.unsplash.com/photo-1606108631580-78be7884b0f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxUcmlhc3NpY3xlbnwwfDB8fHwxNzkxNTI2Mjg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1606108631580-78be7884b0f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxUcmlhc3NpY3xlbnwwfDB8fHwxNzkxNTI2Mjg2fDA&ixlib=rb-4.1.0&q=80&w=400",
     "alt": "green and brown dinosaur statue",
     "photographer_name": "Nico Smit",
     "photographer_url": "https://unsplash.com/@nicosmit99",
@@ -881,14 +884,7 @@
     "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mollweide_Paleographic_Map_of_Earth%2C_170_Ma_%28Bajocian_Age%29.png/330px-Mollweide_Paleographic_Map_of_Earth%2C_170_Ma_%28Bajocian_Age%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
    },
    "location": null,
-   "unsplash": {
-    "image_url": "https://images.unsplash.com/photo-1525877442103-5ddb2089b2bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxKdXJhc3NpY3xlbnwwfDB8fHwxNzkxNTE4OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "thumb_url": "https://images.unsplash.com/photo-1525877442103-5ddb2089b2bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxKdXJhc3NpY3xlbnwwfDB8fHwxNzkxNTE4OTA3fDA&ixlib=rb-4.1.0&q=80&w=400",
-    "alt": "A Tyrannosaurus rex model in a misty forest with tall eucalyptus trees",
-    "photographer_name": "Fausto García-Menéndez",
-    "photographer_url": "https://unsplash.com/@faustogarmen",
-    "unsplash_url": "https://unsplash.com/photos/tyrannosaurus-rex-model-in-misty-forest-hYKG311mff8"
-   }
+   "unsplash": null
   },
   {
    "id": "3407b5de4cce8ddc",
@@ -897,12 +893,7 @@
    "start_sec": 105.04,
    "end_sec": 105.46,
    "chunk_id": 17,
-   "wikipedia": {
-    "title": "Pangaea",
-    "extract": "Pangaea or Pangea was a supercontinent that existed during the late Paleozoic and early Mesozoic eras. It assembled from the earlier continental units of Gondwana, Euramerica and Siberia during the Carboniferous period approximately 335 million years ago, and began to break apart about 175 million years ago, at the beginning of the Jurassic. Pangaea was C-shaped, with the bulk of its mass stretching between Earth's northern and southern polar regions and surrounded by the superocean Panthalassa and the Paleo-Tethys and subsequent Tethys Oceans. Pangaea is the most recent supercontinent to have existed and was the first to be reconstructed by geologists.",
-    "url": "https://en.wikipedia.org/wiki/Pangaea",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png/330px-Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-   },
+   "wikipedia": null,
    "location": null,
    "unsplash": null
   },
@@ -921,8 +912,8 @@
    },
    "location": null,
    "unsplash": {
-    "image_url": "https://images.unsplash.com/photo-1787061673826-7da45911713c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDcmV0YWNlb3VzfGVufDB8MHx8fDE3OTE1MTg5MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "thumb_url": "https://images.unsplash.com/photo-1787061673826-7da45911713c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDcmV0YWNlb3VzfGVufDB8MHx8fDE3OTE1MTg5MDh8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_url": "https://images.unsplash.com/photo-1787061673826-7da45911713c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDcmV0YWNlb3VzfGVufDB8MHx8fDE3OTE1MjYyODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1787061673826-7da45911713c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDcmV0YWNlb3VzfGVufDB8MHx8fDE3OTE1MjYyODh8MA&ixlib=rb-4.1.0&q=80&w=400",
     "alt": "A sculpted model of a Stegosaurus with large dorsal plates on a wooden base",
     "photographer_name": "Smithsonian",
     "photographer_url": "https://unsplash.com/@smithsonian",
@@ -944,8 +935,8 @@
    },
    "location": null,
    "unsplash": {
-    "image_url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXhpY298ZW58MHwwfHx8MTc5MTUxODkwOXww&ixlib=rb-4.1.0&q=80&w=1080",
-    "thumb_url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXhpY298ZW58MHwwfHx8MTc5MTUxODkwOXww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXhpY298ZW58MHwwfHx8MTc5MTUyNjI4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXhpY298ZW58MHwwfHx8MTc5MTUyNjI4OXww&ixlib=rb-4.1.0&q=80&w=400",
     "alt": "people standing on corner road near concrete buildings during daytime",
     "photographer_name": "Jezael Melgoza",
     "photographer_url": "https://unsplash.com/@jezar",
@@ -967,8 +958,8 @@
    },
    "location": null,
    "unsplash": {
-    "image_url": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBZnJpY2F8ZW58MHwwfHx8MTc5MTUxODkxMHww&ixlib=rb-4.1.0&q=80&w=1080",
-    "thumb_url": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBZnJpY2F8ZW58MHwwfHx8MTc5MTUxODkxMHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_url": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBZnJpY2F8ZW58MHwwfHx8MTc5MTUyNjI5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBZnJpY2F8ZW58MHwwfHx8MTc5MTUyNjI5MHww&ixlib=rb-4.1.0&q=80&w=400",
     "alt": "tree between green land during golden hour",
     "photographer_name": "Damian Patkowski",
     "photographer_url": "https://unsplash.com/@damianpatkowski",
@@ -1005,7 +996,14 @@
     "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Java_Man_holotype.jpg/330px-Java_Man_holotype.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
    },
    "location": null,
-   "unsplash": null
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1673251672498-237773856ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxIb21vJTIwZXJlY3R1c3xlbnwwfDB8fHwxNzkxNTI2MjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1673251672498-237773856ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxIb21vJTIwZXJlY3R1c3xlbnwwfDB8fHwxNzkxNTI2MjkxfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "a close up of a human skull on a black background",
+    "photographer_name": "Aldo Hernandez",
+    "photographer_url": "https://unsplash.com/@aldohdzel",
+    "unsplash_url": "https://unsplash.com/photos/a-close-up-of-a-human-skull-on-a-black-background-j-dJxx_oyy4"
+   }
   },
   {
    "id": "1672ed432a20b4b3",
@@ -1021,7 +1019,14 @@
     "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Eurasia_%28orthographic_projection%29.svg/330px-Eurasia_%28orthographic_projection%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
    },
    "location": null,
-   "unsplash": null
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1699030751002-4ffed3a8aeef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxFdXJhc2lhfGVufDB8MHx8fDE3OTE1MjYyOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1699030751002-4ffed3a8aeef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxFdXJhc2lhfGVufDB8MHx8fDE3OTE1MjYyOTJ8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "a group of people walking down a street next to tall buildings",
+    "photographer_name": "Anton Fotoedov",
+    "photographer_url": "https://unsplash.com/@fotoedov",
+    "unsplash_url": "https://unsplash.com/photos/a-group-of-people-walking-down-a-street-next-to-tall-buildings-PSOjMnvO-ic"
+   }
   },
   {
    "id": "59a6f2a1c368ed9c",
@@ -1037,39 +1042,58 @@
     "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Akha_cropped_hires.JPG/330px-Akha_cropped_hires.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
    },
    "location": null,
-   "unsplash": null
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxIdW1hbnxlbnwwfDB8fHwxNzkxNTI2MjkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxIdW1hbnxlbnwwfDB8fHwxNzkxNTI2MjkzfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "shallow focus photography of woman outdoor during day",
+    "photographer_name": "Christopher Campbell",
+    "photographer_url": "https://unsplash.com/@chrisjoelcampbell",
+    "unsplash_url": "https://unsplash.com/photos/shallow-focus-photography-of-woman-outdoor-during-day-rDEOVtE7vOs"
+   }
   },
   {
-   "id": "04e69b6364683744",
+   "id": "5d1a91e21db20e86",
    "type": "MISC",
-   "text": "meanderthals",
+   "text": "Neanderthals",
    "start_sec": 195.169,
    "end_sec": 195.868,
    "chunk_id": 31,
    "wikipedia": {
-    "title": "Meanderthal",
-    "extract": "Meanderthal is the second full-length studio album by American heavy metal band Torche. It was released on April 8, 2008.",
-    "url": "https://en.wikipedia.org/wiki/Meanderthal",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/52/Torche_Meanderthal.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    "title": "Neanderthal",
+    "extract": "Neanderthals are an extinct group of archaic humans who inhabited Europe and Western and Central Asia during the Middle to Late Pleistocene. The timeline of Neanderthal extinction is uncertain, but generally considered to be complete in Asia and most of Europe by 40,000 years ago, coinciding and possibly related to the arrival of Cro-Magnons into Europe. Neanderthals seem to have survived longer in some parts of the Iberian Peninsula.",
+    "url": "https://en.wikipedia.org/wiki/Neanderthal",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Neanderthal_at_AMNH.jpg/330px-Neanderthal_at_AMNH.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1557000385-a78203b4b259?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxOZWFuZGVydGhhbHxlbnwwfDB8fHwxNzkxNTI2MjkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1557000385-a78203b4b259?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxOZWFuZGVydGhhbHxlbnwwfDB8fHwxNzkxNTI2MjkzfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "man holding spear wall painting",
+    "photographer_name": "Crawford Jolly",
+    "photographer_url": "https://unsplash.com/@crawford",
+    "unsplash_url": "https://unsplash.com/photos/man-holding-spear-wall-painting-3IxuF9MCjkA"
+   }
+  },
+  {
+   "id": "895a709b94b7493c",
+   "type": "MISC",
+   "text": "Denisovans",
+   "start_sec": 196.159,
+   "end_sec": 196.742,
+   "chunk_id": 31,
+   "wikipedia": {
+    "title": "Denisovan",
+    "extract": "The Denisovans or Denisova hominins are an extinct species or subspecies of archaic human that ranged across Asia during the Middle to Late Pleistocene, approximately 200,000–32,000 years ago. Most of what is known about Denisovans comes from DNA evidence. While many recent fossils have been found and tentatively identified as Denisovan, the first Denisovans discovered were known from few physical remains. Consequently, no formal species name has been established. However, an analysis of the mitochondrial DNA and endogenous proteins from the Harbin cranium, which had been given the name Homo longi, showed that this skull represents a Denisovan.\nIn a study published in September 2025, remains from six additional sites in China including the one-million-year-old Yunxian man were proposed to be related to the Homo longi lineage with the genetically confirmed Denisovans. Other authors have included other Denisovan remains, like Penghu 1 and the Xiahe mandible, within the species Homo juluensis.",
+    "url": "https://en.wikipedia.org/wiki/Denisovan",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Homo_longi_holotype.jpg/330px-Homo_longi_holotype.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
    },
    "location": null,
    "unsplash": null
   },
   {
-   "id": "1091808bd011e8a3",
+   "id": "197619751fa1041c",
    "type": "MISC",
-   "text": "denisavans",
-   "start_sec": 196.159,
-   "end_sec": 196.742,
-   "chunk_id": 31,
-   "wikipedia": null,
-   "location": null,
-   "unsplash": null
-  },
-  {
-   "id": "634caea43f3ff8a6",
-   "type": "MISC",
-   "text": "industrial revolution",
+   "text": "Industrial Revolution",
    "start_sec": 211.654,
    "end_sec": 213.182,
    "chunk_id": 34,
@@ -1080,16 +1104,43 @@
     "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Powerloom_weaving_in_1835.jpg/330px-Powerloom_weaving_in_1835.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
    },
    "location": null,
-   "unsplash": null
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1516937941344-00b4e0337589?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxJbmR1c3RyaWFsJTIwUmV2b2x1dGlvbnxlbnwwfDB8fHwxNzkxNTI2Mjk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1516937941344-00b4e0337589?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxJbmR1c3RyaWFsJTIwUmV2b2x1dGlvbnxlbnwwfDB8fHwxNzkxNTI2Mjk0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "factories with smoke under cloudy sky",
+    "photographer_name": "Patrick Hendry",
+    "photographer_url": "https://unsplash.com/@worldsbetweenlines",
+    "unsplash_url": "https://unsplash.com/photos/factories-with-smoke-under-cloudy-sky-6xeDIZgoPaw"
+   }
   }
  ],
  "unsplash_enabled": true,
+ "review": {
+  "fixed": [
+   {
+    "name": "meanderthals",
+    "to": "Neanderthals",
+    "type": "MISC"
+   },
+   {
+    "name": "denisavans",
+    "to": "Denisovans",
+    "type": "MISC"
+   }
+  ],
+  "merged": [],
+  "dropped": [],
+  "kept": 18,
+  "model": "gpt-5.4-mini",
+  "failed_batches": 0,
+  "mismatches_removed": 6
+ },
  "timeline": {
   "model": "gpt-5.4-mini",
   "events": [
    {
-    "title": "Earth's deep history overview",
-    "description": "The episode frames Earth's 4.5-billion-year history as a 24-hour clock, emphasizing how brief human existence is by comparison. This is the central framing concept for the whole excerpt.",
+    "title": "Earth's deep history as a 24-hour clock",
+    "description": "The episode opens by asking listeners to imagine compressing Earth's entire history into a single 24-hour clock. It is a framing concept used to explain the scale of geologic and human time.",
     "category": "OTHER",
     "date_label": null,
     "year": null,
@@ -1103,7 +1154,7 @@
    },
    {
     "title": "Earth forms from solar dust",
-    "description": "Earth formed from swirling dust and rock left over from the birth of the sun in the early solar system. The speaker places this at the beginning of the planet's history, 4.5 billion years ago.",
+    "description": "Earth formed from swirling dust and rock left over from the birth of the sun. The transcript places this at the beginning of the planet's history, about 4.5 billion years ago.",
     "category": "EVENT",
     "date_label": "4.5 billion years ago",
     "year": -4500000000,
@@ -1116,8 +1167,8 @@
     "id": "ev0001"
    },
    {
-    "title": "First life emerges",
-    "description": "Around 3.8 billion years ago, the young planet cooled enough for oceans to form and the first microscopic single-celled life appeared in deep-sea hydrothermal vents. This is described as the start of life on Earth.",
+    "title": "First microscopic life emerges",
+    "description": "The first microscopic single-celled life emerged in deep-sea hydrothermal vents after the young planet cooled and oceans formed. This is presented as the start of life on Earth, around 3.8 billion years ago.",
     "category": "EVENT",
     "date_label": "around 3.8 billion years ago",
     "year": -3800000000,
@@ -1130,8 +1181,8 @@
     "id": "ev0002"
    },
    {
-    "title": "Great oxidation event begins",
-    "description": "Cyanobacteria started producing oxygen through photosynthesis around 2.4 billion years ago, triggering the great oxidation event. The transcript says this permanently changed Earth's atmosphere.",
+    "title": "Great Oxidation Event begins",
+    "description": "Cyanobacteria began producing oxygen through photosynthesis, triggering the Great Oxidation Event and permanently changing Earth's atmosphere. The transcript dates this to around 2.4 billion years ago.",
     "category": "EVENT",
     "date_label": "around 2.4 billion years ago",
     "year": -2400000000,
@@ -1139,14 +1190,14 @@
     "mentioned_at_sec": 38.8,
     "entities": [
      "Earth",
-     "great oxidation event"
+     "Great Oxidation Event"
     ],
     "importance": 3,
     "id": "ev0003"
    },
    {
     "title": "Cambrian explosion diversifies life",
-    "description": "Around 540 million years ago, the Cambrian explosion dramatically diversified life in the oceans. Complex creatures, shells, and early vertebrates appeared.",
+    "description": "The Cambrian explosion marks a dramatic diversification of life in the oceans, with complex creatures, shells, and early vertebrates appearing. The transcript dates this to about 540 million years ago.",
     "category": "EVENT",
     "date_label": "540 million years ago",
     "year": -540000000,
@@ -1161,7 +1212,7 @@
    },
    {
     "title": "Early tetrapods move onto land",
-    "description": "By 375 million years ago, early tetrapods crawled out of the sea and onto land. The transcript presents this as an important step in vertebrate evolution.",
+    "description": "By 375 million years ago, early tetrapods crawled out of the sea and onto land. The transcript treats this as a major step in vertebrate evolution.",
     "category": "EVENT",
     "date_label": "375 million years ago",
     "year": -375000000,
@@ -1174,7 +1225,7 @@
     "id": "ev0005"
    },
    {
-    "title": "Permian extinction wipes out marine species",
+    "title": "Permian extinction wipes out species",
     "description": "Around 252 million years ago, Earth suffered the Permian extinction, described as the worst mass extinction in planetary history. More than 90% of marine species were wiped out.",
     "category": "EVENT",
     "date_label": "around 252 million years ago",
@@ -1190,7 +1241,7 @@
    },
    {
     "title": "Mesozoic era begins",
-    "description": "After the Permian extinction, the Mesozoic era rose as a new age of dinosaurs. The transcript frames it as the era that followed the catastrophic reset.",
+    "description": "After the Permian extinction, the Mesozoic era rose as a new age, better known as the age of dinosaurs. The transcript frames it as the rebound from the earlier extinction.",
     "category": "EVENT",
     "date_label": "after 252 million years ago",
     "year": -252000000,
@@ -1203,8 +1254,8 @@
     "id": "ev0007"
    },
    {
-    "title": "Dinosaurs arise in Triassic",
-    "description": "Starting in the Triassic period, roughly 245 million years ago, early reptiles evolved into the first dinosaurs. This marks the start of the dinosaur age in the transcript.",
+    "title": "Triassic dinosaurs evolve",
+    "description": "During the Triassic period, roughly 245 million years ago, early reptiles evolved into the first dinosaurs. This marks the start of dinosaur dominance in the Mesozoic.",
     "category": "EVENT",
     "date_label": "roughly 245 million years ago",
     "year": -245000000,
@@ -1217,8 +1268,8 @@
     "id": "ev0008"
    },
    {
-    "title": "Jurassic giants roam Pangaea",
-    "description": "During the Jurassic period, around 200 million years ago, giant sauropods and predators roamed the supercontinent Pangaea. The speaker uses this to describe dinosaur life on the ancient supercontinent.",
+    "title": "Jurassic dinosaurs spread across Pangaea",
+    "description": "In the Jurassic period, around 200 million years ago, giant sauropods and predators roamed the supercontinent Pangaea. The transcript presents this as a peak dinosaur landscape.",
     "category": "EVENT",
     "date_label": "around 200 million years ago",
     "year": -200000000,
@@ -1232,11 +1283,11 @@
     "id": "ev0009"
    },
    {
-    "title": "Cretaceous dinosaurs dominate",
-    "description": "In the Cretaceous period, from 145 to 66 million years ago, iconic dinosaurs like Tyrannosaurus rex and Triceratops ruled the land while flowering plants first bloomed. The transcript highlights this as the last great dinosaur era before extinction.",
+    "title": "Cretaceous giants rule",
+    "description": "During the Cretaceous period, between 145 and 66 million years ago, giants like Tyrannosaurus Rex and Triceratops ruled while flowering plants appeared for the first time. This is described as the last major dinosaur age.",
     "category": "EVENT",
     "date_label": "145 to 66 million years ago",
-    "year": -105500000,
+    "year": -145000000,
     "month": null,
     "mentioned_at_sec": 106.08,
     "entities": [
@@ -1246,24 +1297,25 @@
     "id": "ev0010"
    },
    {
-    "title": "Asteroid strikes Mexico",
-    "description": "Sixty-six million years ago, a six-mile-wide asteroid slammed into modern-day Mexico. The impact triggered wildfires, megatsunamis, and darkness that ended the era of non-avian dinosaurs.",
+    "title": "Asteroid ends dinosaur era",
+    "description": "Sixty-six million years ago, a six-mile-wide asteroid struck modern-day Mexico, causing wildfires, megatsunamis, and darkness that ended the era of non-avian dinosaurs. The impact cleared the way for mammals to expand.",
     "category": "EVENT",
     "date_label": "66 million years ago",
     "year": -66000000,
     "month": null,
     "mentioned_at_sec": 119.11999999999999,
     "entities": [
+     "Earth",
      "Mexico"
     ],
     "importance": 3,
     "id": "ev0011"
    },
    {
-    "title": "Mammals diversify after dinosaur extinction",
-    "description": "After the dinosaurs disappeared, mammals expanded in size and diversity over the last 66 million years. The transcript says this led to whales, primates, big cats, and grasslands.",
+    "title": "Mammals diversify after dinosaurs",
+    "description": "After the dinosaur extinction, mammals expanded in size and diversity over the last 66 million years. The transcript says this led to whales, primates, big cats, and grasslands.",
     "category": "EVENT",
-    "date_label": "after 66 million years ago",
+    "date_label": "past 66 million years",
     "year": -66000000,
     "month": null,
     "mentioned_at_sec": 144.4,
@@ -1274,8 +1326,8 @@
     "id": "ev0012"
    },
    {
-    "title": "Hominin split in Africa",
-    "description": "About six million years ago, the speaker says human ancestors split from a common primate ancestor in Africa. This is presented as the beginning of the hominin line.",
+    "title": "Hominin split from primates",
+    "description": "About six million years ago, hominin ancestors split from a common primate ancestor in Africa. The transcript identifies this as a key separation in human evolution.",
     "category": "EVENT",
     "date_label": "six million years ago",
     "year": -6000000,
@@ -1289,8 +1341,8 @@
    },
    {
     "title": "Genus Homo emerges",
-    "description": "Around 2.8 million years ago, the genus Homo emerged and began making primitive stone tools. This is a key step in human evolution.",
-    "category": "PERSON",
+    "description": "Around 2.8 million years ago, the genus Homo emerged and began crafting primitive stone tools. This is presented as an early step in human ancestry.",
+    "category": "EVENT",
     "date_label": "around 2.8 million years ago",
     "year": -2800000,
     "month": null,
@@ -1302,9 +1354,9 @@
     "id": "ev0014"
    },
    {
-    "title": "Homo erectus spreads out of Africa",
-    "description": "By 1.8 million years ago, Homo erectus had mastered fire and migrated from Africa into Eurasia. The transcript presents this as an early human expansion beyond Africa.",
-    "category": "PERSON",
+    "title": "Homo erectus leaves Africa",
+    "description": "By 1.8 million years ago, Homo erectus had mastered fire and migrated out of Africa into Eurasia. The transcript treats this as a major human migration.",
+    "category": "EVENT",
     "date_label": "by 1.8 million years ago",
     "year": -1800000,
     "month": null,
@@ -1318,8 +1370,8 @@
     "id": "ev0015"
    },
    {
-    "title": "Homo sapiens emerges in Africa",
-    "description": "Roughly 300,000 years ago, Homo sapiens emerged in Africa with speech, language, and toolmaking abilities. The speakers identify this as the origin of our direct species.",
+    "title": "Homo sapiens emerge in Africa",
+    "description": "Homo sapiens emerged in Africa roughly 300,000 years ago with complex speech, language, and toolmaking abilities. The transcript presents this as the appearance of our direct species.",
     "category": "PERSON",
     "date_label": "roughly 300,000 years ago",
     "year": -300000,
@@ -1334,23 +1386,23 @@
    },
    {
     "title": "Neanderthals and Denisovans coexist with humans",
-    "description": "The speaker says Homo sapiens coexisted with other human species such as meanderthals and denisavans. This is presented as part of Ice Age human evolution.",
+    "description": "The transcript says Homo sapiens coexisted with other human species like Neanderthals and Denisovans during harsh ice age climates. This is an undated evolutionary relationship mentioned in passing.",
     "category": "OTHER",
     "date_label": null,
     "year": null,
     "month": null,
     "mentioned_at_sec": 190.8,
     "entities": [
+     "Denisovans",
      "Homo sapiens",
-     "denisavans",
-     "meanderthals"
+     "Neanderthals"
     ],
     "importance": 2,
     "id": "ev0017"
    },
    {
-    "title": "Human agricultural revolution begins",
-    "description": "About 12,000 years ago, humans invented agriculture and shifted from nomadic hunter-gatherers into permanent settlements and cities. The transcript treats this as a major transition in human society.",
+    "title": "Humans invent agriculture",
+    "description": "About 12,000 years ago, humans invented agriculture and shifted from nomadic hunter-gatherers to permanent settlements and cities. The transcript frames this as the start of settled civilization.",
     "category": "EVENT",
     "date_label": "12,000 years ago",
     "year": -12000,
@@ -1364,7 +1416,7 @@
    },
    {
     "title": "Writing is invented",
-    "description": "Writing was invented about 5,000 years ago, which the speaker says sparked recorded human history. This marks the start of historical records in the narrative.",
+    "description": "Writing was invented 5,000 years ago, which the transcript says sparked recorded human history. This marks the transition from prehistory to historical records.",
     "category": "EVENT",
     "date_label": "5,000 years ago",
     "year": -5000,
@@ -1377,22 +1429,22 @@
     "id": "ev0019"
    },
    {
-    "title": "Industrial revolution begins",
-    "description": "The industrial revolution began about 250 years ago, according to the transcript. It is paired with the later arrival of space travel as a recent development in human history.",
+    "title": "Industrial Revolution begins",
+    "description": "The Industrial Revolution began about 250 years ago. The transcript uses it as a marker of recent human transformation on Earth.",
     "category": "EVENT",
-    "date_label": "about 250 years ago",
+    "date_label": "just 250 years ago",
     "year": 1776,
     "month": null,
     "mentioned_at_sec": 208.96,
     "entities": [
-     "industrial revolution"
+     "Industrial Revolution"
     ],
     "importance": 3,
     "id": "ev0020"
    },
    {
     "title": "Space travel begins",
-    "description": "Space travel began less than 70 years ago. The transcript mentions it as one of the most recent major human advancements.",
+    "description": "Space travel began less than 70 years ago, according to the transcript. It is presented as one of humanity's most recent major achievements.",
     "category": "EVENT",
     "date_label": "less than 70 years ago",
     "year": 1956,
@@ -1412,12 +1464,44 @@
   {
    "question": "Summarize this episode in 3 points.",
    "response": {
-    "answer": "1. The episode traces Earth’s formation and early biological milestones, from a molten young planet to the first single-celled life and the rise of oxygen through the great oxidation event. 2. It then covers major turning points in complex life, including the Cambrian explosion, the Permian extinction, and the rise and fall of dinosaurs across the Triassic, Jurassic, and Cretaceous periods. 3. Finally, it brings the story to humans, from the emergence of Homo and Homo erectus to Homo sapiens, agriculture, writing, and the industrial revolution.",
+    "answer": "1) The episode compresses Earth’s 4.5-billion-year history into a 24-hour timeline, beginning with Earth’s formation, early oceans, and the first life, then major biological turning points like the Great Oxidation Event and Cambrian explosion. 2) It traces the rise and fall of dinosaurs through the Permian extinction, the Mesozoic era, and the Triassic, Jurassic, and Cretaceous periods, ending with the asteroid impact in Mexico that wiped out non-avian dinosaurs. 3) It finishes with the story of mammals and humans, from primate ancestors in Africa to Homo, Homo erectus, and Homo sapiens, and notes recent milestones like agriculture, writing, and the Industrial Revolution. [t=0.0] “entire history of our planet into a single 24-hour clock” [t=45.5] “great oxidation event” [t=50.5] “Cambrian explosion” [t=67.8] “Permian extinction” [t=80.8] “Mesozoic era” [t=86.8] “Triassic period” [t=94.2] “Jurassic period” [t=106.1] “Cretaceous period” [t=125.9] “modern-day Mexico” [t=157.9] “split from a common primate ancestor in Africa” [t=164.2] “genus Homo emerged” [t=171.1] “Homo erectus” [t=178.2] “Homo sapiens” [t=209.0] “industrial revolution began just 250 years ago”",
+    "found": true,
+    "citations": [
+     {
+      "start_sec": 0.0,
+      "quote": "entire history of our planet into a single 24-hour clock"
+     },
+     {
+      "start_sec": 45.519999999999996,
+      "quote": "great oxidation event"
+     },
+     {
+      "start_sec": 50.480000000000004,
+      "quote": "Cambrian explosion"
+     },
+     {
+      "start_sec": 67.84,
+      "quote": "Permian extinction"
+     }
+    ],
+    "mode": "full",
+    "model": "gpt-5.4-mini",
+    "unverified": false
+   }
+  },
+  {
+   "question": "What happens around Earth?",
+   "response": {
+    "answer": "Around Earth’s history, the planet forms from dust and rock, cools enough for oceans and the first single-celled life, oxygen rises, life diversifies, dinosaurs dominate and then go extinct, mammals and humans emerge, and much later humans invent agriculture, writing, and industry. The episode frames all of this as Earth’s 4.5-billion-year story on a 24-hour clock. [t=11.2], [t=21.3], [t=27.7], [t=45.5], [t=50.5], [t=67.8], [t=119.1], [t=144.4], [t=157.9], [t=178.2], [t=197.4], [t=209.0], [t=0.0]",
     "found": true,
     "citations": [
      {
       "start_sec": 11.200000000000001,
       "quote": "Earth formed from swirling dust and rock"
+     },
+     {
+      "start_sec": 21.28,
+      "quote": "the surface cooled and oceans formed"
      },
      {
       "start_sec": 27.68,
@@ -1436,24 +1520,16 @@
       "quote": "Earth suffered the Permian extinction"
      },
      {
-      "start_sec": 86.8,
-      "quote": "the Triassic period"
+      "start_sec": 119.11999999999999,
+      "quote": "everything changed in an instant"
      },
      {
-      "start_sec": 94.16,
-      "quote": "During the Jurassic period"
+      "start_sec": 144.4,
+      "quote": "mammals exploded in size and diversity"
      },
      {
-      "start_sec": 106.08,
-      "quote": "By the Cretaceous period"
-     },
-     {
-      "start_sec": 164.16,
-      "quote": "the genus Homo emerged"
-     },
-     {
-      "start_sec": 171.11999999999998,
-      "quote": "Homo erectus mastered fire"
+      "start_sec": 157.92,
+      "quote": "our hominin ancestors split from a common primate ancestor"
      },
      {
       "start_sec": 178.16,
@@ -1468,17 +1544,6 @@
       "quote": "The industrial revolution began"
      }
     ],
-    "mode": "full",
-    "model": "gpt-5.4-mini",
-    "unverified": false
-   }
-  },
-  {
-   "question": "What happens around Earth?",
-   "response": {
-    "answer": "It is not discussed in this episode what happens around Earth in the sense of events around the planet beyond its own history.",
-    "found": false,
-    "citations": [],
     "mode": "full",
     "model": "gpt-5.4-mini",
     "unverified": false

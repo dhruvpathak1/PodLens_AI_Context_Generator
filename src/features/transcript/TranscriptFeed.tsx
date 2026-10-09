@@ -1,4 +1,4 @@
-import { formatTimeRange } from '../../shared/format'
+import { formatClock } from '../../shared/format'
 import { Skeleton } from '../../shared/components/Skeleton'
 import type { TranscriptView } from './useTranscriptView'
 
@@ -18,7 +18,7 @@ export function TranscriptFeed({ view, busy, hasTranscript, hasError }: Props) {
   const { feedRef, visibleSentences, selectedSentence, activeSentenceId, hasTimedSentences, searchQuery } = view
 
   return (
-    <div ref={feedRef} className="transcript-sidebar__feed" role="region" aria-label="Transcript sentences">
+    <div ref={feedRef} className="transcript-feed" role="region" aria-label="Transcript sentences">
       {busy && <Skeleton className="skeleton--in-feed" />}
 
       {!busy &&
@@ -37,28 +37,23 @@ export function TranscriptFeed({ view, busy, hasTranscript, hasError }: Props) {
               aria-pressed={isSelected}
               aria-current={isPlayingHere ? 'location' : undefined}
             >
-              <span className="transcript-sentence__meta">
-                <span className="transcript-sentence__speaker">Sentence</span>
-                <time
-                  className="transcript-sentence__time"
-                  dateTime={hasTimedSentences ? `PT${Math.floor(s.start)}S` : undefined}
-                >
-                  {hasTimedSentences ? formatTimeRange(s.start, s.end) : '–'}
-                </time>
-              </span>
+              <time
+                className="transcript-sentence__time"
+                dateTime={hasTimedSentences ? `PT${Math.floor(s.start)}S` : undefined}
+              >
+                {hasTimedSentences ? formatClock(s.start) : ''}
+              </time>
               <span className="transcript-sentence__text">{s.text}</span>
             </button>
           )
         })}
 
       {!busy && !hasTranscript && !hasError && (
-        <p className="transcript-sidebar__empty">
-          Drop an audio file and run <strong>PodLens</strong> to get a timestamped transcript with context cards.
-        </p>
+        <p className="empty">The transcript appears here, line by line, and follows the audio as it plays.</p>
       )}
 
       {!busy && hasTranscript && visibleSentences.length === 0 && searchQuery && (
-        <p className="transcript-sidebar__empty">No sentences match this filter.</p>
+        <p className="empty">No sentences match this filter.</p>
       )}
     </div>
   )

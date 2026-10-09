@@ -52,6 +52,8 @@ class DemoOptions:
     out_dir: Path = DEFAULT_OUT_DIR
     skip_timeline: bool = False
     skip_ask: bool = False
+    #: LLM review of entities and cards (None = server default: on when OpenAI is configured).
+    review: bool | None = None
 
 
 # ---------------------------------------------------------------------------------------------
@@ -68,8 +70,8 @@ def slugify(text: str) -> str:
 def default_questions(entities: list[dict[str, Any]]) -> list[str]:
     """Starter questions built from the most-mentioned entities.
 
-    Mirrors `suggestQuestions` in `src/features/ask/suggestions.ts`, so the demo's suggestion
-    chips are exactly the questions that have pre-computed answers.
+    These get pre-computed answers. On the public demo, typed questions are matched to them
+    loosely (src/features/demo/demoData.ts), and they are offered as follow-ups otherwise.
     """
     counts: Counter[tuple[str, str]] = Counter()
     display: dict[tuple[str, str], str] = {}
@@ -171,7 +173,7 @@ STEP_NAMES = frozenset({"transcribe", "extract", "enrich", "timeline", "answer",
 def _default_steps() -> dict[str, Any]:
     """Real implementations, imported lazily (Whisper and LangChain are heavy)."""
     from app.services.ask import answer_question
-    from app.services.enrichment import enrich_entities_payload
+    from app.services.source_cards import build_source_cards
     from app.services.entities import extract_document
     from app.services.timeline import build_timeline
     from app.services.transcription import transcribe_file
@@ -179,7 +181,7 @@ def _default_steps() -> dict[str, Any]:
     return {
         "transcribe": transcribe_file,
         "extract": extract_document,
-        "enrich": enrich_entities_payload,
+        "enrich": build_source_cards,
         "timeline": build_timeline,
         "answer": answer_question,
         "compress": compress_audio,
@@ -220,8 +222,24 @@ async def build_demo_episode(
     entities = document.get("entities") or []
     log(f"    {len(entities)} mentions via {document.get('backend')}")
 
-    log("3/6 Building source cards (Wikipedia, maps, photos)…")
-    enriched = await s["enrich"](entities) if entities else {"cards": [], "unsplash_enabled": False}
+    log("3/6 Reviewing entities and building source cards (Wikipedia, maps, photos)…")
+    enriched = (
+        await s["enrich"](entities, segments=segments, source_label=opts.title, review=opts.review)
+        if entities
+        else {"cards": [], "unsplash_enabled": False}
+    )
+    review = enriched.get("review")
+    if enriched.get("entities") is not None:
+        # The review corrected, merged or dropped entities: publish the reviewed list.
+        entities = enriched["entities"]
+        document = {**document, "entities": entities}
+    if review and not review.get("error"):
+        log(
+            f"    review: {len(review['fixed'])} fixed, {len(review['merged'])} merged, "
+            f"{len(review['dropped'])} dropped, {review.get('mismatches_removed', 0)} mismatched lookups removed"
+        )
+    elif review:
+        log(f"    review failed, using unreviewed entities: {review['error']}")
 
     openai_ready = settings.openai_configured
     timeline: dict[str, Any] | None = None
@@ -268,6 +286,7 @@ async def build_demo_episode(
         "document": {**document, "source_label": opts.title},
         "cards": enriched.get("cards", []),
         "unsplash_enabled": bool(enriched.get("unsplash_enabled")),
+        "review": review,
         "timeline": timeline,
         "qa": qa,
     }

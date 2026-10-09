@@ -22,6 +22,22 @@ export type EntityRecord = {
   source?: string
   /** The backend's own label before mapping (e.g. "GPE", "ORG"). */
   original_label?: string
+  /** Wikipedia search hint written by the AI entity review. */
+  search_query?: string
+}
+
+/** What the AI entity review changed (returned by `/api/enrich-entities`, stored in demo bundles). */
+export type EntityReviewReport = {
+  fixed?: { name: string; to: string; type: string }[]
+  merged?: { name: string; into: string }[]
+  dropped?: { name: string; reason: string }[]
+  /** Unique entities left after the review. */
+  kept?: number
+  /** Wikipedia summaries and photos removed because they did not match the episode. */
+  mismatches_removed?: number
+  model?: string
+  /** Set when the review failed and the original entities were used. */
+  error?: string
 }
 
 /** Versioned NER output for one episode (also saved to disk by the server). */

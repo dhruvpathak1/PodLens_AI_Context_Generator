@@ -100,3 +100,30 @@ export function PauseIcon({ size = 20 }: IconProps) {
     </svg>
   )
 }
+
+/** Arrow pointing up (send a question). */
+export function ArrowUpIcon({ size = 16 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden>
+      <path d="M12 19V5M5 12l7-7 7 7" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+/** Filled square (stop the answer in progress). */
+export function StopIcon({ size = 12 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <rect x="5" y="5" width="14" height="14" rx="2" />
+    </svg>
+  )
+}
+
+/** Small arrow leaving a box (opens an external page). */
+export function ExternalIcon({ size = 12 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}

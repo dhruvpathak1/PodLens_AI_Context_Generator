@@ -26,6 +26,9 @@ services:
       OPENAI_TIMELINE_MODEL: ${OPENAI_TIMELINE_MODEL:-}
       OPENAI_ASK_MODEL: ${OPENAI_ASK_MODEL:-}
       OPENAI_EMBED_MODEL: ${OPENAI_EMBED_MODEL:-}
+      # AI review of entities and source cards (needs OPENAI_API_KEY)
+      ENTITY_REVIEW: ${ENTITY_REVIEW:-true}
+      OPENAI_REVIEW_MODEL: ${OPENAI_REVIEW_MODEL:-}
       # Live mic mode is parked (future scope); true mounts /api/live
       ENABLE_LIVE_MODE: ${ENABLE_LIVE_MODE:-false}
       CORS_EXTRA_ORIGINS: ${CORS_EXTRA_ORIGINS:-http://localhost:8080,http://127.0.0.1:8080}

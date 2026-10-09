@@ -48,9 +48,15 @@ export function useTranscriptView({ transcript, segments, playbackTime, playback
   useEffect(() => {
     if (!activeSentenceId || lastScrolledIdRef.current === activeSentenceId) return
     lastScrolledIdRef.current = activeSentenceId
-    feedRef.current
-      ?.querySelector<HTMLElement>(`[data-sentence-id="${CSS.escape(activeSentenceId)}"]`)
-      ?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+    const row = feedRef.current?.querySelector<HTMLElement>(`[data-sentence-id="${CSS.escape(activeSentenceId)}"]`)
+    // Scroll only the transcript's own scroll box (never the page), keeping the line in view.
+    const box = row?.closest<HTMLElement>('.panel__body')
+    if (!row || !box) return
+    const rowTop = row.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop
+    const margin = 48
+    if (rowTop < box.scrollTop + margin || rowTop + row.offsetHeight > box.scrollTop + box.clientHeight - margin) {
+      box.scrollTo({ top: Math.max(0, rowTop - box.clientHeight / 3), behavior: 'smooth' })
+    }
   }, [activeSentenceId])
 
   /** Open/close the search box; closing clears the filter. */

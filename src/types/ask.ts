@@ -13,6 +13,8 @@ export type AskResponse = {
   model: string
   /** The model claimed an answer but none of its citations matched the transcript. */
   unverified: boolean
+  /** Demo mode only: questions that do have stored answers, offered when nothing matched. */
+  followups?: string[]
 }
 
 /** One earlier turn, sent back so follow-up questions have context. */
