@@ -1,12 +1,12 @@
 <p align="center"><img src="public/favicon.svg" width="104" alt="PodLens logo"></p>
 
-# PodLens: AI-Powered Context for Your Podcasts 🎙️✨
+# PodLens: AI-Powered Context for Your Podcasts
 
 PodLens is an AI-powered context engine for podcasts. It transcribes an episode, identifies the people, companies, places and technologies mentioned, and surfaces each one as a source card with a summary, map and image, timed to the moment it is spoken. It can also build a chronological timeline of the episode and answer questions about it, with citations that jump to the exact moment.
 
 **▶ Try the live demo:** https://podlens.dhruvpathak.com
 
-## 🧰 Built With
+## Built With
 
 | Category | Technologies |
 |---|---|
@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 
 ---
 
-## 📑 Contents
+## Contents
 
 - [Built With](#-built-with)
 - [Key Features](#-key-features)
@@ -46,7 +46,7 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 | Feature | What it does | Powered by |
 |---|---|---|
@@ -63,7 +63,7 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ```
  Upload audio ─▶ FFmpeg ─▶ Whisper ─▶ Transcript + segments
@@ -81,7 +81,7 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 
 ---
 
-## 🔎 AI Entity Review
+## AI Entity Review
 
 Speech recognition and entity taggers make predictable mistakes on podcasts. A review step checks every entity against the episode before (and after) the source cards are built.
 
@@ -168,7 +168,7 @@ curl -X POST http://127.0.0.1:8000/api/timeline \
 
 ---
 
-## 💬 Ask the Episode (LLM Q&A)
+## Ask the Episode (LLM Q&A)
 
 Ask anything about the episode and get an answer **grounded only in the transcript**, with citations you can click to hear the exact quote.
 
@@ -212,7 +212,7 @@ curl -X POST http://127.0.0.1:8000/api/ask \
 
 ---
 
-## 🧪 Choosing Your Models: spaCy vs Claude vs OpenAI
+## Choosing Your Models: spaCy vs Claude vs OpenAI
 
 PodLens uses three model families, each for a different job:
 
@@ -249,7 +249,7 @@ PodLens uses three model families, each for a different job:
 
 ---
 
-## 🌐 APIs and Services Used
+## APIs and Services Used
 
 | Service | Used for | Endpoint | Key needed |
 |---|---|---|---|
@@ -268,7 +268,7 @@ Every external service is optional except Whisper and spaCy. Missing keys disabl
 
 ---
 
-## 🔌 PodLens REST API
+## PodLens REST API
 
 | Method | Path | Purpose |
 |---|---|---|
@@ -321,7 +321,7 @@ curl http://127.0.0.1:8000/api/health
 
 ---
 
-## 📦 Installation and Setup
+## Installation and Setup
 
 ### Prerequisites
 - **Node.js** 18+
@@ -357,7 +357,7 @@ Then fill in what you need:
 
 ---
 
-## 🚀 Running the App
+## Running the App
 
 ### Development
 ```bash
@@ -383,7 +383,7 @@ Open http://localhost:8080. One container serves the built UI and the API; data 
 
 ---
 
-## 📜 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
