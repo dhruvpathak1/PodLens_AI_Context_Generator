@@ -10,7 +10,6 @@
   --panel-3: #22252b; /* hover */
   --line: #24272d;
   --line-2: #33373e;
-  --frame: #ffffff; /* outline of the see-through panels (Timeline, Ask) */
   --text: #e7e9ec;
   --text-2: #a4a9b1;
   --text-3: #6f757e;
@@ -56,7 +55,6 @@
   --panel-3: #eceef1;
   --line: #e3e5e9;
   --line-2: #d3d6db;
-  --frame: #15171a; /* white would vanish on the light canvas, so use ink instead */
   --text: #15171a;
   --text-2: #4b5058;
   --text-3: #80868f;

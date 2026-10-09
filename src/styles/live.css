@@ -152,3 +152,85 @@
     min-height: 90px;
   }
 }
+
+/* ---- Intro cards (before the first mention) ------------------------------------------------ */
+.intro-card {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-2);
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.intro-card__kicker {
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+.intro-card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.intro-card__text {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.intro-card__text--small {
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+.intro-card__list {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--text-2);
+}
+
+.intro-card__list li::marker {
+  color: var(--accent);
+}
+
+.intro-card--note .intro-card__kicker {
+  color: var(--text-3);
+}
+
+.intro-card--logo {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.2rem;
+}
+
+.intro-card__wordmark {
+  margin-top: 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.intro-card__tagline {
+  font-size: 0.8rem;
+  color: var(--text-3);
+}
+
+@media (max-width: 760px) {
+  .intro-card {
+    min-height: 0;
+  }
+}

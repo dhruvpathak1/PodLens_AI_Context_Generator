@@ -195,7 +195,6 @@ export default function App() {
         <div className="board__col board__col--mid">
           <LiveGrid
             cards={liveCards}
-            hasEntities={entityFilter.filteredEntities.length > 0}
             hasAudio={!!playback.audioUrl}
             playbackTime={playback.playbackTime}
             playbackDuration={playback.playbackDuration}

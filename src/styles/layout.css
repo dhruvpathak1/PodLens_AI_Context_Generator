@@ -63,11 +63,10 @@
   overflow: hidden;
 }
 
-/* See-through panels: the dotted canvas shows behind them, framed by a white outline */
+/* See-through panels: the dotted canvas shows behind them */
 .panel--timeline,
 .panel--chat {
   background: transparent;
-  border-color: var(--frame);
   box-shadow: none;
 }
 
