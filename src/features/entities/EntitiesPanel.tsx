@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { Panel } from '../../shared/components/Panel'
-import { ENTITY_FILTER_OPTIONS, type EntityDocument } from '../../types/entities'
+import { ENTITY_FILTER_OPTIONS, type EntityDocument, type EntityReviewReport } from '../../types/entities'
 import { getEntitiesActiveAtPlayback } from './activeEntities'
 import { entityMatchKey, typeLabel } from './entityKeys'
 import type { EntityFilterState } from './useEntityFilter'
@@ -13,6 +13,27 @@ type Props = {
   onSeek: (sec: number) => void
   /** Optional setup note (e.g. Unsplash not configured), shown under the list. */
   note?: string | null
+  /** What the AI review changed; summarised in the header, details in the tooltip. */
+  review?: EntityReviewReport | null
+}
+
+/** "6 corrected, 5 removed by AI review" plus a tooltip listing each change. */
+function reviewSummary(review: EntityReviewReport | null | undefined): { text: string; detail: string } | null {
+  if (!review || review.error) return null
+  const fixed = review.fixed ?? []
+  const merged = review.merged ?? []
+  const dropped = review.dropped ?? []
+  const corrected = fixed.length + merged.length
+  const parts = [corrected ? `${corrected} corrected` : null, dropped.length ? `${dropped.length} removed` : null].filter(Boolean)
+  const detail = [
+    ...fixed.map((f) => `Corrected: ${f.name} -> ${f.to}`),
+    ...merged.map((m) => `Merged: ${m.name} -> ${m.into}`),
+    ...dropped.map((d) => `Removed: ${d.name}${d.reason ? ` (${d.reason})` : ''}`),
+    review.mismatches_removed ? `Mismatched summaries or photos removed: ${review.mismatches_removed}` : null,
+  ]
+    .filter(Boolean)
+    .join('\n')
+  return { text: parts.length ? `checked by AI, ${parts.join(', ')}` : 'checked by AI', detail }
 }
 
 /** One unique entity with its mention count and first mention time. */
@@ -23,7 +44,7 @@ type Row = { key: string; type: string; text: string; count: number; first: numb
  * filterable by type from the header. Names being spoken right now are highlighted and scrolled
  * into view; clicking a name plays its first mention.
  */
-export function EntitiesPanel({ entityDoc, filter, playbackTime, onSeek, note }: Props) {
+export function EntitiesPanel({ entityDoc, filter, playbackTime, onSeek, note, review }: Props) {
   const entities = useMemo(() => entityDoc?.entities ?? [], [entityDoc])
 
   // Unique entities in order of first mention.
@@ -59,13 +80,21 @@ export function EntitiesPanel({ entityDoc, filter, playbackTime, onSeek, note }:
     }
   }, [speakingKey])
 
+  const checked = reviewSummary(review)
   const types = ENTITY_FILTER_OPTIONS.filter((o) => o === 'ALL' || (filter.counts?.[o] ?? 0) > 0)
 
   return (
     <Panel
       className="panel--entities"
       title="Entities"
-      meta={entityDoc ? `${rows.length} found${entityDoc.backend ? ` with ${entityDoc.backend === 'claude' ? 'Claude' : 'spaCy'}` : ''}` : null}
+      meta={
+        entityDoc ? (
+          <span title={checked?.detail || undefined}>
+            {rows.length} found{entityDoc.backend ? ` with ${entityDoc.backend === 'claude' ? 'Claude' : 'spaCy'}` : ''}
+            {checked ? `, ${checked.text}` : ''}
+          </span>
+        ) : null
+      }
       actions={
         rows.length > 0 ? (
           <div className="seg" role="group" aria-label="Filter by type">

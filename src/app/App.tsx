@@ -128,6 +128,7 @@ export default function App() {
         document: demo.document,
         cards: demo.cards,
         unsplashEnabled: demo.unsplash_enabled,
+        review: demo.review ?? null,
       })
     },
     [resetTimeline, resetChat, resetFilter, clearSelection, loadPrepared]
@@ -204,6 +205,7 @@ export default function App() {
             filter={entityFilter}
             playbackTime={playback.playbackTime}
             onSeek={playback.seekTo}
+            review={episode.review}
             // Server setup advice is meaningless on the public demo.
             note={
               !DEMO_MODE && episode.unsplashHint === false && episode.enrichedCards.length > 0

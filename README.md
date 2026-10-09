@@ -34,6 +34,7 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 - [Built With](#-built-with)
 - [Key Features](#-key-features)
 - [How It Works](#%EF%B8%8F-how-it-works)
+- [AI Entity Review](#-ai-entity-review)
 - [Episode Timeline](#-episode-timeline)
 - [Ask the Episode (LLM Q&A)](#-ask-the-episode-llm-qa)
 - [Choosing Your Models: spaCy vs Claude vs OpenAI](#-choosing-your-models-spacy-vs-claude-vs-openai)
@@ -56,6 +57,7 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 | **Transcription** | Timestamped transcript of any uploaded episode, run locally | OpenAI Whisper (local) |
 | **Entity tagging** | Finds people, companies, places, technologies and events | spaCy (local) or Anthropic Claude |
 | **Disambiguation** | Tells "Apple" the company from the fruit, "Amazon" the company from the river | Custom context rules |
+| **AI entity review** | Fixes misheard names, merges duplicates, drops vague tags, and removes summaries or photos that don't match the episode | LangChain + OpenAI |
 | **Source cards** | Summary, map and photo for every entity, shown as playback reaches it | Wikipedia, OpenStreetMap, Unsplash |
 | **Episode timeline** | Chronological timeline of everything mentioned, revealed as you listen | LangChain + OpenAI |
 | **Ask the episode** | Grounded Q&A with citations that seek the player to the quote | LangChain + OpenAI (+ embeddings) |
@@ -83,10 +85,32 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 1. **Ingest**: the browser uploads an MP3, WAV, M4A, WebM or similar file to `POST /api/transcribe`.
 2. **Transcribe**: FFmpeg normalizes the audio to 16 kHz mono; Whisper returns text plus timed segments.
 3. **Tag entities**: filler words ("um", "you know") are stripped, then spaCy or Claude tags entities. A disambiguation layer reads nearby words to fix common homonyms.
-4. **Enrich**: each unique entity is looked up on Wikipedia, geocoded with Nominatim if it is a place, and matched to an Unsplash photo. Lookups for one entity run in parallel; entities run one after another to respect Nominatim's 1 request/second limit.
-5. **Display**: a 2 x 2 grid of live source cards always shows the four most recent names up to the playhead.
-6. **AI layer (optional)**: with `OPENAI_API_KEY` set, the right column adds the timeline and Q&A.
-7. **Persist**: transcripts are saved to `server/transcripts/` and entity JSON to `server/entity_exports/`.
+4. **Review (optional)**: with `OPENAI_API_KEY` set, an LLM reviews every entity in context (see [AI Entity Review](#-ai-entity-review)).
+5. **Enrich**: each unique entity is looked up on Wikipedia, geocoded with Nominatim if it is a place, and matched to an Unsplash photo. Lookups for one entity run in parallel; entities run one after another to respect Nominatim's 1 request/second limit.
+6. **Display**: a 2 x 2 grid of live source cards always shows the four most recent names up to the playhead.
+7. **AI layer (optional)**: with `OPENAI_API_KEY` set, the right column adds the timeline and Q&A.
+8. **Persist**: transcripts are saved to `server/transcripts/` and entity JSON to `server/entity_exports/`.
+
+---
+
+## 🔎 AI Entity Review
+
+Speech recognition and entity taggers make predictable mistakes on podcasts. A review step checks every entity against the episode before (and after) the source cards are built.
+
+| Problem | Example | What the review does |
+|---|---|---|
+| Misheard name | "Traderus 8", "Apollo Alto Garage" | **Fix**: "Traitorous Eight", "Palo Alto" (and the right type) |
+| Same thing, several names | "SF", "San Francisco", "San Francisco, California" | **Merge** into one entity |
+| Not a real entity | "San", the show's own name, filler | **Drop** |
+| Wrong sense on Wikipedia | "Yerba Buena" resolves to the mint plant | Writes a precise search query ("Yerba Buena San Francisco history"), then **removes** any summary or photo that still doesn't match |
+
+**How it works**
+
+1. **Before lookups**: each unique entity is sent with the transcript lines it appears in and the opening of the episode. The model returns one verdict per entity (`keep`, `fix`, `merge`, `drop`) plus a disambiguated Wikipedia search query, using strict structured output.
+2. **Lookups**: Wikipedia, maps and photos use the corrected names and search queries.
+3. **After lookups**: the model compares each card's Wikipedia summary and photo description with how the episode uses the name, and strict mismatches are removed from the card.
+
+The Entities panel shows the result ("checked by AI, 6 corrected, 5 removed"; hover for the full list). The review **fails open**: if the model is unavailable, cards are built from the original entities. Turn it off with `ENTITY_REVIEW=false`; demo builds accept `--no-review`.
 
 ---
 
@@ -208,9 +232,10 @@ PodLens uses three model families, each for a different job:
 |---|---|---|
 | Speech to text | Whisper `tiny` to `large` (local) | `WHISPER_MODEL` |
 | Entity tagging (NER) | spaCy `sm` / `md` / `lg` (local) or Claude (API) | `ENTITY_BACKEND`, `SPACY_MODEL`, `CLAUDE_MODEL` |
+| Entity review | OpenAI chat model (API) | `OPENAI_REVIEW_MODEL` |
 | Timeline and Q&A | OpenAI chat + embedding models (API) | `OPENAI_TIMELINE_MODEL`, `OPENAI_ASK_MODEL`, `OPENAI_EMBED_MODEL` |
 
-> OpenAI is not used for entity tagging. Entity quality comes from Whisper + spaCy/Claude; the timeline and Q&A then build on those entities.
+> OpenAI does not tag entities. It reviews what spaCy or Claude found (fix, merge, drop) and powers the timeline and Q&A.
 
 ### Entity tagging: spaCy vs Claude
 
@@ -265,7 +290,7 @@ OPENAI_API_KEY=sk-...          # enables timeline + Ask
 | **OpenAI Whisper** (local) | Speech to text | Runs in-process | No |
 | **spaCy** (local) | Entity tagging | Runs in-process | No |
 | **Anthropic Messages API** | Entity tagging (Claude backend) | `api.anthropic.com` via the `anthropic` SDK | `ANTHROPIC_API_KEY` |
-| **OpenAI Chat Completions** | Timeline and Q&A (strict JSON schema) | via `langchain-openai` | `OPENAI_API_KEY` |
+| **OpenAI Chat Completions** | Entity review, timeline and Q&A (strict JSON schema) | via `langchain-openai` | `OPENAI_API_KEY` |
 | **OpenAI Embeddings** | Retrieval for long episodes in Ask | via `langchain-openai` | `OPENAI_API_KEY` |
 | **Wikipedia Action API** | Find the best article for an entity | `en.wikipedia.org/w/api.php` | No |
 | **Wikipedia REST API** | Summary and thumbnail | `en.wikipedia.org/api/rest_v1/page/summary` | No |
@@ -284,7 +309,7 @@ Every external service is optional except Whisper and spaCy. Missing keys disabl
 | `GET` | `/api/health` | Status and which optional features are configured |
 | `POST` | `/api/transcribe` | Upload audio (multipart); returns transcript, segments and tagged entities |
 | `POST` | `/api/extract-entities` | Tag entities in existing transcript segments |
-| `POST` | `/api/enrich-entities` | Build source cards (Wikipedia, map, photo) |
+| `POST` | `/api/enrich-entities` | Review entities with AI (when `segments` are sent) and build source cards |
 | `POST` | `/api/timeline` | Chronological timeline of everything mentioned |
 | `POST` | `/api/ask` | Grounded Q&A with citations |
 
@@ -384,7 +409,8 @@ curl http://127.0.0.1:8000/api/health
     │   ├── api/                 HTTP layer: routes/, request schemas, error helpers
     │   ├── services/            Business logic: audio, transcription, episode, storage,
     │   │                        entities/ (spaCy or Claude NER), enrichment/ (Wikipedia,
-    │   │                        Nominatim, Unsplash), timeline.py, ask.py
+    │   │                        Nominatim, Unsplash), entity_review.py, source_cards.py,
+    │   │                        timeline.py, ask.py, demo_bundle.py
     │   └── live/                PARKED live endpoints, mounted only with ENABLE_LIVE_MODE=true
     ├── scripts/build_demo.py    CLI: turn an audio file into a demo episode (npm run demo:build)
     └── tests/                   pytest suite
@@ -493,6 +519,7 @@ git add public/demo && git commit -m "demo: add Apollo 11 episode" && git push
 | `--question "..."` | Preset Ask question (repeatable); default: generated from the top entities |
 | `--backend spacy\|claude` | Entity tagger for this build |
 | `--skip-timeline`, `--skip-ask` | Build without OpenAI (free, local tools only) |
+| `--no-review` | Skip the AI entity review (on by default with an OpenAI key) |
 | `--bitrate 64k` | MP3 bitrate of the published audio (about 0.5 MB per minute) |
 
 The build uses your local `.env` keys **once**, on your machine; the keys are never written to the output. Without `OPENAI_API_KEY` the episode is still built, just without the timeline and preset answers.
@@ -518,6 +545,8 @@ All settings live in `.env` (see [`.env.example`](.env.example) for the full, co
 | `OPENAI_EMBED_MODEL` | `text-embedding-3-small` | Embeddings for long-episode retrieval |
 | `ASK_FULL_CONTEXT_CHARS` | `60000` | Above this, Ask switches to retrieval |
 | `ASK_TOP_K` | `8` | Chunks retrieved per question |
+| `ENTITY_REVIEW` | `true` | AI review of entities and source cards (needs `OPENAI_API_KEY`) |
+| `OPENAI_REVIEW_MODEL` | `gpt-5.4-mini` | Model for the entity review |
 | `CORS_EXTRA_ORIGINS` | none | Extra allowed browser origins (comma-separated) |
 | `VITE_TRANSCRIBE_URL` | dev proxy | API URL for production frontend builds |
 | `ENABLE_LIVE_MODE` | `false` | Mounts the parked live endpoints |

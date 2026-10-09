@@ -9,7 +9,7 @@ from fastapi import APIRouter, HTTPException
 from app.api.schemas import EnrichEntitiesRequest, ExtractEntitiesRequest
 from app.core.config import settings
 from app.services import storage
-from app.services.enrichment import enrich_entities_payload
+from app.services.source_cards import build_source_cards
 from app.services.entities import build_document, resolve_entity_backend, run_extraction, save_document
 
 logger = logging.getLogger(__name__)
@@ -39,11 +39,20 @@ async def extract_entities(body: ExtractEntitiesRequest) -> dict:
 
 @router.post("/api/enrich-entities")
 async def enrich_entities(body: EnrichEntitiesRequest) -> dict:
-    """Build source cards (Wikipedia, map, photo). Response: `{cards[], count, unsplash_enabled}`."""
+    """Build source cards (Wikipedia, map, photo), with an LLM review of the entities when enabled.
+
+    Response: `{cards[], count, unsplash_enabled}`, plus `entities[]` (reviewed mentions to display)
+    and `review` (fixed / merged / dropped / mismatches_removed) when the review ran.
+    """
     if not body.entities:
         raise HTTPException(status_code=400, detail="entities must be non-empty")
     try:
-        return await enrich_entities_payload([e.model_dump() for e in body.entities])
+        return await build_source_cards(
+            [e.model_dump() for e in body.entities],
+            segments=[s.model_dump() for s in body.segments],
+            source_label=body.source_label,
+            review=body.review,
+        )
     except Exception as e:
         logger.exception("enrich-entities failed")
         raise HTTPException(status_code=500, detail=str(e)) from e

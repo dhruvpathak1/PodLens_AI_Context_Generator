@@ -36,7 +36,7 @@ def _steps(calls: list[str]) -> dict:
         calls.append("extract")
         return {"backend": "spacy", "source_label": "/Users/me/secret/path.mp3", "chunks": segments, "entities": ENTITIES}
 
-    async def enrich(entities):
+    async def enrich(entities, **_kw):
         """Return one card per entity."""
         calls.append("enrich")
         return {"cards": [{"id": e["text"], **e} for e in entities], "unsplash_enabled": False}
