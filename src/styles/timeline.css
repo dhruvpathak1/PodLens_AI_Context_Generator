@@ -71,7 +71,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--panel);
+  background: var(--bg); /* the panel is see-through, so match the page behind it */
   border: 1px solid var(--text-2);
 }
 
