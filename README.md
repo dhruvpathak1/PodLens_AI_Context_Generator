@@ -41,12 +41,8 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 - [Choosing Your Models: spaCy vs Claude vs OpenAI](#-choosing-your-models-spacy-vs-claude-vs-openai)
 - [APIs and Services Used](#-apis-and-services-used)
 - [PodLens REST API](#-podlens-rest-api)
-- [Project Structure](#%EF%B8%8F-project-structure)
 - [Installation and Setup](#-installation-and-setup)
 - [Running the App](#-running-the-app)
-- [Live Demo](#-live-demo)
-- [Configuration Reference](#%EF%B8%8F-configuration-reference)
-- [Roadmap](#%EF%B8%8F-roadmap)
 
 ---
 
@@ -384,32 +380,6 @@ Backend tests need the dev requirements once: `venv/bin/python -m pip install -r
 docker compose up --build
 ```
 Open http://localhost:8080. One container serves the built UI and the API; data persists in the `podlens-data` volume. See [DOCKER.md](DOCKER.md) for sharing and deployment.
-
----
-
-## ⚙️ Configuration Reference
-
-All settings live in `.env` (see [`.env.example`](.env.example) for the full, commented list).
-
-| Variable | Default | Description |
-|---|---|---|
-| `WHISPER_MODEL` | `base` | Whisper size: `tiny`, `base`, `small`, `medium`, `large` |
-| `ENTITY_BACKEND` | auto | `spacy` or `claude` |
-| `SPACY_MODEL` | `en_core_web_sm` | spaCy pipeline for the local backend |
-| `CLAUDE_MODEL` | `claude-haiku-4-5-20251001` | Claude model for NER |
-| `OPENAI_TIMELINE_MODEL` | `gpt-5.4-mini` | Model for the timeline |
-| `TIMELINE_WINDOW_CHARS` | `24000` | Transcript window size per timeline call |
-| `TIMELINE_MAX_CONCURRENCY` | `4` | Parallel timeline windows |
-| `OPENAI_ASK_MODEL` | `gpt-5.4-mini` | Model for Ask |
-| `OPENAI_EMBED_MODEL` | `text-embedding-3-small` | Embeddings for long-episode retrieval |
-| `ASK_FULL_CONTEXT_CHARS` | `60000` | Above this, Ask switches to retrieval |
-| `ASK_TOP_K` | `8` | Chunks retrieved per question |
-| `ENTITY_REVIEW` | `true` | AI review of entities and source cards (needs `OPENAI_API_KEY`) |
-| `OPENAI_REVIEW_MODEL` | `gpt-5.4-mini` | Model for the entity review |
-| `CORS_EXTRA_ORIGINS` | none | Extra allowed browser origins (comma-separated) |
-| `VITE_TRANSCRIBE_URL` | dev proxy | API URL for production frontend builds |
-| `ENABLE_LIVE_MODE` | `false` | Mounts the parked live endpoints |
-| `VITE_DEMO_MODE` | `false` (`true` on GitHub Pages) | Play pre-processed episodes from `public/demo/`; no API calls |
 
 ---
 
