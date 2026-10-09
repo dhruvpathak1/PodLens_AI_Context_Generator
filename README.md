@@ -24,9 +24,12 @@ PodLens is an AI-powered context engine for podcasts. It transcribes an episode,
 Also used: asyncio, python-multipart, `typescript-eslint`, `eslint-plugin-react-hooks`, Docker Compose, `concurrently`, and Python venv. Data is stored as JSON entity exports and timestamped `.txt` transcripts.
 
 ### See it in Action
-https://github.com/user-attachments/assets/4b8ee1bf-2946-4abc-87b3-8432aa8f52d6
 
-https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
+https://github.com/user-attachments/assets/69667151-380c-4a41-8769-7c90edd57607
+
+https://github.com/user-attachments/assets/017fa7c5-2ab0-4b7d-9cb8-aaf127f4bfd0
+
+<img width="1913" height="1301" alt="Snippet 1" src="https://github.com/user-attachments/assets/65175728-d985-477e-957b-aec1e02ac6d9" >
 
 ---
 
