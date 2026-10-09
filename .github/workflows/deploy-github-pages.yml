@@ -16,8 +16,9 @@
 # - Secrets: VITE_TRANSCRIBE_URL = https://<your-api-host>/api/transcribe
 #   (the server must allow this site's origin via CORS_EXTRA_ORIGINS)
 #
-# The workflow sets VITE_BASE_PATH to /${{ github.event.repository.name }}/ so asset URLs match
-# https://<user>.github.io/<repo>/.
+# Custom domain: https://podlens.dhruvpathak.com (Settings -> Pages -> Custom domain, plus a DNS
+# CNAME record "podlens" -> dhruvpathak1.github.io). The build uses relative asset URLs
+# (VITE_BASE_PATH=./), so it works both there and at https://<user>.github.io/<repo>/.
 
 name: Deploy GitHub Pages
 
@@ -51,7 +52,7 @@ jobs:
 
       - name: Install and build
         env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_BASE_PATH: ./
           # Demo mode: serve the pre-processed episodes in public/demo/ with no API and no keys.
           # Set the repository variable VITE_DEMO_MODE=false only if you host the API yourself.
           VITE_DEMO_MODE: ${{ vars.VITE_DEMO_MODE || 'true' }}

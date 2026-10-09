@@ -3,9 +3,17 @@ import react from '@vitejs/plugin-react'
 
 const apiPort = process.env.API_PORT ?? '8000'
 
-/** GitHub Pages project URL is /<repo>/; set VITE_BASE_PATH in CI (e.g. /PodLens_AI_Context_Generator/). */
+/**
+ * Base URL the site is served from (`VITE_BASE_PATH`):
+ * - unset or "/"  -> served from the domain root (local dev, Docker)
+ * - "./"          -> relative asset URLs: the same build works at any path, e.g. both
+ *                    podlens.dhruvpathak.com/ and <user>.github.io/<repo>/ (used by the Pages workflow)
+ * - "/repo"       -> normalised to "/repo/"
+ */
 function normalizeBase(raw: string | undefined): string {
-  if (raw == null || String(raw).trim() === '' || String(raw).trim() === '/') return '/'
+  const v = raw == null ? '' : String(raw).trim()
+  if (v === '' || v === '/') return '/'
+  if (v === '.' || v === './') return './'
   let b = String(raw).trim()
   if (!b.startsWith('/')) b = `/${b}`
   if (!b.endsWith('/')) b = `${b}/`
