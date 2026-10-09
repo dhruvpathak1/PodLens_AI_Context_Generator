@@ -14,6 +14,8 @@ export type ChatMessage =
       found: boolean
       citations: AskCitation[]
       unverified: boolean
+      /** Questions offered as links under the answer (demo mode, when nothing matched). */
+      followups: string[]
     }
   | { id: string; role: 'error'; content: string }
 
@@ -81,6 +83,7 @@ export function useEpisodeChat(getContext: () => Context, answer?: AnswerFn) {
           found: res.found,
           citations: res.citations,
           unverified: res.unverified,
+          followups: res.followups ?? [],
         },
       ])
     } catch (e) {

@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { APP_TITLE, DEMO_MODE, ENTITY_BACKEND, MISSING_PROD_API_URL } from '../config/env'
-import { suggestQuestions } from '../features/ask/suggestions'
 import { useEpisodeChat, type AnswerFn } from '../features/ask/useEpisodeChat'
 import { AboutPanel } from '../features/about/AboutPanel'
 import { AskEpisode } from '../features/ask/AskEpisode'
@@ -84,14 +83,6 @@ export default function App() {
   const chat = useEpisodeChat(
     () => ({ segments: episode.segments, entities, sourceLabel: episode.sourceName }),
     demoAnswerFn
-  )
-  // Demo suggestions are exactly the questions that have stored answers.
-  const askSuggestions = useMemo(
-    () =>
-      demoEpisode?.qa.length
-        ? demoEpisode.qa.map((qa) => qa.question)
-        : suggestQuestions(episode.entityDoc?.entities ?? []),
-    [demoEpisode, episode.entityDoc]
   )
 
   // --- User actions -----------------------------------------------------------------------
@@ -234,7 +225,6 @@ export default function App() {
             messages={chat.messages}
             busy={chat.busy}
             enabled={episodeReady}
-            suggestions={askSuggestions}
             onAsk={(q) => void chat.ask(q)}
             onStop={chat.stop}
             onClear={chat.reset}

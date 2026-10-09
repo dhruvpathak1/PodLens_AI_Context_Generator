@@ -9,7 +9,6 @@ type Props = {
   busy: boolean
   /** False until an episode is loaded; the box is disabled with an explanation. */
   enabled: boolean
-  suggestions: string[]
   onAsk: (question: string) => void
   onStop: () => void
   onClear: () => void
@@ -21,11 +20,11 @@ type Props = {
 const MAX_LEN = 500
 
 /**
- * Right column, bottom: "Ask the episode". Suggested questions, the conversation (answers with
- * clickable citations), and the question box pinned to the bottom (Enter sends, Shift+Enter
- * adds a line).
+ * Right column, bottom: "Ask the episode". The conversation (answers with clickable citations)
+ * on the page's dotted background, and the question box pinned to the bottom (Enter sends,
+ * Shift+Enter adds a line).
  */
-export function AskEpisode({ messages, busy, enabled, suggestions, onAsk, onStop, onClear, onCite }: Props) {
+export function AskEpisode({ messages, busy, enabled, onAsk, onStop, onClear, onCite }: Props) {
   const [draft, setDraft] = useState('')
   const listRef = useRef<HTMLDivElement>(null)
 
@@ -92,20 +91,11 @@ export function AskEpisode({ messages, busy, enabled, suggestions, onAsk, onStop
     >
       <div className="ask" ref={listRef} aria-live="polite">
         {messages.length === 0 ? (
-          enabled ? (
-            <div className="ask__intro">
-              <p className="empty">Answers come only from the transcript, with timestamps you can play.</p>
-              <div className="ask__suggestions">
-                {suggestions.map((s) => (
-                  <button key={s} type="button" className="ask__suggestion" onClick={() => submit(s)} disabled={busy}>
-                    {s}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <p className="empty">Questions about the episode are answered here, with the moments they come from.</p>
-          )
+          <p className="empty">
+            {enabled
+              ? 'Ask anything about this episode. Answers come only from the transcript, with timestamps you can play.'
+              : 'Questions about the episode are answered here, with the moments they come from.'}
+          </p>
         ) : (
           messages.map((m) =>
             m.role === 'user' ? (
@@ -126,6 +116,17 @@ export function AskEpisode({ messages, busy, enabled, suggestions, onAsk, onStop
                         <button type="button" className="cite" onClick={() => onCite(c.start_sec, c.quote)} title="Play this moment">
                           <span className="cite__time num">{formatClock(c.start_sec)}</span>
                           <span className="cite__quote">{c.quote}</span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {m.followups.length > 0 ? (
+                  <ul className="followups" aria-label="Questions with answers">
+                    {m.followups.map((q) => (
+                      <li key={q}>
+                        <button type="button" className="followup" onClick={() => submit(q)} disabled={busy}>
+                          {q}
                         </button>
                       </li>
                     ))}

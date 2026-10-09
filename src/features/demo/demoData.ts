@@ -58,20 +58,55 @@ export function normalizeQuestion(q: string): string {
     .trim()
 }
 
-/** Answer shown for questions that were not pre-computed. */
-const NOT_PRECOMPUTED: Omit<AskResponse, 'model'> = {
-  answer:
-    'This public demo only has answers for the suggested questions. Run PodLens locally with your own OpenAI key to ask anything about any episode.',
-  found: false,
-  citations: [],
-  mode: 'full',
-  unverified: false,
+/** Words too common to tell questions apart. */
+const STOP_WORDS = new Set(
+  'a an and are about did does do episode for from how in is it mentioned of on said say says the they this to was were what when where which who why with'.split(' ')
+)
+
+/** Meaningful words of a question, for loose matching. */
+function keywords(q: string): Set<string> {
+  return new Set(normalizeQuestion(q).split(' ').filter((w) => w.length > 1 && !STOP_WORDS.has(w)))
 }
 
-/** Ask request in demo mode: the stored answer for a suggested question, or an explanation. */
+/** Share of the stored question's keywords that the visitor's question also uses (0..1). */
+function overlap(asked: Set<string>, stored: Set<string>): number {
+  if (!stored.size) return 0
+  let hits = 0
+  for (const w of stored) if (asked.has(w)) hits++
+  return hits / stored.size
+}
+
+/** Minimum keyword overlap for a typed question to count as a stored one. */
+const MATCH_THRESHOLD = 0.6
+
+/**
+ * Ask request in demo mode. Exact or loose matches return the stored answer
+ * ("who was joseph strauss" finds "Who is Joseph Strauss and why are they mentioned?").
+ * Otherwise the reply explains the limit and offers the stored questions as follow-ups.
+ */
 export async function demoAnswer(episode: DemoEpisode, question: string): Promise<AskResponse> {
   await settle(600)
   const key = normalizeQuestion(question)
-  const hit = episode.qa.find((qa) => normalizeQuestion(qa.question) === key)
-  return hit ? hit.response : { ...NOT_PRECOMPUTED, model: 'demo' }
+  const exact = episode.qa.find((qa) => normalizeQuestion(qa.question) === key)
+  if (exact) return exact.response
+
+  const asked = keywords(question)
+  let best: { score: number; response: AskResponse } | null = null
+  for (const qa of episode.qa) {
+    const score = overlap(asked, keywords(qa.question))
+    if (score >= MATCH_THRESHOLD && (!best || score > best.score)) best = { score, response: qa.response }
+  }
+  if (best) return best.response
+
+  return {
+    answer: episode.qa.length
+      ? 'This public demo has answers for a few questions only. Try one of these, or run PodLens locally with your own OpenAI key to ask anything.'
+      : 'This sample was published without answers. Run PodLens locally with your own OpenAI key to ask questions.',
+    found: false,
+    citations: [],
+    mode: 'full',
+    unverified: false,
+    model: 'demo',
+    followups: episode.qa.map((qa) => qa.question),
+  }
 }

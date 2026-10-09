@@ -1,35 +1,15 @@
-/* Ask the episode: suggestions, conversation with citations, and the question bar. */
+/* Ask the episode: a see-through panel (the dotted page shows behind the conversation),
+   blue question bubbles, answers with citations, and the question bar. */
+
+.panel--chat {
+  background: transparent;
+  box-shadow: none;
+}
 
 .ask {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-}
-
-.ask__intro {
-  display: grid;
-  gap: 0.7rem;
-}
-
-.ask__suggestions {
-  display: grid;
-  gap: 0.4rem;
-}
-
-.ask__suggestion {
-  padding: 0.5rem 0.7rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--panel-2);
-  color: var(--text-2);
-  font-size: 0.8rem;
-  text-align: left;
-  cursor: pointer;
-}
-
-.ask__suggestion:hover:not(:disabled) {
-  border-color: var(--line-2);
-  color: var(--text);
 }
 
 .msg {
@@ -42,8 +22,9 @@
   align-self: flex-end;
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius) var(--radius) 3px var(--radius);
-  background: var(--panel-3);
-  color: var(--text);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 500;
 }
 
 .msg--bot {
@@ -103,6 +84,29 @@
   font-size: 0.78rem;
   line-height: 1.45;
   color: var(--text-2);
+}
+
+.followups {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.followup {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.followup:hover:not(:disabled) {
+  background: var(--accent-soft);
 }
 
 .dots {

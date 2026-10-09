@@ -68,8 +68,8 @@ def slugify(text: str) -> str:
 def default_questions(entities: list[dict[str, Any]]) -> list[str]:
     """Starter questions built from the most-mentioned entities.
 
-    Mirrors `suggestQuestions` in `src/features/ask/suggestions.ts`, so the demo's suggestion
-    chips are exactly the questions that have pre-computed answers.
+    These get pre-computed answers. On the public demo, typed questions are matched to them
+    loosely (src/features/demo/demoData.ts), and they are offered as follow-ups otherwise.
     """
     counts: Counter[tuple[str, str]] = Counter()
     display: dict[tuple[str, str], str] = {}
