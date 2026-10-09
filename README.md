@@ -1,3 +1,5 @@
+<p align="center"><img src="public/favicon.svg" width="104" alt="PodLens logo"></p>
+
 # PodLens: AI-Powered Context for Your Podcasts 🎙️✨
 
 PodLens is an AI-powered context engine for podcasts. It transcribes an episode, identifies the people, companies, places and technologies mentioned, and surfaces each one as a source card with a summary, map and image, timed to the moment it is spoken. It can also build a chronological timeline of the episode and answer questions about it, with citations that jump to the exact moment.
@@ -8,19 +10,18 @@ PodLens is an AI-powered context engine for podcasts. It transcribes an episode,
 
 | Category | Technologies |
 |---|---|
-| **Languages** | TypeScript, Python, CSS, HTML, YAML, Shell |
-| **Frontend** | React 19, Vite, HTML5 Audio, Fetch API, CSS custom properties (design tokens, light/dark theme), Inter (Google Fonts) |
-| **Backend** | FastAPI, Uvicorn, Pydantic, httpx (async HTTP), python-multipart, python-dotenv, asyncio |
-| **Speech and audio** | OpenAI Whisper (local, on PyTorch), FFmpeg |
-| **NLP / entity tagging** | spaCy (`en_core_web_sm`, optional `md` / `lg`), Anthropic Claude (Haiku 4.5) via the `anthropic` SDK, custom disambiguation rules |
-| **LLM and AI** | LangChain (`langchain-core`, `langchain-openai`), OpenAI chat models (`gpt-5.4-mini`) with strict JSON-schema structured output, OpenAI embeddings (`text-embedding-3-small`), in-memory vector retrieval |
-| **External APIs** | Wikipedia Action API and REST API, Nominatim (OpenStreetMap) geocoding, OpenStreetMap map embeds, Unsplash Search API |
-| **Live mode (parked)** | OpenAI Realtime transcription over WebSockets, Web Audio API (AudioWorklet), MediaRecorder |
-| **Testing and quality** | pytest, TypeScript strict mode, ESLint (`typescript-eslint`, `eslint-plugin-react-hooks`) |
-| **DevOps and tooling** | Docker (multi-stage build), Docker Compose, GitHub Actions, GitHub Pages, npm, Node.js, `concurrently`, Python venv, Git |
-| **Data and storage** | JSON entity exports, timestamped `.txt` transcripts, local file storage |
+| **Languages** | [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org) [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML) [![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS) [![YAML](https://img.shields.io/badge/YAML-CB171E?style=for-the-badge&logo=yaml&logoColor=white)](https://yaml.org) [![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/) |
+| **Frontend** | [![React 19](https://img.shields.io/badge/React%2019-61DAFB?style=for-the-badge&logo=react&logoColor=000000)](https://react.dev) [![Vite](https://img.shields.io/badge/Vite-9135FF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev) [![Web Audio API](https://img.shields.io/badge/Web%20Audio%20API-30363d?style=for-the-badge)](https://developer.mozilla.org/docs/Web/API/Web_Audio_API) [![Inter (Google Fonts)](https://img.shields.io/badge/Inter%20%28Google%20Fonts%29-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white)](https://fonts.google.com/specimen/Inter) |
+| **Backend** | [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com) [![Uvicorn](https://img.shields.io/badge/Uvicorn-30363d?style=for-the-badge)](https://www.uvicorn.org) [![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)](https://docs.pydantic.dev) [![HTTPX](https://img.shields.io/badge/HTTPX-30363d?style=for-the-badge)](https://www.python-httpx.org) [![python-dotenv](https://img.shields.io/badge/python--dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=000000)](https://github.com/theskumar/python-dotenv) |
+| **Speech & audio** | [![OpenAI Whisper](https://img.shields.io/badge/OpenAI%20Whisper-412991?style=for-the-badge)](https://github.com/openai/whisper) [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org) [![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white)](https://ffmpeg.org) |
+| **NLP & entities** | [![spaCy](https://img.shields.io/badge/spaCy-09A3D5?style=for-the-badge&logo=spacy&logoColor=white)](https://spacy.io) [![Claude (Anthropic)](https://img.shields.io/badge/Claude%20%28Anthropic%29-D97757?style=for-the-badge&logo=claude&logoColor=white)](https://www.anthropic.com/claude) |
+| **LLM & AI** | [![LangChain](https://img.shields.io/badge/LangChain-7FC8FF?style=for-the-badge&logo=langchain&logoColor=000000)](https://www.langchain.com) [![OpenAI GPT](https://img.shields.io/badge/OpenAI%20GPT-412991?style=for-the-badge)](https://platform.openai.com/docs/models) [![OpenAI Embeddings](https://img.shields.io/badge/OpenAI%20Embeddings-412991?style=for-the-badge)](https://platform.openai.com/docs/guides/embeddings) |
+| **Data sources** | [![Wikipedia](https://img.shields.io/badge/Wikipedia-000000?style=for-the-badge&logo=wikipedia&logoColor=white)](https://www.wikipedia.org) [![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)](https://www.openstreetmap.org) [![Unsplash](https://img.shields.io/badge/Unsplash-000000?style=for-the-badge&logo=unsplash&logoColor=white)](https://unsplash.com/developers) |
+| **Testing & quality** | [![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)](https://docs.pytest.org) [![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org) [![TypeScript strict](https://img.shields.io/badge/TypeScript%20strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/tsconfig#strict) |
+| **DevOps & tooling** | [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com) [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/features/actions) [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)](https://pages.github.com) [![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org) [![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com) [![Git](https://img.shields.io/badge/Git-F03C2E?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com) |
+| **Live mode (parked)** | [![OpenAI Realtime](https://img.shields.io/badge/OpenAI%20Realtime-412991?style=for-the-badge)](https://platform.openai.com/docs/guides/realtime) [![WebSockets](https://img.shields.io/badge/WebSockets-30363d?style=for-the-badge)](https://developer.mozilla.org/docs/Web/API/WebSockets_API) [![MediaRecorder](https://img.shields.io/badge/MediaRecorder-30363d?style=for-the-badge)](https://developer.mozilla.org/docs/Web/API/MediaRecorder) |
 
-![PodLens Architecture](public/architecture_diagram.png)
+Also used: asyncio, python-multipart, `typescript-eslint`, `eslint-plugin-react-hooks`, Docker Compose, `concurrently`, and Python venv. Data is stored as JSON entity exports and timestamped `.txt` transcripts.
 
 ### See it in Action
 https://github.com/user-attachments/assets/4b8ee1bf-2946-4abc-87b3-8432aa8f52d6
@@ -40,7 +41,6 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 - [Choosing Your Models: spaCy vs Claude vs OpenAI](#-choosing-your-models-spacy-vs-claude-vs-openai)
 - [APIs and Services Used](#-apis-and-services-used)
 - [PodLens REST API](#-podlens-rest-api)
-- [Technology Stack](#%EF%B8%8F-technology-stack)
 - [Project Structure](#%EF%B8%8F-project-structure)
 - [Installation and Setup](#-installation-and-setup)
 - [Running the App](#-running-the-app)
@@ -59,10 +59,11 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 | **Disambiguation** | Tells "Apple" the company from the fruit, "Amazon" the company from the river | Custom context rules |
 | **AI entity review** | Fixes misheard names, merges duplicates, drops vague tags, and removes summaries or photos that don't match the episode | LangChain + OpenAI |
 | **Source cards** | Summary, map and photo for every entity, shown as playback reaches it | Wikipedia, OpenStreetMap, Unsplash |
-| **Episode timeline** | Chronological timeline of everything mentioned, revealed as you listen | LangChain + OpenAI |
+| **Episode timeline** | Every dated event mentioned, in date order, each with a link to the moment it is said | LangChain + OpenAI |
 | **Ask the episode** | Grounded Q&A with citations that seek the player to the quote | LangChain + OpenAI (+ embeddings) |
 | **Synced transcript** | Waveform scrubber; the active line highlights during playback; click any line to seek; search | React, Web Audio |
-| **Dashboard** | Six panels on a dotted dark canvas, each scrolling on its own; light theme available | CSS design tokens |
+| **Dashboard** | Six panels on a dotted dark canvas, each scrolling on its own; intro cards on first load; light theme available | CSS design tokens |
+| **Free public demo** | Pre-processed sample episodes on GitHub Pages, with no server and no API keys | Static JSON + audio |
 
 ---
 
@@ -124,7 +125,7 @@ One click turns the episode into a chronological timeline of every company, pers
 - Windows are processed concurrently (`TIMELINE_MAX_CONCURRENCY`, default 4). Each window only receives the entities tagged inside it.
 - LangChain's `with_structured_output` uses OpenAI **strict JSON schema** mode, so every event is guaranteed to match the schema; no regex parsing of model output.
 - Results from all windows are merged, de-duplicated and clamped to valid timestamps. One failed window does not fail the whole timeline.
-- In the UI, **Create timeline** lists every event in date order on a quiet date spine (date on the left, events on the right; undated events last). Each event has a **Play** link to the moment it is mentioned.
+- In the UI, **Create timeline** lists every event in date order on a quiet date spine: the date on the left (in the accent colour), the event title and a **Played at** link to the moment it is mentioned on the right. Undated events come last; the model's description shows when you hover a title.
 
 **Event schema**
 
@@ -350,31 +351,8 @@ curl -X POST http://127.0.0.1:8000/api/enrich-entities \
 ```bash
 curl http://127.0.0.1:8000/api/health
 # {"ok":true,"model":"base","entity_backend":"spacy","unsplash_configured":true,
-#  "openai_configured":true,"live_mode":false,"realtime_transcription":false}
+#  "openai_configured":true,"entity_review":true,"live_mode":false,"realtime_transcription":false}
 ```
-
----
-
-## 🛠️ Technology Stack
-
-### Frontend
-- ![React](https://img.shields.io/badge/React_19-20232A?style=flat&logo=react&logoColor=61DAFB) **React 19** with feature-based hooks and components.
-- ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) Strict TypeScript end to end.
-- ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) Fast dev server and optimized builds.
-- ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white) Plain CSS with design tokens and a light/dark theme.
-
-### Backend
-- ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi) Async Python API with typed request models.
-- ![Python](https://img.shields.io/badge/Python_3.9+-3776AB?style=flat&logo=python&logoColor=white) NLP and orchestration.
-- ![OpenAI Whisper](https://img.shields.io/badge/OpenAI_Whisper-412991?style=flat&logo=openai&logoColor=white) Local speech to text.
-- ![spaCy](https://img.shields.io/badge/spaCy-09A3D5?style=flat&logo=spacy&logoColor=white) Local entity extraction.
-- ![Anthropic](https://img.shields.io/badge/Anthropic_Claude-191919?style=flat&logo=anthropic&logoColor=white) High-accuracy entity extraction.
-- ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white) Structured LLM output for the timeline and Ask.
-
-### Quality and Delivery
-- ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat&logo=pytest&logoColor=white) Backend test suite (no network or API keys needed).
-- ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) Single-container deployment.
-- ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white) Static frontend deploy to GitHub Pages.
 
 ---
 
@@ -451,7 +429,7 @@ Then fill in what you need:
 |---|---|
 | `UNSPLASH_ACCESS_KEY` | Photos on source cards |
 | `ANTHROPIC_API_KEY` | Claude entity tagging |
-| `OPENAI_API_KEY` | Episode timeline and Ask the episode |
+| `OPENAI_API_KEY` | AI entity review, Episode timeline and Ask the episode |
 | `NOMINATIM_USER_AGENT` | Your app name or contact email (requested by OpenStreetMap) |
 
 ---
@@ -491,13 +469,13 @@ The public site runs on GitHub Pages in **demo mode**: it plays episodes that we
 ```
  Your machine (once per episode)                    GitHub Pages (every visitor)
  ─────────────────────────────────                  ────────────────────────────
- npm run demo:build ─▶ Whisper ─▶ NER ─▶ cards      public/demo/index.json
-                   ─▶ timeline ─▶ preset Q&A  ───▶  public/demo/<slug>/episode.json
+ npm run demo:build ─▶ Whisper ─▶ NER ─▶ AI review  public/demo/index.json
+                   ─▶ cards ─▶ timeline ─▶ Q&A ───▶  public/demo/<slug>/episode.json
                    ─▶ compressed audio              public/demo/<slug>/audio.mp3
 ```
 
 - The demo build sets `VITE_DEMO_MODE=true`. The PodLens panel shows sample episodes instead of the upload box, and the Timeline and Ask panels answer from the stored results. The rest of the UI is exactly the same.
-- The suggested Ask questions are the ones with pre-computed answers. Typed questions get a short note explaining how to run PodLens locally.
+- Each sample ships with pre-computed answers to a few questions. Typed questions are matched to them loosely; anything else gets a short reply listing the questions that do have answers, as clickable links.
 - No request ever goes to an API, so there is nothing to abuse and no bill.
 
 **Add a demo episode**
@@ -515,7 +493,7 @@ git add public/demo && git commit -m "demo: add Apollo 11 episode" && git push
 |---|---|
 | `--title` | Name shown in the picker (required) |
 | `--description` | One line under the title |
-| `--credit` | Audio attribution shown in the demo banner |
+| `--credit` | Audio attribution shown under the sample buttons |
 | `--question "..."` | Preset Ask question (repeatable); default: generated from the top entities |
 | `--backend spacy\|claude` | Entity tagger for this build |
 | `--skip-timeline`, `--skip-ask` | Build without OpenAI (free, local tools only) |
