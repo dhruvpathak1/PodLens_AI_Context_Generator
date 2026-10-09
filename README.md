@@ -325,48 +325,6 @@ curl http://127.0.0.1:8000/api/health
 
 ---
 
-## 🗂️ Project Structure
-
-```
-├── src/                         React frontend
-│   ├── app/                     App.tsx (composition only: wires hooks, lays out the 3 columns)
-│   ├── api/                     One module per backend endpoint (fetch + response parsing)
-│   ├── config/env.ts            Build-time settings (API base URL, entity backend)
-│   ├── types/                   Shared data shapes (transcript, entities, timeline, ask)
-│   ├── shared/                  Panel shell, formatting helpers, icons, Alert, Skeleton
-│   ├── features/                One folder per feature: hooks, components and helpers
-│   │   ├── episode/             Upload -> transcribe -> tag -> enrich pipeline state
-│   │   ├── playback/            Audio player, waveform scrubber, playback clock
-│   │   ├── transcript/          Transcript panel: synced text, search, sentence timing
-│   │   ├── entities/            Live card grid, Entities (NER) panel, type filter
-│   │   ├── about/               PodLens panel: project explanation, samples or upload
-│   │   ├── timeline/            Episode timeline
-│   │   ├── ask/                 Ask the episode chat
-│   │   ├── demo/                Demo mode: sample picker, pre-computed timeline/Ask
-│   │   ├── theme/ upload/       Theme toggle, drop zone
-│   │   └── live/                PARKED live microphone mode (not imported; see its README)
-│   └── styles/                  Global CSS split by area; index.css imports them in order
-├── public/demo/                 Pre-processed demo episodes served by the public site
-│
-└── server/                      FastAPI backend
-    ├── main.py                  Entry point shim (`uvicorn main:app`)
-    ├── app/
-    │   ├── main.py              create_app(): CORS, routers, optional static UI
-    │   ├── core/                Settings (every env var in one place) and logging
-    │   ├── api/                 HTTP layer: routes/, request schemas, error helpers
-    │   ├── services/            Business logic: audio, transcription, episode, storage,
-    │   │                        entities/ (spaCy or Claude NER), enrichment/ (Wikipedia,
-    │   │                        Nominatim, Unsplash), entity_review.py, source_cards.py,
-    │   │                        timeline.py, ask.py, demo_bundle.py
-    │   └── live/                PARKED live endpoints, mounted only with ENABLE_LIVE_MODE=true
-    ├── scripts/build_demo.py    CLI: turn an audio file into a demo episode (npm run demo:build)
-    └── tests/                   pytest suite
-```
-
-**Design rules**: routes stay thin (validate, call a service, map errors to HTTP codes); services know nothing about HTTP; heavy libraries (Whisper, LangChain) load lazily so the API starts instantly; on the frontend, `App.tsx` only composes feature hooks and components.
-
----
-
 ## 📦 Installation and Setup
 
 ### Prerequisites
@@ -429,52 +387,6 @@ Open http://localhost:8080. One container serves the built UI and the API; data 
 
 ---
 
-## 🎧 Live Demo
-
-The public site runs on GitHub Pages in **demo mode**: it plays episodes that were processed once, ahead of time, so it needs **no server, no API keys, and costs nothing** to run. Visitors get the full experience (synced transcript, live source cards, timeline, and answers with clickable citations) instantly.
-
-**How it works**
-
-```
- Your machine (once per episode)                    GitHub Pages (every visitor)
- ─────────────────────────────────                  ────────────────────────────
- npm run demo:build ─▶ Whisper ─▶ NER ─▶ AI review  public/demo/index.json
-                   ─▶ cards ─▶ timeline ─▶ Q&A ───▶  public/demo/<slug>/episode.json
-                   ─▶ compressed audio              public/demo/<slug>/audio.mp3
-```
-
-- The demo build sets `VITE_DEMO_MODE=true`. The PodLens panel shows sample episodes instead of the upload box, and the Timeline and Ask panels answer from the stored results. The rest of the UI is exactly the same.
-- Each sample ships with pre-computed answers to a few questions. Typed questions are matched to them loosely; anything else gets a short reply listing the questions that do have answers, as clickable links.
-- No request ever goes to an API, so there is nothing to abuse and no bill.
-
-**Add a demo episode**
-
-```bash
-npm run demo:build -- path/to/episode.mp3 \
-  --title "Apollo 11: The Landing" \
-  --description "Mission audio from the first crewed Moon landing." \
-  --credit "Audio: NASA (public domain)"
-
-git add public/demo && git commit -m "demo: add Apollo 11 episode" && git push
-```
-
-| Flag | Purpose |
-|---|---|
-| `--title` | Name shown in the picker (required) |
-| `--description` | One line under the title |
-| `--credit` | Audio attribution shown under the sample buttons |
-| `--question "..."` | Preset Ask question (repeatable); default: generated from the top entities |
-| `--backend spacy\|claude` | Entity tagger for this build |
-| `--skip-timeline`, `--skip-ask` | Build without OpenAI (free, local tools only) |
-| `--no-review` | Skip the AI entity review (on by default with an OpenAI key) |
-| `--bitrate 64k` | MP3 bitrate of the published audio (about 0.5 MB per minute) |
-
-The build uses your local `.env` keys **once**, on your machine; the keys are never written to the output. Without `OPENAI_API_KEY` the episode is still built, just without the timeline and preset answers.
-
-> **Only publish audio you own or that is licensed for redistribution** (your own recordings, public-domain sources such as NASA or LibriVox, or Creative Commons with attribution). The audio is served publicly from the site.
-
----
-
 ## ⚙️ Configuration Reference
 
 All settings live in `.env` (see [`.env.example`](.env.example) for the full, commented list).
@@ -498,16 +410,6 @@ All settings live in `.env` (see [`.env.example`](.env.example) for the full, co
 | `VITE_TRANSCRIBE_URL` | dev proxy | API URL for production frontend builds |
 | `ENABLE_LIVE_MODE` | `false` | Mounts the parked live endpoints |
 | `VITE_DEMO_MODE` | `false` (`true` on GitHub Pages) | Play pre-processed episodes from `public/demo/`; no API calls |
-
----
-
-## 🗺️ Roadmap
-
-- **Live mode**: real-time microphone transcription via OpenAI Realtime. The code is parked, documented and compiling in `src/features/live/` and `server/app/live/`; see the README in each folder to re-enable it.
-- **Non-blocking uploads**: move transcription off the event loop so the API stays responsive during long jobs.
-- **Persistent vector store**: replace the in-memory embedding cache (for example, pgvector) so Ask survives restarts.
-- **Episode library**: save processed episodes and reopen them without re-transcribing.
-- **Authentication** before any public deployment.
 
 ---
 
