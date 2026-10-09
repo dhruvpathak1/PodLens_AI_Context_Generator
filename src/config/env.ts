@@ -33,7 +33,7 @@ export function apiUrl(path: string): string {
  */
 export const DEMO_MODE = (import.meta.env.VITE_DEMO_MODE ?? '').trim().toLowerCase() === 'true'
 
-/** URL of a file under `public/demo/`, respecting Vite's base path (e.g. `/<repo>/` on Pages). */
+/** URL of a file under `public/demo/`, respecting Vite's base path ("./" on Pages, "/" locally). */
 export function demoUrl(path: string): string {
   return `${import.meta.env.BASE_URL}demo/${path}`
 }
