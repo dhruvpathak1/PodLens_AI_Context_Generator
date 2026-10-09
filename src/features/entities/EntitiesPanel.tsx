@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { Panel } from '../../shared/components/Panel'
 import { ENTITY_FILTER_OPTIONS, type EntityDocument } from '../../types/entities'
 import { getEntitiesActiveAtPlayback } from './activeEntities'
@@ -19,8 +19,9 @@ type Props = {
 type Row = { key: string; type: string; text: string; count: number; first: number }
 
 /**
- * Middle column, bottom: every entity found (NER), filterable by type. Names being spoken right
- * now are highlighted; clicking a name plays its first mention.
+ * Middle column, bottom: a compact bar with every entity found (NER) on one scrolling row,
+ * filterable by type from the header. Names being spoken right now are highlighted and scrolled
+ * into view; clicking a name plays its first mention.
  */
 export function EntitiesPanel({ entityDoc, filter, playbackTime, onSeek, note }: Props) {
   const entities = useMemo(() => entityDoc?.entities ?? [], [entityDoc])
@@ -44,6 +45,20 @@ export function EntitiesPanel({ entityDoc, filter, playbackTime, onSeek, note }:
     () => new Set(getEntitiesActiveAtPlayback(entities, playbackTime).map((e) => entityMatchKey(e.type, e.text))),
     [entities, playbackTime]
   )
+  // Keep the name being spoken visible: scroll the strip sideways (never the page).
+  const listRef = useRef<HTMLUListElement>(null)
+  const speakingKey = [...speaking][0] ?? null
+  useEffect(() => {
+    const list = listRef.current
+    const strip = list?.parentElement
+    const chip = speakingKey ? list?.querySelector<HTMLElement>('.chip--speaking') : null
+    if (!strip || !chip) return
+    const left = chip.offsetLeft - list.offsetLeft
+    if (left < strip.scrollLeft || left + chip.offsetWidth > strip.scrollLeft + strip.clientWidth) {
+      strip.scrollTo({ left: Math.max(0, left - strip.clientWidth / 3), behavior: 'smooth' })
+    }
+  }, [speakingKey])
+
   const types = ENTITY_FILTER_OPTIONS.filter((o) => o === 'ALL' || (filter.counts?.[o] ?? 0) > 0)
 
   return (
@@ -51,7 +66,7 @@ export function EntitiesPanel({ entityDoc, filter, playbackTime, onSeek, note }:
       className="panel--entities"
       title="Entities"
       meta={entityDoc ? `${rows.length} found${entityDoc.backend ? ` with ${entityDoc.backend === 'claude' ? 'Claude' : 'spaCy'}` : ''}` : null}
-      toolbar={
+      actions={
         rows.length > 0 ? (
           <div className="seg" role="group" aria-label="Filter by type">
             {types.map((o) => {
@@ -71,11 +86,12 @@ export function EntitiesPanel({ entityDoc, filter, playbackTime, onSeek, note }:
           </div>
         ) : null
       }
+      bodyClassName="panel__body--strip"
     >
       {rows.length === 0 ? (
         <p className="empty">People, places and organisations found in the episode are listed here.</p>
       ) : (
-        <ul className="chips" aria-label="Entities">
+        <ul className="chips" aria-label="Entities" ref={listRef}>
           {visible.map((r) => (
             <li key={r.key}>
               <button

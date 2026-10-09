@@ -55,7 +55,10 @@
 
 .spine__what {
   position: relative;
-  padding: 0 0 1.05rem 1rem;
+  display: grid;
+  justify-items: start;
+  gap: 0.1rem;
+  padding: 0 0 0.85rem 1rem;
   border-left: 1px solid var(--line-2);
 }
 
@@ -83,30 +86,13 @@
   color: var(--text);
 }
 
-.spine__desc {
-  margin-top: 0.15rem;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: var(--text-2);
-}
-
-.spine__meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.2rem 0.7rem;
-  margin-top: 0.3rem;
-  font-size: 0.72rem;
-  color: var(--text-3);
-}
-
 .spine__play {
   display: inline-flex;
   gap: 0.3rem;
   padding: 0;
   border: 0;
   background: none;
-  color: var(--text-2);
+  color: var(--text-3);
   font-size: 0.72rem;
   cursor: pointer;
 }

@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { formatClock } from '../../shared/format'
 import type { EpisodeTimelineData, TimelineEvent } from '../../types/timeline'
-import { compactWhen, formatEventDate, sortByHistory } from './timelineSort'
+import { compactWhen, sortByHistory } from './timelineSort'
 
 type Props = {
   timeline: EpisodeTimelineData
@@ -14,7 +14,8 @@ const whenKey = (e: TimelineEvent) => (e.year == null ? 'undated' : `${e.year}-$
 
 /**
  * The whole timeline at once, in real-world order: a quiet date spine (date on the left,
- * events on the right). Undated events are listed last. Each event can play its first mention.
+ * event title and "Played at" on the right). Undated events are listed last. The model's
+ * description is kept as the title's tooltip; clicking "Played at" plays that moment.
  */
 export function EpisodeTimeline({ timeline, onSeek }: Props) {
   const events = useMemo(() => sortByHistory(timeline.events), [timeline.events])
@@ -26,9 +27,6 @@ export function EpisodeTimeline({ timeline, onSeek }: Props) {
       {events.map((e, i) => {
         const showWhen = i === 0 || whenKey(events[i - 1]) !== whenKey(e)
         const when = compactWhen(e)
-        const label = formatEventDate(e)
-        // Only repeat the model's wording when it says more than the compact date ("late 1700s").
-        const showLabel = label && when && label !== when.value && label !== `${when.unit} ${when.value}`
         return (
           <li key={e.id} className={`spine__item${showWhen ? ' spine__item--dated' : ''}`}>
             <div className="spine__when" aria-hidden={!showWhen}>
@@ -44,19 +42,17 @@ export function EpisodeTimeline({ timeline, onSeek }: Props) {
               ) : null}
             </div>
             <div className="spine__what">
-              <h3 className="spine__title">{e.title}</h3>
-              {e.description ? <p className="spine__desc">{e.description}</p> : null}
-              <p className="spine__meta">
-                {showLabel ? <span>{label}</span> : null}
-                <button
-                  type="button"
-                  className="spine__play"
-                  onClick={() => onSeek(e.mentioned_at_sec)}
-                  aria-label={`Play mention of ${e.title} at ${formatClock(e.mentioned_at_sec)}`}
-                >
-                  Play <span className="num">{formatClock(e.mentioned_at_sec)}</span>
-                </button>
-              </p>
+              <h3 className="spine__title" title={e.description || undefined}>
+                {e.title}
+              </h3>
+              <button
+                type="button"
+                className="spine__play"
+                onClick={() => onSeek(e.mentioned_at_sec)}
+                aria-label={`Play mention of ${e.title} at ${formatClock(e.mentioned_at_sec)}`}
+              >
+                Played at <span className="num">{formatClock(e.mentioned_at_sec)}</span>
+              </button>
             </div>
           </li>
         )

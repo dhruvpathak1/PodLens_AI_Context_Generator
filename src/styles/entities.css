@@ -1,23 +1,29 @@
-/* Entities panel: type filter and the list of names found in the episode. */
+/* Entities bar: type filter in the header, then one horizontally scrolling row of names. */
 
 .seg {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  padding: 0.55rem 0.9rem;
-  border-bottom: 1px solid var(--line);
+  gap: 0.15rem;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.panel--entities .panel__actions {
+  min-width: 0;
 }
 
 .seg__opt {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.25rem 0.6rem;
+  flex: none;
+  padding: 0.2rem 0.55rem;
   border: 1px solid transparent;
   border-radius: 999px;
   background: none;
   color: var(--text-2);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -38,8 +44,9 @@
 
 .chips {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.4rem;
+  width: max-content;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -55,6 +62,7 @@
   background: var(--panel-2);
   color: var(--text);
   font-size: 0.8rem;
+  white-space: nowrap;
   cursor: pointer;
 }
 

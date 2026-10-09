@@ -38,11 +38,10 @@
   flex: 0 0 auto;
 }
 .panel--live {
-  flex: 1 1 64%;
+  flex: 1 1 auto;
 }
 .panel--entities {
-  flex: 1 1 36%;
-  min-height: 150px;
+  flex: 0 0 auto; /* compact bar: header plus one scrolling row of names */
 }
 .panel--timeline {
   flex: 1 1 56%;
@@ -108,6 +107,13 @@
 
 .panel__body--flush {
   padding: 0;
+}
+
+.panel__body--strip {
+  flex: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.6rem 0.9rem 0.7rem;
 }
 
 .panel__body--grid {
@@ -182,9 +188,6 @@
   }
   .panel--live .panel__body--grid {
     overflow: visible;
-  }
-  .panel--entities {
-    max-height: 50vh;
   }
   .panel--timeline {
     height: 70vh;

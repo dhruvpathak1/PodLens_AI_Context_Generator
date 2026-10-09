@@ -141,9 +141,9 @@
   min-height: 38px;
   max-height: 120px;
   padding: 0.5rem 0.75rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-2);
   border-radius: 999px;
-  background: var(--panel-2);
+  background: transparent;
   color: var(--text);
   font: inherit;
   font-size: 0.86rem;
