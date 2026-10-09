@@ -382,8 +382,7 @@ docker compose up --build
 Open http://localhost:8080. One container serves the built UI and the API; data persists in the `podlens-data` volume. See [DOCKER.md](DOCKER.md) for sharing and deployment.
 
 ---
-
-## License
+---
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
