@@ -83,15 +83,6 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
               └──────────────▶ React dashboard synced to playback ◀───┘
 ```
 
-1. **Ingest**: the browser uploads an MP3, WAV, M4A, WebM or similar file to `POST /api/transcribe`.
-2. **Transcribe**: FFmpeg normalizes the audio to 16 kHz mono; Whisper returns text plus timed segments.
-3. **Tag entities**: filler words ("um", "you know") are stripped, then spaCy or Claude tags entities. A disambiguation layer reads nearby words to fix common homonyms.
-4. **Review (optional)**: with `OPENAI_API_KEY` set, an LLM reviews every entity in context (see [AI Entity Review](#-ai-entity-review)).
-5. **Enrich**: each unique entity is looked up on Wikipedia, geocoded with Nominatim if it is a place, and matched to an Unsplash photo. Lookups for one entity run in parallel; entities run one after another to respect Nominatim's 1 request/second limit.
-6. **Display**: a 2 x 2 grid of live source cards always shows the four most recent names up to the playhead.
-7. **AI layer (optional)**: with `OPENAI_API_KEY` set, the right column adds the timeline and Q&A.
-8. **Persist**: transcripts are saved to `server/transcripts/` and entity JSON to `server/entity_exports/`.
-
 ---
 
 ## 🔎 AI Entity Review
@@ -259,28 +250,6 @@ PodLens uses three model families, each for a different job:
 | `base` (default) | 74M | Good balance on a laptop CPU |
 | `small` | 244M | Noticeably cleaner text, which also improves NER |
 | `medium` / `large` | 769M / 1.55B | Best accuracy; slow on CPU, best with a GPU |
-
-### Recommended presets
-
-```bash
-# 1) Free and fully local (fastest)
-WHISPER_MODEL=base
-ENTITY_BACKEND=spacy
-SPACY_MODEL=en_core_web_sm
-
-# 2) Free and local, better accuracy
-WHISPER_MODEL=small
-ENTITY_BACKEND=spacy
-SPACY_MODEL=en_core_web_md
-
-# 3) Best quality (paid APIs)
-WHISPER_MODEL=small
-ENTITY_BACKEND=claude
-ANTHROPIC_API_KEY=sk-ant-...
-OPENAI_API_KEY=sk-...          # enables timeline + Ask
-```
-
-**Rule of thumb**: transcription quality caps everything downstream. Upgrading Whisper from `base` to `small` often improves tagging more than switching NER backends.
 
 ---
 
