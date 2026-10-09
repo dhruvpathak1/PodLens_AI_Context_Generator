@@ -1,0 +1,154 @@
+/* Live cards: a 2 x 2 grid of source cards for the latest mentions. */
+
+.live-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.live-slot {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+
+.live-slot__text {
+  max-width: 26ch;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-3);
+}
+
+.live-card {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-2);
+  overflow: hidden;
+  animation: card-in 0.35s ease-out;
+}
+
+/* The one moving moment on the page: a new mention arriving */
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.live-card__media {
+  position: relative;
+  flex: 0 0 38%;
+  min-height: 70px;
+  margin: 0;
+  background: var(--panel-3);
+}
+
+.live-card__media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.live-card__credit {
+  position: absolute;
+  right: 6px;
+  bottom: 5px;
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #e7e9ec;
+  font-size: 0.62rem;
+}
+
+.live-card__credit a {
+  color: inherit;
+}
+
+.live-card__body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.65rem 0.75rem 0.6rem;
+}
+
+.live-card__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-3);
+}
+
+.live-card__title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.live-card__text {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-2);
+  scrollbar-width: thin;
+}
+
+.live-card__text--muted {
+  color: var(--text-3);
+}
+
+.live-card__links {
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 0.25rem;
+  font-size: 0.76rem;
+}
+
+.live-card__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+}
+
+.live-card__links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .live-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  /* One card per row: cap the summary and keep only the "next card" placeholder */
+  .live-card__text {
+    max-height: 9.5rem;
+  }
+
+  .live-card__media {
+    flex-basis: 150px;
+  }
+
+  .live-slot {
+    display: none;
+  }
+
+  .live-slot--next {
+    display: grid;
+    min-height: 90px;
+  }
+}

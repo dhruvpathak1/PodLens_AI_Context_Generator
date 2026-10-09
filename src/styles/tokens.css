@@ -1,49 +1,40 @@
-/* Design tokens: colors, shadows, fonts. Dark is the default; [data-theme='light'] overrides.
-   The theme attribute is set on <html> by index.html (before first paint) and by useTheme(). */
+/* Design tokens. Dark is the default look; [data-theme='light'] swaps the same names.
+   Palette: graphite with a fine grey dot grid, neutral panels, one cool accent used sparingly
+   (playhead, active states, primary button). Type: Inter with tabular figures for times. */
 
 :root {
-  /* Dark theme (default). Every color in the app comes from these variables. */
-  --text: #a1a8b8;
-  --text-h: #f1f5f9;
-  --muted: #6b7280;
-  --bg: #06080f;
-  --dash-bg: #06080f;
-  --dash-sidebar: #0c1019;
-  --surface: #131a26;
-  --panel-bg: #131a26;
-  --border: #1e293b;
-  --border-strong: #334155;
-  --code-bg: #0f1419;
-  --accent: #3b82f6;
-  --accent-dim: rgba(59, 130, 246, 0.15);
-  --accent-bg: rgba(59, 130, 246, 0.12);
-  --accent-ring: rgba(59, 130, 246, 0.35);
-  --on-accent: #ffffff;
-  --purple: #8b5cf6;
-  --purple-bg: rgba(139, 92, 246, 0.12);
-  --status-blue: #38bdf8;
-  --err-bg: rgba(127, 29, 29, 0.35);
-  --err-border: rgba(248, 113, 113, 0.35);
-  --err-text: #fecaca;
-  --shadow: 0 4px 24px rgb(0 0 0 / 0.35);
-  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.35);
-  --danger: #c96b6b;
-  --danger-border: rgba(200, 90, 90, 0.45);
+  --bg: #0c0d10;
+  --dot: #2a2d33; /* the 1px dot grid on the page background */
+  --panel: #14161a;
+  --panel-2: #1a1d22; /* surfaces inside panels: cards, inputs, chips */
+  --panel-3: #22252b; /* hover */
+  --line: #24272d;
+  --line-2: #33373e;
+  --text: #e7e9ec;
+  --text-2: #a4a9b1;
+  --text-3: #6f757e;
+  --accent: #9ab8ff;
+  --accent-ink: #0c0d10; /* text on an accent background */
+  --accent-soft: rgba(154, 184, 255, 0.12);
+  --accent-line: rgba(154, 184, 255, 0.45);
+  --danger: #f2a7a7;
+  --danger-soft: rgba(242, 167, 167, 0.1);
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 12px 32px -18px rgba(0, 0, 0, 0.7);
 
-  /* Category hues (entity badges, live tags, timeline) */
-  --hue-blue: #3b82f6;
-  --hue-violet: #a78bfa;
-  --hue-cyan: #22d3ee;
-  --hue-green: #34d399;
-  --hue-amber: #fbbf24;
-  --hue-pink: #f472b6;
-  --hue-teal: #2dd4bf;
-  --hue-red: #f87171;
-  --hue-orange: #fb923c;
-  --hue-slate: #94a3b8;
+  /* Muted markers for entity types (only used as small dots) */
+  --type-person: #c4b5fd;
+  --type-place: #86efac;
+  --type-company: #fcd34d;
+  --type-technology: #7dd3fc;
+  --type-event: #fda4af;
+  --type-misc: #a4a9b1;
 
-  --sans: 'Inter', ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, 'SF Mono', Consolas, monospace;
+  --radius-lg: 14px;
+  --radius: 10px;
+  --radius-sm: 7px;
+  --gap: 14px;
+
+  --sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   font-family: var(--sans);
   font-size: 15px;
@@ -56,46 +47,29 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* Light theme: set by the header toggle (data-theme on <html>), persisted in localStorage. */
 :root[data-theme='light'] {
-  --text: #475569;
-  --text-h: #0f172a;
-  --muted: #64748b;
-  --bg: #f4f6fb;
-  --dash-bg: #f4f6fb;
-  --dash-sidebar: #ffffff;
-  --surface: #ffffff;
-  --panel-bg: #ffffff;
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
-  --code-bg: #f1f5f9;
-  --accent: #2563eb;
-  --accent-dim: rgba(37, 99, 235, 0.1);
-  --accent-bg: rgba(37, 99, 235, 0.08);
-  --accent-ring: rgba(37, 99, 235, 0.35);
-  --on-accent: #ffffff;
-  --purple: #7c3aed;
-  --purple-bg: rgba(124, 58, 237, 0.1);
-  --status-blue: #0284c7;
-  --err-bg: #fef2f2;
-  --err-border: #fecaca;
-  --err-text: #991b1b;
-  --shadow: 0 4px 24px rgb(15 23 42 / 0.08);
-  --shadow-sm: 0 1px 3px rgb(15 23 42 / 0.12);
-  --danger: #b91c1c;
-  --danger-border: rgba(185, 28, 28, 0.35);
-
-  /* Darker hues so category text stays readable on white */
-  --hue-blue: #2563eb;
-  --hue-violet: #7c3aed;
-  --hue-cyan: #0891b2;
-  --hue-green: #059669;
-  --hue-amber: #b45309;
-  --hue-pink: #db2777;
-  --hue-teal: #0d9488;
-  --hue-red: #dc2626;
-  --hue-orange: #ea580c;
-  --hue-slate: #64748b;
-
+  --bg: #f3f4f6;
+  --dot: #c9ccd2;
+  --panel: #ffffff;
+  --panel-2: #f6f7f9;
+  --panel-3: #eceef1;
+  --line: #e3e5e9;
+  --line-2: #d3d6db;
+  --text: #15171a;
+  --text-2: #4b5058;
+  --text-3: #80868f;
+  --accent: #3157d5;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(49, 87, 213, 0.09);
+  --accent-line: rgba(49, 87, 213, 0.4);
+  --danger: #b42318;
+  --danger-soft: #fef3f2;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 12px 32px -20px rgba(16, 24, 40, 0.25);
+  --type-person: #7c3aed;
+  --type-place: #059669;
+  --type-company: #b45309;
+  --type-technology: #0284c7;
+  --type-event: #e11d48;
+  --type-misc: #6b7280;
   color-scheme: light;
 }

@@ -15,9 +15,9 @@
     <!-- Apply the saved theme before first paint to avoid a light/dark flash (see features/theme/useTheme.ts). -->
     <script>
       try {
+        // Dark by default; light only if the visitor chose it before.
         var t = localStorage.getItem('podlens-theme')
-        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
-        document.documentElement.dataset.theme = t
+        document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark'
       } catch (e) {
         document.documentElement.dataset.theme = 'dark'
       }

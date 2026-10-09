@@ -30,3 +30,6 @@ export function placeholderCard(e: EntityRecord): EnrichedEntityCard {
     unsplash: null,
   }
 }
+
+/** Display name for an entity type ("PLACE" -> "Place"). */
+export const typeLabel = (t: string) => t.charAt(0) + t.slice(1).toLowerCase()

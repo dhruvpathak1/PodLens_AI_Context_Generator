@@ -59,8 +59,8 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 | **Source cards** | Summary, map and photo for every entity, shown as playback reaches it | Wikipedia, OpenStreetMap, Unsplash |
 | **Episode timeline** | Chronological timeline of everything mentioned, revealed as you listen | LangChain + OpenAI |
 | **Ask the episode** | Grounded Q&A with citations that seek the player to the quote | LangChain + OpenAI (+ embeddings) |
-| **Synced transcript** | Active sentence highlights during playback; click any line to seek; full-text search | React |
-| **Light / dark theme** | Remembers your choice, no flash on load | CSS design tokens |
+| **Synced transcript** | Waveform scrubber; the active line highlights during playback; click any line to seek; search | React, Web Audio |
+| **Dashboard** | Six panels on a dotted dark canvas, each scrolling on its own; light theme available | CSS design tokens |
 
 ---
 
@@ -84,8 +84,8 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 2. **Transcribe**: FFmpeg normalizes the audio to 16 kHz mono; Whisper returns text plus timed segments.
 3. **Tag entities**: filler words ("um", "you know") are stripped, then spaCy or Claude tags entities. A disambiguation layer reads nearby words to fix common homonyms.
 4. **Enrich**: each unique entity is looked up on Wikipedia, geocoded with Nominatim if it is a place, and matched to an Unsplash photo. Lookups for one entity run in parallel; entities run one after another to respect Nominatim's 1 request/second limit.
-5. **Display**: source cards roll onto a Live panel exactly when each entity is spoken.
-6. **AI layer (optional)**: with `OPENAI_API_KEY` set, the right-hand **Episode AI** panel adds the timeline and Q&A.
+5. **Display**: a 2 x 2 grid of live source cards always shows the four most recent names up to the playhead.
+6. **AI layer (optional)**: with `OPENAI_API_KEY` set, the right column adds the timeline and Q&A.
 7. **Persist**: transcripts are saved to `server/transcripts/` and entity JSON to `server/entity_exports/`.
 
 ---
@@ -100,7 +100,7 @@ One click turns the episode into a chronological timeline of every company, pers
 - Windows are processed concurrently (`TIMELINE_MAX_CONCURRENCY`, default 4). Each window only receives the entities tagged inside it.
 - LangChain's `with_structured_output` uses OpenAI **strict JSON schema** mode, so every event is guaranteed to match the schema; no regex parsing of model output.
 - Results from all windows are merged, de-duplicated and clamped to valid timestamps. One failed window does not fail the whole timeline.
-- In the UI, events **stack up in the right panel as playback reaches them**. Toggle between *As mentioned* and *By date*, filter by category, and click any event to jump to that moment.
+- In the UI, **Create timeline** lists every event in date order on a quiet date spine (date on the left, events on the right; undated events last). Each event has a **Play** link to the moment it is mentioned.
 
 **Event schema**
 
@@ -361,16 +361,16 @@ curl http://127.0.0.1:8000/api/health
 │   ├── api/                     One module per backend endpoint (fetch + response parsing)
 │   ├── config/env.ts            Build-time settings (API base URL, entity backend)
 │   ├── types/                   Shared data shapes (transcript, entities, timeline, ask)
-│   ├── shared/                  Formatting helpers, icons, Alert, Skeleton
+│   ├── shared/                  Panel shell, formatting helpers, icons, Alert, Skeleton
 │   ├── features/                One folder per feature: hooks, components and helpers
 │   │   ├── episode/             Upload -> transcribe -> tag -> enrich pipeline state
-│   │   ├── playback/            Audio player and playback clock
-│   │   ├── transcript/          Left sidebar: synced transcript, search, sentence timing
-│   │   ├── entities/            Live cards, entity filter, source cards
-│   │   ├── rail/                Right "Episode AI" panel (Timeline / Ask tabs)
+│   │   ├── playback/            Audio player, waveform scrubber, playback clock
+│   │   ├── transcript/          Transcript panel: synced text, search, sentence timing
+│   │   ├── entities/            Live card grid, Entities (NER) panel, type filter
+│   │   ├── about/               PodLens panel: project explanation, samples or upload
 │   │   ├── timeline/            Episode timeline
 │   │   ├── ask/                 Ask the episode chat
-│   │   ├── demo/                Demo mode: episode picker, banner, pre-computed timeline/Ask
+│   │   ├── demo/                Demo mode: sample picker, pre-computed timeline/Ask
 │   │   ├── theme/ upload/       Theme toggle, drop zone
 │   │   └── live/                PARKED live microphone mode (not imported; see its README)
 │   └── styles/                  Global CSS split by area; index.css imports them in order
@@ -470,7 +470,7 @@ The public site runs on GitHub Pages in **demo mode**: it plays episodes that we
                    ─▶ compressed audio              public/demo/<slug>/audio.mp3
 ```
 
-- The demo build sets `VITE_DEMO_MODE=true`. The sidebar shows an episode picker instead of the upload box, and the Timeline and Ask tabs answer from the stored results. The rest of the UI is exactly the same.
+- The demo build sets `VITE_DEMO_MODE=true`. The PodLens panel shows sample episodes instead of the upload box, and the Timeline and Ask panels answer from the stored results. The rest of the UI is exactly the same.
 - The suggested Ask questions are the ones with pre-computed answers. Typed questions get a short note explaining how to run PodLens locally.
 - No request ever goes to an API, so there is nothing to abuse and no bill.
 

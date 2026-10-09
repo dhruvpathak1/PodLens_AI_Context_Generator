@@ -1,26 +1,86 @@
-/* Document-level defaults: full-height app shell and base typography. */
+/* Document defaults: the dotted page background, type and a few utilities. */
 
 html,
 body {
-  height: 100svh;
-  background: var(--bg);
   margin: 0;
-  overflow: hidden;
+  min-height: 100%;
+  background-color: var(--bg);
+  /* Tiny grey dots on an 18px grid */
+  background-image: radial-gradient(circle at 1px 1px, var(--dot) 1px, transparent 1.2px);
+  background-size: 18px 18px;
 }
 
 #root {
-  height: 100%;
-  min-height: 0;
-  box-sizing: border-box;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 h1,
-h2 {
-  color: var(--text-h);
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-line);
+  outline-offset: 2px;
 }
 
 code {
-  font-family: var(--mono);
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+/* Tabular figures keep times and years from jittering as they change */
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Smooth theme swap (useTheme adds this class briefly) */
+@media (prefers-reduced-motion: no-preference) {
+  .theme-anim,
+  .theme-anim * {
+    transition:
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      color 0.25s ease !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
