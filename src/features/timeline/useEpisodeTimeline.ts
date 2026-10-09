@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { createEpisodeTimeline } from '../../api/timeline'
 import type { EntityRecord } from '../../types/entities'
 import type { EpisodeTimelineData } from '../../types/timeline'
@@ -10,17 +10,23 @@ type Params = {
   segments: TranscriptSegment[]
   entities: EntityRecord[]
   sourceLabel: string | null
+  /** Replaces the API call (demo mode returns a pre-computed timeline). */
+  generate?: () => Promise<EpisodeTimelineData>
 }
 
 /**
  * Timeline generation state. `create()` sends the transcript and entities to the LLM;
  * `reset()` aborts any request in flight and clears the result (new episode).
  */
-export function useEpisodeTimeline({ ready, segments, entities, sourceLabel }: Params) {
+export function useEpisodeTimeline({ ready, segments, entities, sourceLabel, generate }: Params) {
   const [timeline, setTimeline] = useState<EpisodeTimelineData | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const abortRef = useRef<AbortController | null>(null)
+  const generateRef = useRef(generate)
+  useEffect(() => {
+    generateRef.current = generate
+  }, [generate])
 
   const reset = useCallback(() => {
     abortRef.current?.abort()
@@ -38,7 +44,9 @@ export function useEpisodeTimeline({ ready, segments, entities, sourceLabel }: P
     setBusy(true)
     setError(null)
     try {
-      const result = await createEpisodeTimeline(segments, entities, sourceLabel, ctrl.signal)
+      const result = generateRef.current
+        ? await generateRef.current()
+        : await createEpisodeTimeline(segments, entities, sourceLabel, ctrl.signal)
       if (!ctrl.signal.aborted) setTimeline(result)
     } catch (e) {
       if (!ctrl.signal.aborted) setError(e instanceof Error ? e.message : 'Timeline failed')

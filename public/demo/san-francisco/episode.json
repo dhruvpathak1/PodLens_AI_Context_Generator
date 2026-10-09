@@ -1,0 +1,2171 @@
+{
+ "schema_version": 1,
+ "slug": "san-francisco",
+ "title": "San Francisco",
+ "description": "A short audio tour of the city's history and landmarks.",
+ "credit": "Audio: Dhruv Pathak",
+ "audio": "audio.mp3",
+ "duration_sec": 247.2,
+ "generated_at": "2026-10-09",
+ "generated_with": {
+  "whisper_model": "base",
+  "entity_backend": "claude",
+  "timeline_model": "gpt-5.4-mini",
+  "ask_model": "gpt-5.4-mini"
+ },
+ "transcript": "Welcome back to the Deep Dive. Today, we are heading west straight into the fog, iconic rolling hills, and cable cars of one of the world's most dynamic cities, San Francisco, California. Whether you know it for its pastel-painted ladies, sweeping bay views, or tech behemoths, SF is a city defined by reinvention. From a sleepy 1800s outpost to the global brain trust of tech innovation, how did a 49-square-mile peninsula become such a massive engine of world history? Let's trace the map. Long before streetcars or tech campuses, the San Francisco peninsula was the ancestral land of the Oloni people. By the late 1700s, Spanish colonizers arrived, establishing Mission Dolores and a military precidio, founding a quiet settlement called Yerba Buena. But everything changed in 1848. Gold was discovered at Sutter's Mill in the California foothills, launching the legendary 1849 California gold rush. Over night, Yerba Buena renamed itself San Francisco and its population exploded, jumping from roughly 1000 residents to over 25,000 in less than two years. Ships were left abandoned in the harbor by crews running off to find gold, and houses were thrown up literally overnight. That wild, risk-taking spirit became part of the city's DNA. Even after the devastating 1906 earthquake and fire leveled three quarters of the city, San Francisco rebuilt itself within a decade, bigger and bolder than before. That resilience paved the way for modern San Francisco landmarks. You can't talk about SF without picturing its geography, Alcatraz Islands sitting in the bay, historic cable cars climbing knob hill, and of course, Fisherman's Wharf. But the undisputed Crown Jewel opened in 1937, the Golden Gate Bridge. At the time, critics said it couldn't be built, the ocean currents were too turbulent, the fog was too dense, and the gap was over a mile wide. But chief engineer Joseph Strauss proved them wrong. Coded in its iconic, international orange, paint, chosen specifically to stand out against the thick bay fog. The suspension bridge instantly became a symbol of human ambition and design. So how did this center of trade, counterculture, and maritime history morph into the tech capital of the planet? It actually started just south of the city in the Santa Clara Valley, what we now call Silicon Valley. In the 1940s and 50s, Stanford University Dean Frederick Turman encouraged graduates to build electronics companies locally instead of heading east. Early pioneers like Hewlett Packard in Apollo Alto Garage, and later the Traderus 8, who founded Fairchild Semiconductor, sparked a revolution in Silicon Microchips. By the late 1990s.com boom and the mid-2000s app revolution, tech wasn't just staying in the suburban south bay, it migrated straight back into the heart of San Francisco. Today, San Francisco proper is home to some of the most influential corporate headquarters on earth. Take Salesforce, whose 1,070 foot skyscraper dominates the skyline. Or social media giant acts, formerly Twitter, Fintech powerhouses like Square, Block, and Stripe, and sharing economy pioneers like Airbnb and Uber. Even AI giants like OpenAI and Anthropic call this F their home base during the generative AI wave. The city remains a magnetic hub for venture capital, engineering talent, and world shaping startups. From O'Loney villages and gold rush fortune seekers to engineering marvels like the Golden Gate Bridge, right up to the modern code base of tomorrow. San Francisco has always been a place where people go to invent the future or reinvent themselves. That's it for today's episode. If you loved this deep dive, hit that subscribe button, leave us a review, and let us know what city we should cover next. Until next time, stay curious.",
+ "segments": [
+  {
+   "id": 0,
+   "start": 0.0,
+   "end": 6.16,
+   "text": "Welcome back to the Deep Dive. Today, we are heading west straight into the fog, iconic rolling hills,"
+  },
+  {
+   "id": 1,
+   "start": 6.16,
+   "end": 10.88,
+   "text": "and cable cars of one of the world's most dynamic cities, San Francisco, California."
+  },
+  {
+   "id": 2,
+   "start": 11.52,
+   "end": 16.8,
+   "text": "Whether you know it for its pastel-painted ladies, sweeping bay views, or tech behemoths,"
+  },
+  {
+   "id": 3,
+   "start": 16.8,
+   "end": 23.36,
+   "text": "SF is a city defined by reinvention. From a sleepy 1800s outpost to the global brain trust"
+  },
+  {
+   "id": 4,
+   "start": 23.36,
+   "end": 29.2,
+   "text": "of tech innovation, how did a 49-square-mile peninsula become such a massive engine of world history?"
+  },
+  {
+   "id": 5,
+   "start": 30.0,
+   "end": 35.52,
+   "text": "Let's trace the map. Long before streetcars or tech campuses, the San Francisco peninsula"
+  },
+  {
+   "id": 6,
+   "start": 35.52,
+   "end": 42.480000000000004,
+   "text": "was the ancestral land of the Oloni people. By the late 1700s, Spanish colonizers arrived,"
+  },
+  {
+   "id": 7,
+   "start": 42.480000000000004,
+   "end": 48.24,
+   "text": "establishing Mission Dolores and a military precidio, founding a quiet settlement called Yerba Buena."
+  },
+  {
+   "id": 8,
+   "start": 48.879999999999995,
+   "end": 55.2,
+   "text": "But everything changed in 1848. Gold was discovered at Sutter's Mill in the California foothills,"
+  },
+  {
+   "id": 9,
+   "start": 55.2,
+   "end": 62.32,
+   "text": "launching the legendary 1849 California gold rush. Over night, Yerba Buena renamed itself San"
+  },
+  {
+   "id": 10,
+   "start": 62.32,
+   "end": 69.28,
+   "text": "Francisco and its population exploded, jumping from roughly 1000 residents to over 25,000 in less"
+  },
+  {
+   "id": 11,
+   "start": 69.28,
+   "end": 74.96000000000001,
+   "text": "than two years. Ships were left abandoned in the harbor by crews running off to find gold,"
+  },
+  {
+   "id": 12,
+   "start": 74.96000000000001,
+   "end": 81.84,
+   "text": "and houses were thrown up literally overnight. That wild, risk-taking spirit became part of the city's DNA."
+  },
+  {
+   "id": 13,
+   "start": 82.56,
+   "end": 88.16,
+   "text": "Even after the devastating 1906 earthquake and fire leveled three quarters of the city,"
+  },
+  {
+   "id": 14,
+   "start": 88.16,
+   "end": 94.0,
+   "text": "San Francisco rebuilt itself within a decade, bigger and bolder than before. That resilience paved"
+  },
+  {
+   "id": 15,
+   "start": 94.0,
+   "end": 100.32000000000001,
+   "text": "the way for modern San Francisco landmarks. You can't talk about SF without picturing its geography,"
+  },
+  {
+   "id": 16,
+   "start": 100.32000000000001,
+   "end": 105.84,
+   "text": "Alcatraz Islands sitting in the bay, historic cable cars climbing knob hill, and of course,"
+  },
+  {
+   "id": 17,
+   "start": 105.84,
+   "end": 112.24000000000001,
+   "text": "Fisherman's Wharf. But the undisputed Crown Jewel opened in 1937, the Golden Gate Bridge."
+  },
+  {
+   "id": 18,
+   "start": 112.96000000000001,
+   "end": 117.76,
+   "text": "At the time, critics said it couldn't be built, the ocean currents were too turbulent,"
+  },
+  {
+   "id": 19,
+   "start": 117.76,
+   "end": 124.08000000000001,
+   "text": "the fog was too dense, and the gap was over a mile wide. But chief engineer Joseph Strauss proved"
+  },
+  {
+   "id": 20,
+   "start": 124.08000000000001,
+   "end": 130.32,
+   "text": "them wrong. Coded in its iconic, international orange, paint, chosen specifically to stand out"
+  },
+  {
+   "id": 21,
+   "start": 130.32,
+   "end": 135.68,
+   "text": "against the thick bay fog. The suspension bridge instantly became a symbol of human ambition and"
+  },
+  {
+   "id": 22,
+   "start": 135.68,
+   "end": 141.35999999999999,
+   "text": "design. So how did this center of trade, counterculture, and maritime history morph into the tech"
+  },
+  {
+   "id": 23,
+   "start": 141.35999999999999,
+   "end": 146.95999999999998,
+   "text": "capital of the planet? It actually started just south of the city in the Santa Clara Valley,"
+  },
+  {
+   "id": 24,
+   "start": 146.95999999999998,
+   "end": 153.44,
+   "text": "what we now call Silicon Valley. In the 1940s and 50s, Stanford University Dean Frederick"
+  },
+  {
+   "id": 25,
+   "start": 153.44,
+   "end": 158.24,
+   "text": "Turman encouraged graduates to build electronics companies locally instead of heading east."
+  },
+  {
+   "id": 26,
+   "start": 158.96,
+   "end": 163.44,
+   "text": "Early pioneers like Hewlett Packard in Apollo Alto Garage, and later the"
+  },
+  {
+   "id": 27,
+   "start": 163.44,
+   "end": 169.28,
+   "text": "Traderus 8, who founded Fairchild Semiconductor, sparked a revolution in Silicon Microchips."
+  },
+  {
+   "id": 28,
+   "start": 170.0,
+   "end": 176.4,
+   "text": "By the late 1990s.com boom and the mid-2000s app revolution, tech wasn't just staying in the"
+  },
+  {
+   "id": 29,
+   "start": 176.4,
+   "end": 182.64000000000001,
+   "text": "suburban south bay, it migrated straight back into the heart of San Francisco. Today, San Francisco"
+  },
+  {
+   "id": 30,
+   "start": 182.64,
+   "end": 188.48,
+   "text": "proper is home to some of the most influential corporate headquarters on earth. Take Salesforce,"
+  },
+  {
+   "id": 31,
+   "start": 188.48,
+   "end": 195.92,
+   "text": "whose 1,070 foot skyscraper dominates the skyline. Or social media giant acts, formerly Twitter,"
+  },
+  {
+   "id": 32,
+   "start": 195.92,
+   "end": 202.16,
+   "text": "Fintech powerhouses like Square, Block, and Stripe, and sharing economy pioneers like Airbnb"
+  },
+  {
+   "id": 33,
+   "start": 202.16,
+   "end": 208.64,
+   "text": "and Uber. Even AI giants like OpenAI and Anthropic call this F their home base during the generative"
+  },
+  {
+   "id": 34,
+   "start": 208.95999999999998,
+   "end": 214.72,
+   "text": "AI wave. The city remains a magnetic hub for venture capital, engineering talent, and world"
+  },
+  {
+   "id": 35,
+   "start": 214.72,
+   "end": 220.23999999999998,
+   "text": "shaping startups. From O'Loney villages and gold rush fortune seekers to engineering marvels"
+  },
+  {
+   "id": 36,
+   "start": 220.23999999999998,
+   "end": 225.92,
+   "text": "like the Golden Gate Bridge, right up to the modern code base of tomorrow. San Francisco has"
+  },
+  {
+   "id": 37,
+   "start": 225.92,
+   "end": 231.6,
+   "text": "always been a place where people go to invent the future or reinvent themselves. That's it for"
+  },
+  {
+   "id": 38,
+   "start": 231.6,
+   "end": 237.2,
+   "text": "today's episode. If you loved this deep dive, hit that subscribe button, leave us a review,"
+  },
+  {
+   "id": 39,
+   "start": 237.2,
+   "end": 247.2,
+   "text": "and let us know what city we should cover next. Until next time, stay curious."
+  }
+ ],
+ "document": {
+  "schema_version": 1,
+  "extracted_at": "2026-10-09T04:07:06.540078+00:00",
+  "backend": "claude",
+  "source_label": "San Francisco",
+  "chunks": [
+   {
+    "id": 0,
+    "start_sec": 0.0,
+    "end_sec": 6.16,
+    "text_raw": "Welcome back to the Deep Dive. Today, we are heading west straight into the fog, iconic rolling hills,",
+    "text_clean": "Welcome back to the Deep Dive. Today, we are heading west straight into the fog, iconic rolling hills,"
+   },
+   {
+    "id": 1,
+    "start_sec": 6.16,
+    "end_sec": 10.88,
+    "text_raw": "and cable cars of one of the world's most dynamic cities, San Francisco, California.",
+    "text_clean": "and cable cars of one of the world's most dynamic cities, San Francisco, California."
+   },
+   {
+    "id": 2,
+    "start_sec": 11.52,
+    "end_sec": 16.8,
+    "text_raw": "Whether you know it for its pastel-painted ladies, sweeping bay views, or tech behemoths,",
+    "text_clean": "Whether it for its pastel-painted ladies, sweeping bay views, or tech behemoths,"
+   },
+   {
+    "id": 3,
+    "start_sec": 16.8,
+    "end_sec": 23.36,
+    "text_raw": "SF is a city defined by reinvention. From a sleepy 1800s outpost to the global brain trust",
+    "text_clean": "SF is a city defined by reinvention. From a sleepy 1800s outpost to the global brain trust"
+   },
+   {
+    "id": 4,
+    "start_sec": 23.36,
+    "end_sec": 29.2,
+    "text_raw": "of tech innovation, how did a 49-square-mile peninsula become such a massive engine of world history?",
+    "text_clean": "of tech innovation, how did a 49-square-mile peninsula become such a massive engine of world history?"
+   },
+   {
+    "id": 5,
+    "start_sec": 30.0,
+    "end_sec": 35.52,
+    "text_raw": "Let's trace the map. Long before streetcars or tech campuses, the San Francisco peninsula",
+    "text_clean": "Let's trace the map. Long before streetcars or tech campuses, the San Francisco peninsula"
+   },
+   {
+    "id": 6,
+    "start_sec": 35.52,
+    "end_sec": 42.48,
+    "text_raw": "was the ancestral land of the Oloni people. By the late 1700s, Spanish colonizers arrived,",
+    "text_clean": "was the ancestral land of the Oloni people. By the late 1700s, Spanish colonizers arrived,"
+   },
+   {
+    "id": 7,
+    "start_sec": 42.48,
+    "end_sec": 48.24,
+    "text_raw": "establishing Mission Dolores and a military precidio, founding a quiet settlement called Yerba Buena.",
+    "text_clean": "establishing Mission Dolores and a military precidio, founding a quiet settlement called Yerba Buena."
+   },
+   {
+    "id": 8,
+    "start_sec": 48.88,
+    "end_sec": 55.2,
+    "text_raw": "But everything changed in 1848. Gold was discovered at Sutter's Mill in the California foothills,",
+    "text_clean": "But everything changed in 1848. Gold was discovered at Sutter's Mill in the California foothills,"
+   },
+   {
+    "id": 9,
+    "start_sec": 55.2,
+    "end_sec": 62.32,
+    "text_raw": "launching the legendary 1849 California gold rush. Over night, Yerba Buena renamed itself San",
+    "text_clean": "launching the legendary 1849 California gold rush. Over night, Yerba Buena renamed itself San"
+   },
+   {
+    "id": 10,
+    "start_sec": 62.32,
+    "end_sec": 69.28,
+    "text_raw": "Francisco and its population exploded, jumping from roughly 1000 residents to over 25,000 in less",
+    "text_clean": "Francisco and its population exploded, jumping from roughly 1000 residents to over 25,000 in less"
+   },
+   {
+    "id": 11,
+    "start_sec": 69.28,
+    "end_sec": 74.96,
+    "text_raw": "than two years. Ships were left abandoned in the harbor by crews running off to find gold,",
+    "text_clean": "than two years. Ships were left abandoned in the harbor by crews running off to find gold,"
+   },
+   {
+    "id": 12,
+    "start_sec": 74.96,
+    "end_sec": 81.84,
+    "text_raw": "and houses were thrown up literally overnight. That wild, risk-taking spirit became part of the city's DNA.",
+    "text_clean": "and houses were thrown up overnight. That wild, risk-taking spirit became part of the city's DNA."
+   },
+   {
+    "id": 13,
+    "start_sec": 82.56,
+    "end_sec": 88.16,
+    "text_raw": "Even after the devastating 1906 earthquake and fire leveled three quarters of the city,",
+    "text_clean": "Even after the devastating 1906 earthquake and fire leveled three quarters of the city,"
+   },
+   {
+    "id": 14,
+    "start_sec": 88.16,
+    "end_sec": 94.0,
+    "text_raw": "San Francisco rebuilt itself within a decade, bigger and bolder than before. That resilience paved",
+    "text_clean": "San Francisco rebuilt itself within a decade, bigger and bolder than before. That resilience paved"
+   },
+   {
+    "id": 15,
+    "start_sec": 94.0,
+    "end_sec": 100.32,
+    "text_raw": "the way for modern San Francisco landmarks. You can't talk about SF without picturing its geography,",
+    "text_clean": "the way for modern San Francisco landmarks. You can't talk about SF without picturing its geography,"
+   },
+   {
+    "id": 16,
+    "start_sec": 100.32,
+    "end_sec": 105.84,
+    "text_raw": "Alcatraz Islands sitting in the bay, historic cable cars climbing knob hill, and of course,",
+    "text_clean": "Alcatraz Islands sitting in the bay, historic cable cars climbing knob hill, and of course,"
+   },
+   {
+    "id": 17,
+    "start_sec": 105.84,
+    "end_sec": 112.24,
+    "text_raw": "Fisherman's Wharf. But the undisputed Crown Jewel opened in 1937, the Golden Gate Bridge.",
+    "text_clean": "Fisherman's Wharf. But the undisputed Crown Jewel opened in 1937, the Golden Gate Bridge."
+   },
+   {
+    "id": 18,
+    "start_sec": 112.96,
+    "end_sec": 117.76,
+    "text_raw": "At the time, critics said it couldn't be built, the ocean currents were too turbulent,",
+    "text_clean": "At the time, critics said it couldn't be built, the ocean currents were too turbulent,"
+   },
+   {
+    "id": 19,
+    "start_sec": 117.76,
+    "end_sec": 124.08,
+    "text_raw": "the fog was too dense, and the gap was over a mile wide. But chief engineer Joseph Strauss proved",
+    "text_clean": "the fog was too dense, and the gap was over a mile wide. But chief engineer Joseph Strauss proved"
+   },
+   {
+    "id": 20,
+    "start_sec": 124.08,
+    "end_sec": 130.32,
+    "text_raw": "them wrong. Coded in its iconic, international orange, paint, chosen specifically to stand out",
+    "text_clean": "them wrong. Coded in its iconic, international orange, paint, chosen specifically to stand out"
+   },
+   {
+    "id": 21,
+    "start_sec": 130.32,
+    "end_sec": 135.68,
+    "text_raw": "against the thick bay fog. The suspension bridge instantly became a symbol of human ambition and",
+    "text_clean": "against the thick bay fog. The suspension bridge instantly became a symbol of human ambition and"
+   },
+   {
+    "id": 22,
+    "start_sec": 135.68,
+    "end_sec": 141.36,
+    "text_raw": "design. So how did this center of trade, counterculture, and maritime history morph into the tech",
+    "text_clean": "design. So how did this center of trade, counterculture, and maritime history morph into the tech"
+   },
+   {
+    "id": 23,
+    "start_sec": 141.36,
+    "end_sec": 146.96,
+    "text_raw": "capital of the planet? It actually started just south of the city in the Santa Clara Valley,",
+    "text_clean": "capital of the planet? It started just south of the city in the Santa Clara Valley,"
+   },
+   {
+    "id": 24,
+    "start_sec": 146.96,
+    "end_sec": 153.44,
+    "text_raw": "what we now call Silicon Valley. In the 1940s and 50s, Stanford University Dean Frederick",
+    "text_clean": "what we now call Silicon Valley. In the 1940s and 50s, Stanford University Dean Frederick"
+   },
+   {
+    "id": 25,
+    "start_sec": 153.44,
+    "end_sec": 158.24,
+    "text_raw": "Turman encouraged graduates to build electronics companies locally instead of heading east.",
+    "text_clean": "Turman encouraged graduates to build electronics companies locally instead of heading east."
+   },
+   {
+    "id": 26,
+    "start_sec": 158.96,
+    "end_sec": 163.44,
+    "text_raw": "Early pioneers like Hewlett Packard in Apollo Alto Garage, and later the",
+    "text_clean": "Early pioneers like Hewlett Packard in Apollo Alto Garage, and later the"
+   },
+   {
+    "id": 27,
+    "start_sec": 163.44,
+    "end_sec": 169.28,
+    "text_raw": "Traderus 8, who founded Fairchild Semiconductor, sparked a revolution in Silicon Microchips.",
+    "text_clean": "Traderus 8, who founded Fairchild Semiconductor, sparked a revolution in Silicon Microchips."
+   },
+   {
+    "id": 28,
+    "start_sec": 170.0,
+    "end_sec": 176.4,
+    "text_raw": "By the late 1990s.com boom and the mid-2000s app revolution, tech wasn't just staying in the",
+    "text_clean": "By the late 1990s.com boom and the mid-2000s app revolution, tech wasn't just staying in the"
+   },
+   {
+    "id": 29,
+    "start_sec": 176.4,
+    "end_sec": 182.64,
+    "text_raw": "suburban south bay, it migrated straight back into the heart of San Francisco. Today, San Francisco",
+    "text_clean": "suburban south bay, it migrated straight back into the heart of San Francisco. Today, San Francisco"
+   },
+   {
+    "id": 30,
+    "start_sec": 182.64,
+    "end_sec": 188.48,
+    "text_raw": "proper is home to some of the most influential corporate headquarters on earth. Take Salesforce,",
+    "text_clean": "proper is home to some of the most influential corporate headquarters on earth. Take Salesforce,"
+   },
+   {
+    "id": 31,
+    "start_sec": 188.48,
+    "end_sec": 195.92,
+    "text_raw": "whose 1,070 foot skyscraper dominates the skyline. Or social media giant acts, formerly Twitter,",
+    "text_clean": "whose 1,070 foot skyscraper dominates the skyline. Or social media giant acts, formerly Twitter,"
+   },
+   {
+    "id": 32,
+    "start_sec": 195.92,
+    "end_sec": 202.16,
+    "text_raw": "Fintech powerhouses like Square, Block, and Stripe, and sharing economy pioneers like Airbnb",
+    "text_clean": "Fintech powerhouses like Square, Block, and Stripe, and sharing economy pioneers like Airbnb"
+   },
+   {
+    "id": 33,
+    "start_sec": 202.16,
+    "end_sec": 208.64,
+    "text_raw": "and Uber. Even AI giants like OpenAI and Anthropic call this F their home base during the generative",
+    "text_clean": "and Uber. Even AI giants like OpenAI and Anthropic call this F their home base during the generative"
+   },
+   {
+    "id": 34,
+    "start_sec": 208.96,
+    "end_sec": 214.72,
+    "text_raw": "AI wave. The city remains a magnetic hub for venture capital, engineering talent, and world",
+    "text_clean": "AI wave. The city remains a magnetic hub for venture capital, engineering talent, and world"
+   },
+   {
+    "id": 35,
+    "start_sec": 214.72,
+    "end_sec": 220.24,
+    "text_raw": "shaping startups. From O'Loney villages and gold rush fortune seekers to engineering marvels",
+    "text_clean": "shaping startups. From O'Loney villages and gold rush fortune seekers to engineering marvels"
+   },
+   {
+    "id": 36,
+    "start_sec": 220.24,
+    "end_sec": 225.92,
+    "text_raw": "like the Golden Gate Bridge, right up to the modern code base of tomorrow. San Francisco has",
+    "text_clean": "the Golden Gate Bridge, right up to the modern code base of tomorrow. San Francisco has"
+   },
+   {
+    "id": 37,
+    "start_sec": 225.92,
+    "end_sec": 231.6,
+    "text_raw": "always been a place where people go to invent the future or reinvent themselves. That's it for",
+    "text_clean": "always been a place where people go to invent the future or reinvent themselves. That's it for"
+   },
+   {
+    "id": 38,
+    "start_sec": 231.6,
+    "end_sec": 237.2,
+    "text_raw": "today's episode. If you loved this deep dive, hit that subscribe button, leave us a review,",
+    "text_clean": "today's episode. If you loved this deep dive, hit that button, leave us a review,"
+   },
+   {
+    "id": 39,
+    "start_sec": 237.2,
+    "end_sec": 247.2,
+    "text_raw": "and let us know what city we should cover next. Until next time, stay curious.",
+    "text_clean": "and let us know what city we should cover next. Until next time, stay curious."
+   }
+  ],
+  "entities": [
+   {
+    "type": "MISC",
+    "text": "Deep Dive",
+    "start_sec": 1.208,
+    "end_sec": 1.751,
+    "chunk_id": 0,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "San Francisco, California",
+    "start_sec": 9.419,
+    "end_sec": 10.824,
+    "chunk_id": 1,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "SF",
+    "start_sec": 16.8,
+    "end_sec": 16.946,
+    "chunk_id": 3,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "San Francisco",
+    "start_sec": 34.093,
+    "end_sec": 34.9,
+    "chunk_id": 5,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "Oloni",
+    "start_sec": 37.84,
+    "end_sec": 38.227,
+    "chunk_id": 6,
+    "source": "claude"
+   },
+   {
+    "type": "MISC",
+    "text": "Spanish",
+    "start_sec": 40.392,
+    "end_sec": 40.933,
+    "chunk_id": 6,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Mission Dolores",
+    "start_sec": 43.221,
+    "end_sec": 44.077,
+    "chunk_id": 7,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "Yerba Buena",
+    "start_sec": 47.556,
+    "end_sec": 48.183,
+    "chunk_id": 7,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "Sutter's Mill",
+    "start_sec": 52.464,
+    "end_sec": 53.311,
+    "chunk_id": 8,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "California",
+    "start_sec": 53.832,
+    "end_sec": 54.483,
+    "chunk_id": 8,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "1849 California gold rush",
+    "start_sec": 57.037,
+    "end_sec": 58.951,
+    "chunk_id": 9,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Yerba Buena",
+    "start_sec": 60.023,
+    "end_sec": 60.865,
+    "chunk_id": 9,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "San",
+    "start_sec": 62.09,
+    "end_sec": 62.32,
+    "chunk_id": 9,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "1906 earthquake and fire",
+    "start_sec": 84.298,
+    "end_sec": 85.843,
+    "chunk_id": 13,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "San Francisco",
+    "start_sec": 88.16,
+    "end_sec": 88.935,
+    "chunk_id": 14,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "San Francisco",
+    "start_sec": 95.201,
+    "end_sec": 96.022,
+    "chunk_id": 15,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "SF",
+    "start_sec": 98.108,
+    "end_sec": 98.234,
+    "chunk_id": 15,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "Alcatraz Islands",
+    "start_sec": 100.32,
+    "end_sec": 101.291,
+    "chunk_id": 16,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "knob hill",
+    "start_sec": 104.324,
+    "end_sec": 104.869,
+    "chunk_id": 16,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "Fisherman's Wharf",
+    "start_sec": 105.84,
+    "end_sec": 107.062,
+    "chunk_id": 17,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "Golden Gate Bridge",
+    "start_sec": 110.874,
+    "end_sec": 112.168,
+    "chunk_id": 17,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PERSON",
+    "text": "Joseph Strauss",
+    "start_sec": 122.712,
+    "end_sec": 123.624,
+    "chunk_id": 19,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Santa Clara Valley",
+    "start_sec": 145.678,
+    "end_sec": 146.893,
+    "chunk_id": 23,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "Silicon Valley",
+    "start_sec": 148.198,
+    "end_sec": 149.217,
+    "chunk_id": 24,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Stanford University",
+    "start_sec": 150.964,
+    "end_sec": 152.348,
+    "chunk_id": 24,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "PERSON",
+    "text": "Frederick",
+    "start_sec": 152.785,
+    "end_sec": 153.44,
+    "chunk_id": 24,
+    "source": "claude"
+   },
+   {
+    "type": "PERSON",
+    "text": "Turman",
+    "start_sec": 153.44,
+    "end_sec": 153.756,
+    "chunk_id": 25,
+    "source": "claude"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Hewlett Packard",
+    "start_sec": 160.204,
+    "end_sec": 161.138,
+    "chunk_id": 26,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "PLACE",
+    "text": "Apollo Alto Garage",
+    "start_sec": 161.387,
+    "end_sec": 162.507,
+    "chunk_id": 26,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "Traderus 8",
+    "start_sec": 163.44,
+    "end_sec": 164.075,
+    "chunk_id": 27,
+    "source": "claude"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Fairchild Semiconductor",
+    "start_sec": 164.963,
+    "end_sec": 166.423,
+    "chunk_id": 27,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "PLACE",
+    "text": "south bay",
+    "start_sec": 176.967,
+    "end_sec": 177.535,
+    "chunk_id": 29,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "San Francisco",
+    "start_sec": 180.434,
+    "end_sec": 181.253,
+    "chunk_id": 29,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "San Francisco",
+    "start_sec": 182.64,
+    "end_sec": 188.48,
+    "chunk_id": 30,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Salesforce",
+    "start_sec": 187.811,
+    "end_sec": 188.419,
+    "chunk_id": 30,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "COMPANY",
+    "text": "acts",
+    "start_sec": 194.137,
+    "end_sec": 194.447,
+    "chunk_id": 31,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Twitter",
+    "start_sec": 195.3,
+    "end_sec": 195.843,
+    "chunk_id": 31,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Square",
+    "start_sec": 197.616,
+    "end_sec": 198.023,
+    "chunk_id": 32,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Block",
+    "start_sec": 198.158,
+    "end_sec": 198.497,
+    "chunk_id": 32,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Stripe",
+    "start_sec": 198.904,
+    "end_sec": 199.311,
+    "chunk_id": 32,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Airbnb",
+    "start_sec": 201.753,
+    "end_sec": 202.16,
+    "chunk_id": 32,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Uber",
+    "start_sec": 202.419,
+    "end_sec": 202.678,
+    "chunk_id": 33,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "COMPANY",
+    "text": "OpenAI",
+    "start_sec": 204.104,
+    "end_sec": 204.493,
+    "chunk_id": 33,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "COMPANY",
+    "text": "Anthropic",
+    "start_sec": 204.817,
+    "end_sec": 205.4,
+    "chunk_id": 33,
+    "source": "claude",
+    "original_label": "ORG"
+   },
+   {
+    "type": "MISC",
+    "text": "O'Loney",
+    "start_sec": 216.1,
+    "end_sec": 216.52,
+    "chunk_id": 35,
+    "source": "claude"
+   },
+   {
+    "type": "MISC",
+    "text": "gold rush",
+    "start_sec": 217.36,
+    "end_sec": 217.9,
+    "chunk_id": 35,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Golden Gate Bridge",
+    "start_sec": 220.501,
+    "end_sec": 221.676,
+    "chunk_id": 36,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "San Francisco",
+    "start_sec": 224.81,
+    "end_sec": 225.659,
+    "chunk_id": 36,
+    "source": "claude",
+    "original_label": "LOC"
+   }
+  ]
+ },
+ "cards": [
+  {
+   "id": "5b23faccc63e184a",
+   "type": "MISC",
+   "text": "Deep Dive",
+   "start_sec": 1.208,
+   "end_sec": 1.751,
+   "chunk_id": 0,
+   "wikipedia": {
+    "title": "Deep diving",
+    "extract": "Deep diving is underwater diving to a depth beyond the normal range accepted by the associated community. In some cases this is a prescribed limit established by an authority, while in others it is associated with a level of certification or training, and it may vary depending on whether the diving is recreational, technical or commercial. Nitrogen narcosis becomes a hazard below 30 metres (98 ft) and hypoxic breathing gas is required below 60 metres (200 ft) to lessen the risk of oxygen toxicity.",
+    "url": "https://en.wikipedia.org/wiki/Deep_diving",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Trevor_Jackson_returns_from_SS_Kyogle.jpg/330px-Trevor_Jackson_returns_from_SS_Kyogle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1682687982167-d7fb3ed8541d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxEZWVwJTIwZGl2aW5nfGVufDB8MHx8fDE3OTE1MTg4Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1682687982167-d7fb3ed8541d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxEZWVwJTIwZGl2aW5nfGVufDB8MHx8fDE3OTE1MTg4Mjd8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "a scuba diver swims through an underwater cave",
+    "photographer_name": "NEOM",
+    "photographer_url": "https://unsplash.com/@neom",
+    "unsplash_url": "https://unsplash.com/photos/a-scuba-diver-swims-through-an-underwater-cave-yx7TJle8LhM"
+   }
+  },
+  {
+   "id": "c1f30d0900a8ade4",
+   "type": "PLACE",
+   "text": "San Francisco, California",
+   "start_sec": 9.419,
+   "end_sec": 10.824,
+   "chunk_id": 1,
+   "wikipedia": {
+    "title": "San Francisco",
+    "extract": "San Francisco, officially the City and County of San Francisco, is the fourth-most populous city in California and the 17th-most populous in the United States, with a population of 826,079 in 2025. Among U.S. cities with a population of 300,000 or more, San Francisco is ranked first by per capita income, second by population density, and sixth by aggregate income as of 2024. Some 4.6 million residents live in the city's metropolitan statistical area, which is the 13th-largest in the United States. Around 9.2 million live in the San Jose–San Francisco–Oakland combined statistical area, the fifth-largest in the United States.",
+    "url": "https://en.wikipedia.org/wiki/San_Francisco",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Zeppelin-ride-020100925-195_%285029394846%29.jpg/330px-Zeppelin-ride-020100925-195_%285029394846%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYW4lMjBGcmFuY2lzY298ZW58MHwwfHx8MTc5MTUxODgyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYW4lMjBGcmFuY2lzY298ZW58MHwwfHx8MTc5MTUxODgyN3ww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "Golden Gate Bridge during daytime",
+    "photographer_name": "Maarten van den Heuvel",
+    "photographer_url": "https://unsplash.com/@mvdheuvel",
+    "unsplash_url": "https://unsplash.com/photos/golden-gate-bridge-during-daytime-gZXx8lKAb7Y"
+   }
+  },
+  {
+   "id": "f463f64d8aa8d5c7",
+   "type": "PLACE",
+   "text": "SF",
+   "start_sec": 16.8,
+   "end_sec": 98.234,
+   "chunk_id": 3,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1610494475096-ad11c3a21638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTRnxlbnwwfDB8fHwxNzkxNTE4ODI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1610494475096-ad11c3a21638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTRnxlbnwwfDB8fHwxNzkxNTE4ODI5fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "city buildings under blue sky during daytime",
+    "photographer_name": "Shen Pan",
+    "photographer_url": "https://unsplash.com/@shenpan",
+    "unsplash_url": "https://unsplash.com/photos/city-buildings-under-blue-sky-during-daytime-IWXxaPTzsyM"
+   }
+  },
+  {
+   "id": "d23e073acc4796ad",
+   "type": "PLACE",
+   "text": "San Francisco",
+   "start_sec": 34.093,
+   "end_sec": 225.659,
+   "chunk_id": 5,
+   "wikipedia": {
+    "title": "San Francisco",
+    "extract": "San Francisco, officially the City and County of San Francisco, is the fourth-most populous city in California and the 17th-most populous in the United States, with a population of 826,079 in 2025. Among U.S. cities with a population of 300,000 or more, San Francisco is ranked first by per capita income, second by population density, and sixth by aggregate income as of 2024. Some 4.6 million residents live in the city's metropolitan statistical area, which is the 13th-largest in the United States. Around 9.2 million live in the San Jose–San Francisco–Oakland combined statistical area, the fifth-largest in the United States.",
+    "url": "https://en.wikipedia.org/wiki/San_Francisco",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Zeppelin-ride-020100925-195_%285029394846%29.jpg/330px-Zeppelin-ride-020100925-195_%285029394846%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYW4lMjBGcmFuY2lzY298ZW58MHwwfHx8MTc5MTUxODgyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYW4lMjBGcmFuY2lzY298ZW58MHwwfHx8MTc5MTUxODgyN3ww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "Golden Gate Bridge during daytime",
+    "photographer_name": "Maarten van den Heuvel",
+    "photographer_url": "https://unsplash.com/@mvdheuvel",
+    "unsplash_url": "https://unsplash.com/photos/golden-gate-bridge-during-daytime-gZXx8lKAb7Y"
+   }
+  },
+  {
+   "id": "c8e1455213031e3d",
+   "type": "MISC",
+   "text": "Oloni",
+   "start_sec": 37.84,
+   "end_sec": 38.227,
+   "chunk_id": 6,
+   "wikipedia": {
+    "title": "Dami Olonisakin",
+    "extract": "Dami \"Oloni\" Olonisakin is a British Nigerian sex educator and relationship advisor. She runs the blog Simply Oloni and a podcast. Olonisakin was included on OkayAfrica's 100 Women list.",
+    "url": "https://en.wikipedia.org/wiki/Dami_Olonisakin",
+    "thumbnail": null
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "ba17dc547ecde29b",
+   "type": "MISC",
+   "text": "Spanish",
+   "start_sec": 40.392,
+   "end_sec": 40.933,
+   "chunk_id": 6,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1543783207-ec64e4d95325?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTcGFuaXNofGVufDB8MHx8fDE3OTE1MTg4MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1543783207-ec64e4d95325?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTcGFuaXNofGVufDB8MHx8fDE3OTE1MTg4MzF8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "The Edificio Metropoli building at the intersection of Gran Vía in Madrid, Spain",
+    "photographer_name": "Jorge Fernández Salas",
+    "photographer_url": "https://unsplash.com/@jorgefdezsalas",
+    "unsplash_url": "https://unsplash.com/photos/edificio-metropoli-on-gran-via-madrid-ChSZETOal-I"
+   }
+  },
+  {
+   "id": "21f982fbf1727a60",
+   "type": "PLACE",
+   "text": "Mission Dolores",
+   "start_sec": 43.221,
+   "end_sec": 44.077,
+   "chunk_id": 7,
+   "wikipedia": {
+    "title": "Mission San Francisco de Asís",
+    "extract": "The Mission San Francisco de Asís, also known as Mission Dolores, is a historic Catholic church complex in San Francisco, California. Operated by the Archdiocese of San Francisco, the complex was founded in the 18th century by Spanish Catholic missionaries. The mission contains two historic buildings:The Mission Dolores adobe chapel was completed in 1791. It is the oldest intact structure in San Francisco.\nThe Mission Dolores Basilica was constructed in 1918. It was designated a minor basilica by Pope Pius XII in 1952.",
+    "url": "https://en.wikipedia.org/wiki/Mission_San_Francisco_de_As%C3%ADs",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/6/69/Mission_Dolores_%281165072805%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1601056645150-f06742501992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNaXNzaW9uJTIwU2FuJTIwRnJhbmNpc2NvJTIwZGUlMjBBcyVDMyVBRHN8ZW58MHwwfHx8MTc5MTUxODgzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1601056645150-f06742501992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNaXNzaW9uJTIwU2FuJTIwRnJhbmNpc2NvJTIwZGUlMjBBcyVDMyVBRHN8ZW58MHwwfHx8MTc5MTUxODgzMnww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "white concrete house near green grass field during daytime",
+    "photographer_name": "David Vives",
+    "photographer_url": "https://unsplash.com/@davidvives",
+    "unsplash_url": "https://unsplash.com/photos/white-concrete-house-near-green-grass-field-during-daytime-9Z04OIXQAJQ"
+   }
+  },
+  {
+   "id": "29aaaab0e2592be3",
+   "type": "PLACE",
+   "text": "Yerba Buena",
+   "start_sec": 47.556,
+   "end_sec": 60.865,
+   "chunk_id": 7,
+   "wikipedia": {
+    "title": "Yerba buena",
+    "extract": "Yerba buena or hierba buena are various aromatic plants, most of which belong to the mint family. The specific plant species varies from region to region, depending on what grows wild in the surrounding landscape, or which species is customarily grown in local gardens. Perhaps the most common variation of this plant is spearmint. It covers a number of aromatic true mints and mint relatives of the genera Clinopodium, Satureja or Micromeria. All plants so named are associated with medicinal properties, and some have culinary value as herbal teas or seasonings as well.",
+    "url": "https://en.wikipedia.org/wiki/Yerba_buena",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/YerbaBuena2ftTall.jpg/330px-YerbaBuena2ftTall.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1595968686787-b410ce061b76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxZZXJiYSUyMGJ1ZW5hfGVufDB8MHx8fDE3OTE1MTg4MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1595968686787-b410ce061b76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxZZXJiYSUyMGJ1ZW5hfGVufDB8MHx8fDE3OTE1MTg4MzN8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "green trees near high rise buildings during daytime",
+    "photographer_name": "Gracie Emory",
+    "photographer_url": "https://unsplash.com/@gracieemory",
+    "unsplash_url": "https://unsplash.com/photos/green-trees-near-high-rise-buildings-during-daytime-tdXjqv0701M"
+   }
+  },
+  {
+   "id": "d430d2a0eca0cfbe",
+   "type": "PLACE",
+   "text": "Sutter's Mill",
+   "start_sec": 52.464,
+   "end_sec": 53.311,
+   "chunk_id": 8,
+   "wikipedia": {
+    "title": "Sutter's Mill",
+    "extract": "Sutter's Mill was a water-powered sawmill on the bank of the South Fork American River in the foothills of the Sierra Nevada in California. It was named after its owner John Sutter. A worker constructing the mill, James W. Marshall, found gold there in 1848. This discovery set off the California gold rush (1848–1855), a major event in the history of the United States.",
+    "url": "https://en.wikipedia.org/wiki/Sutter's_Mill",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Sutter%27s_Mill_%282%29.JPG/330px-Sutter%27s_Mill_%282%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "97ee2639d756663c",
+   "type": "PLACE",
+   "text": "California",
+   "start_sec": 53.832,
+   "end_sec": 54.483,
+   "chunk_id": 8,
+   "wikipedia": {
+    "title": "California",
+    "extract": "California is a state in the Western United States. It is bordered by Oregon to the north, the Mexican state of Baja California to the south, Nevada to the east, Arizona to the southeast, and the Pacific Ocean to the west. With a population of over 39 million across an area of 163,696 square miles (423,970 km2), it is the most populous U.S. state and the third largest by land area.",
+    "url": "https://en.wikipedia.org/wiki/California",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/330px-Flag_of_California.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDYWxpZm9ybmlhfGVufDB8MHx8fDE3OTE1MTg4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDYWxpZm9ybmlhfGVufDB8MHx8fDE3OTE1MTg4MzV8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "Palm trees silhouetted against the Los Angeles skyline during the golden hour",
+    "photographer_name": "Cedric Letsch",
+    "photographer_url": "https://unsplash.com/@cedricletsch",
+    "unsplash_url": "https://unsplash.com/photos/los-angeles-skyline-with-palm-trees-UZVlSjrIJ3o"
+   }
+  },
+  {
+   "id": "0c949ab797cdf4d1",
+   "type": "MISC",
+   "text": "1849 California gold rush",
+   "start_sec": 57.037,
+   "end_sec": 58.951,
+   "chunk_id": 9,
+   "wikipedia": {
+    "title": "California gold rush",
+    "extract": "The California gold rush (1848–1855) was a gold rush in California, which began on January 24, 1848, when gold was found by James W. Marshall at Sutter's Mill in Coloma, California. The news of gold brought approximately 300,000 people from the rest of the United States and abroad to California, which had recently been conquered from Mexico. The sudden influx of gold into the money supply reinvigorated the American economy; the sudden population increase allowed California to grow rapidly into statehood in the Compromise of 1850. The gold rush had severe effects on Native Californians and accelerated the Native American population's decline from factors including disease, starvation, and according to certain sources, acts of unprovoked aggression.",
+    "url": "https://en.wikipedia.org/wiki/California_gold_rush",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/1850_Woman_and_Men_in_California_Gold_Rush.jpg/330px-1850_Woman_and_Men_in_California_Gold_Rush.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDYWxpZm9ybmlhJTIwZ29sZCUyMHJ1c2h8ZW58MHwwfHx8MTc5MTUxODgzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDYWxpZm9ybmlhJTIwZ29sZCUyMHJ1c2h8ZW58MHwwfHx8MTc5MTUxODgzNnww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "Palm trees silhouetted against the Los Angeles skyline during the golden hour",
+    "photographer_name": "Cedric Letsch",
+    "photographer_url": "https://unsplash.com/@cedricletsch",
+    "unsplash_url": "https://unsplash.com/photos/los-angeles-skyline-with-palm-trees-UZVlSjrIJ3o"
+   }
+  },
+  {
+   "id": "f821447c6b8e4abe",
+   "type": "PLACE",
+   "text": "San",
+   "start_sec": 62.09,
+   "end_sec": 62.32,
+   "chunk_id": 9,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1510513260777-51d462dbaec9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYW58ZW58MHwwfHx8MTc5MTUxODgzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1510513260777-51d462dbaec9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYW58ZW58MHwwfHx8MTc5MTUxODgzN3ww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "gray concrete bridge",
+    "photographer_name": "Lorenzo Castagnone",
+    "photographer_url": "https://unsplash.com/@theparcel",
+    "unsplash_url": "https://unsplash.com/photos/gray-concrete-bridge-S1JVabNkXP0"
+   }
+  },
+  {
+   "id": "03cfaf5df3cbf911",
+   "type": "MISC",
+   "text": "1906 earthquake and fire",
+   "start_sec": 84.298,
+   "end_sec": 85.843,
+   "chunk_id": 13,
+   "wikipedia": {
+    "title": "1906 San Francisco earthquake",
+    "extract": "A magnitude 7.9 earthquake struck the coast of Northern California at 05:12 am Pacific Standard Time on Wednesday, April 18, 1906. With a maximum Mercalli intensity of XI (Extreme), it created high-intensity shaking from Eureka on the North Coast to the Salinas Valley, an agricultural region to the south of the San Francisco Bay Area.",
+    "url": "https://en.wikipedia.org/wiki/1906_San_Francisco_earthquake",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Post-and-Grant-Avenue-Look.jpg/330px-Post-and-Grant-Avenue-Look.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1662373227903-a54727a20a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHwxOTA2JTIwU2FuJTIwRnJhbmNpc2NvJTIwZWFydGhxdWFrZXxlbnwwfDB8fHwxNzkxNTE4ODM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1662373227903-a54727a20a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHwxOTA2JTIwU2FuJTIwRnJhbmNpc2NvJTIwZWFydGhxdWFrZXxlbnwwfDB8fHwxNzkxNTE4ODM3fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "View of street in San Francisco, California, earthquake aftermath with man patrolling with gun",
+    "photographer_name": "Library of Congress",
+    "photographer_url": "https://unsplash.com/@libraryofcongress",
+    "unsplash_url": "https://unsplash.com/photos/view-of-street-in-san-francisco-california-earthquake-aftermath-with-man-patrolling-with-gun-USXDbcipcKY"
+   }
+  },
+  {
+   "id": "9caf06d7a119941a",
+   "type": "PLACE",
+   "text": "Alcatraz Islands",
+   "start_sec": 100.32,
+   "end_sec": 101.291,
+   "chunk_id": 16,
+   "wikipedia": {
+    "title": "Alcatraz Island",
+    "extract": "Alcatraz Island is a small island about 1.25 miles offshore from San Francisco in San Francisco Bay, California, near the Golden Gate strait. The island was developed in the mid-19th century with facilities for a lighthouse, a military fortification, and a military prison. In 1934, the island was converted into a federal prison, Alcatraz Federal Penitentiary. The strong tidal currents around the island and cold water temperatures made escape nearly impossible, giving the prison one of the most notorious reputations of its kind in American history. The prison closed on March 21, 1963, leaving the island a major tourist attraction today with nearly 1.4 million people visiting the island annually.",
+    "url": "https://en.wikipedia.org/wiki/Alcatraz_Island",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Alcatraz_2021.jpg/330px-Alcatraz_2021.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1515022817163-08c759ea4512?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBbGNhdHJheiUyMElzbGFuZHxlbnwwfDB8fHwxNzkxNTE4ODM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1515022817163-08c759ea4512?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBbGNhdHJheiUyMElzbGFuZHxlbnwwfDB8fHwxNzkxNTE4ODM4fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "top view photography of island surrounded by body of water",
+    "photographer_name": "Rodrigo Soares",
+    "photographer_url": "https://unsplash.com/@rodi01",
+    "unsplash_url": "https://unsplash.com/photos/top-view-photography-of-island-surrounded-by-body-of-water-msPBFLQGcPM"
+   }
+  },
+  {
+   "id": "e4a4f1489caacda0",
+   "type": "PLACE",
+   "text": "knob hill",
+   "start_sec": 104.324,
+   "end_sec": 104.869,
+   "chunk_id": 16,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1626699686569-2cb9012533bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxrbm9iJTIwaGlsbHxlbnwwfDB8fHwxNzkxNTE4ODM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1626699686569-2cb9012533bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxrbm9iJTIwaGlsbHxlbnwwfDB8fHwxNzkxNTE4ODM5fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "green trees on mountain during daytime",
+    "photographer_name": "Matthew Larkin",
+    "photographer_url": "https://unsplash.com/@matthewlarkin",
+    "unsplash_url": "https://unsplash.com/photos/green-trees-on-mountain-during-daytime-RWQIPWbbnsU"
+   }
+  },
+  {
+   "id": "cb40f350512ca4d5",
+   "type": "PLACE",
+   "text": "Fisherman's Wharf",
+   "start_sec": 105.84,
+   "end_sec": 107.062,
+   "chunk_id": 17,
+   "wikipedia": {
+    "title": "Macau Fisherman's Wharf",
+    "extract": "The Macau Fisherman's Wharf is a themed entertainment, retail and hotel complex and former amusement park in Sé, Macau, China.",
+    "url": "https://en.wikipedia.org/wiki/Macau_Fisherman's_Wharf",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/68/MacauFishermansWharfLogo.svg/330px-MacauFishermansWharfLogo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1747485339628-120a437514bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNYWNhdSUyMEZpc2hlcm1hbiUyN3MlMjBXaGFyZnxlbnwwfDB8fHwxNzkxNTE4ODQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1747485339628-120a437514bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNYWNhdSUyMEZpc2hlcm1hbiUyN3MlMjBXaGFyZnxlbnwwfDB8fHwxNzkxNTE4ODQxfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "Cityscape with elaborate buildings, viewed from water",
+    "photographer_name": "Sam",
+    "photographer_url": "https://unsplash.com/@samtakespictures",
+    "unsplash_url": "https://unsplash.com/photos/cityscape-with-elaborate-buildings-viewed-from-water-QLGOE0tzQ1I"
+   }
+  },
+  {
+   "id": "a5dae77e1c200a62",
+   "type": "PLACE",
+   "text": "Golden Gate Bridge",
+   "start_sec": 110.874,
+   "end_sec": 221.676,
+   "chunk_id": 17,
+   "wikipedia": {
+    "title": "Golden Gate Bridge",
+    "extract": "The Golden Gate Bridge is a suspension bridge spanning the Golden Gate, the one-mile-wide (1.6 km) strait connecting San Francisco Bay and the Pacific Ocean in California, United States. The structure links San Francisco—the northern tip of the San Francisco Peninsula—to Marin County, carrying both U.S. Route 101 and California State Route 1 across the strait. It also carries pedestrian and bicycle traffic, and is designated as part of U.S. Bicycle Route 95. Recognized by the American Society of Civil Engineers as one of the Wonders of the Modern World, the bridge is one of the most internationally recognized symbols of San Francisco and California.",
+    "url": "https://en.wikipedia.org/wiki/Golden_Gate_Bridge",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Golden_Gate_Bridge_as_seen_from_Battery_East.jpg/330px-Golden_Gate_Bridge_as_seen_from_Battery_East.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxHb2xkZW4lMjBHYXRlJTIwQnJpZGdlfGVufDB8MHx8fDE3OTE1MTg4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxHb2xkZW4lMjBHYXRlJTIwQnJpZGdlfGVufDB8MHx8fDE3OTE1MTg4NDJ8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "Golden Gate Bridge during daytime",
+    "photographer_name": "Maarten van den Heuvel",
+    "photographer_url": "https://unsplash.com/@mvdheuvel",
+    "unsplash_url": "https://unsplash.com/photos/golden-gate-bridge-during-daytime-gZXx8lKAb7Y"
+   }
+  },
+  {
+   "id": "6056ea1229de3063",
+   "type": "PERSON",
+   "text": "Joseph Strauss",
+   "start_sec": 122.712,
+   "end_sec": 123.624,
+   "chunk_id": 19,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "0b28f29c64573188",
+   "type": "PLACE",
+   "text": "Santa Clara Valley",
+   "start_sec": 145.678,
+   "end_sec": 146.893,
+   "chunk_id": 23,
+   "wikipedia": {
+    "title": "Santa Clara Valley",
+    "extract": "The Santa Clara Valley is a geologic trough in Northern California that extends 90 miles (140 km) south–southeast from San Francisco to Hollister. The longitudinal valley is bordered on the west by the Santa Cruz Mountains and on the east by the Diablo Range; the two coastal ranges meet south of Hollister. The San Francisco Bay borders the valley to the north, and fills much of the northern third of the valley. The valley floor is an alluvial plain that formed in the graben between the San Andreas Fault to the west and the Hayward and Calaveras faults to the east.\nWithin the valley and surrounding the bay on three sides are the urban communities of San Mateo County, Santa Clara County, and Alameda County, while the narrow southern reaches of the valley extend into rural San Benito County to Hollister. In practical terms, the central portion of the Santa Clara Valley is often considered by itself, contained entirely within Santa Clara County.",
+    "url": "https://en.wikipedia.org/wiki/Santa_Clara_Valley",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Stanford_University_Main_Quad_May_2011_001_%28cropped%29.jpg/330px-Stanford_University_Main_Quad_May_2011_001_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1662958570149-4875c1b4d485?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYW50YSUyMENsYXJhJTIwVmFsbGV5fGVufDB8MHx8fDE3OTE1MTg4NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1662958570149-4875c1b4d485?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYW50YSUyMENsYXJhJTIwVmFsbGV5fGVufDB8MHx8fDE3OTE1MTg4NDR8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "an aerial view of a stadium",
+    "photographer_name": "Zetong Li",
+    "photographer_url": "https://unsplash.com/@zetong",
+    "unsplash_url": "https://unsplash.com/photos/an-aerial-view-of-a-stadium-4NtK2XrfMbU"
+   }
+  },
+  {
+   "id": "3a94d01b716336bc",
+   "type": "PLACE",
+   "text": "Silicon Valley",
+   "start_sec": 148.198,
+   "end_sec": 149.217,
+   "chunk_id": 24,
+   "wikipedia": {
+    "title": "Silicon Valley",
+    "extract": "Silicon Valley is a region in Northern California that is known as a global center for high technology and innovation. Located in the southern part of the San Francisco Bay Area, it corresponds roughly to the geographical area of the Santa Clara Valley.",
+    "url": "https://en.wikipedia.org/wiki/Silicon_Valley",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Silicon_Valley%2C_facing_southward_towards_Downtown_San_Jose%2C_2014_%28cropped%29.jpg/330px-Silicon_Valley%2C_facing_southward_towards_Downtown_San_Jose%2C_2014_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1719290227108-ea72b5728ec7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTaWxpY29uJTIwVmFsbGV5fGVufDB8MHx8fDE3OTE1MTg4NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1719290227108-ea72b5728ec7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTaWxpY29uJTIwVmFsbGV5fGVufDB8MHx8fDE3OTE1MTg4NDV8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "An aerial view of a city with a circular building",
+    "photographer_name": "Nils Huenerfuerst",
+    "photographer_url": "https://unsplash.com/@nhuenerfuerst",
+    "unsplash_url": "https://unsplash.com/photos/an-aerial-view-of-a-city-with-a-circular-building-87-z5bW4ihk"
+   }
+  },
+  {
+   "id": "123f2ba61e31076c",
+   "type": "COMPANY",
+   "text": "Stanford University",
+   "start_sec": 150.964,
+   "end_sec": 152.348,
+   "chunk_id": 24,
+   "wikipedia": {
+    "title": "Stanford University",
+    "extract": "Leland Stanford Junior University, commonly referred to as Stanford University, is a private research university in Stanford, California, United States. It was founded in 1885 by railroad magnate Leland Stanford and his wife, Jane, in memory of their only child, Leland Jr., who died from typhoid at the age of 15.",
+    "url": "https://en.wikipedia.org/wiki/Stanford_University",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_Leland_Stanford_Junior_University.svg/330px-Seal_of_Leland_Stanford_Junior_University.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1681782421891-5088f13466ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTdGFuZm9yZCUyMFVuaXZlcnNpdHl8ZW58MHwwfHx8MTc5MTUxODg0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1681782421891-5088f13466ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTdGFuZm9yZCUyMFVuaXZlcnNpdHl8ZW58MHwwfHx8MTc5MTUxODg0Nnww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "a large building with a clock tower in the background",
+    "photographer_name": "Robert Gareth",
+    "photographer_url": "https://unsplash.com/@robertogar",
+    "unsplash_url": "https://unsplash.com/photos/a-large-building-with-a-clock-tower-in-the-background-_ge2fkbfR6U"
+   }
+  },
+  {
+   "id": "e9a033e7fcd1c653",
+   "type": "PERSON",
+   "text": "Frederick",
+   "start_sec": 152.785,
+   "end_sec": 153.44,
+   "chunk_id": 24,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1684258083478-65a2f049b5c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxGcmVkZXJpY2t8ZW58MHwwfHx8MTc5MTUxODg0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1684258083478-65a2f049b5c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxGcmVkZXJpY2t8ZW58MHwwfHx8MTc5MTUxODg0Nnww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "a rope on the end of a boat in the water",
+    "photographer_name": "Teslariu Mihai",
+    "photographer_url": "https://unsplash.com/@mihaiteslariu0",
+    "unsplash_url": "https://unsplash.com/photos/a-rope-on-the-end-of-a-boat-in-the-water-uUjJpXtVBEU"
+   }
+  },
+  {
+   "id": "6b2b77521cc10b96",
+   "type": "PERSON",
+   "text": "Turman",
+   "start_sec": 153.44,
+   "end_sec": 153.756,
+   "chunk_id": 25,
+   "wikipedia": {
+    "title": "Glynn Turman",
+    "extract": "Glynn Turman is an American actor. First coming to attention as a child actor in the original 1959 Broadway production of A Raisin in the Sun, Turman is known for his roles as Lew Miles on the prime-time soap opera Peyton Place (1968–1969), high school student Leroy \"Preach\" Jackson in the 1975 coming-of-age film Cooley High, math professor and retired Army colonel Bradford Taylor on the NBC sitcom A Different World (1988–1993), and Baltimore mayor Clarence Royce on the HBO drama series The Wire. He received the Primetime Emmy Award for Outstanding Guest Actor in a Drama Series for his role on the HBO drama series In Treatment.",
+    "url": "https://en.wikipedia.org/wiki/Glynn_Turman",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Glynn_Turman_headshot.jpg/330px-Glynn_Turman_headshot.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "ff8c89919f98fa9e",
+   "type": "COMPANY",
+   "text": "Hewlett Packard",
+   "start_sec": 160.204,
+   "end_sec": 161.138,
+   "chunk_id": 26,
+   "wikipedia": {
+    "title": "Hewlett-Packard",
+    "extract": "The Hewlett-Packard Company, commonly shortened to Hewlett-Packard or HP, was an American multinational information technology company. It was founded by Bill Hewlett and David Packard in 1939 in a one-car garage in Palo Alto, California. Growing to become an influential high-tech powerhouse at the heart of Silicon Valley, the company was known for its progressive business philosophy, deemed the HP Way. HP developed and provided a wide variety of hardware components, as well as software and related services, to consumers, small and medium-sized businesses (SMBs), and fairly large companies, including customers in government sectors. At its peak in 2011, HP employed 350,000 people around the globe. The company officially split into Hewlett Packard Enterprise and HP Inc. in 2015.",
+    "url": "https://en.wikipedia.org/wiki/Hewlett-Packard",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/HP_Headquarters_Palo_Alto.jpg/330px-HP_Headquarters_Palo_Alto.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1623701173792-89aeb410c1a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxIZXdsZXR0LVBhY2thcmR8ZW58MHwwfHx8MTc5MTUxODg0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1623701173792-89aeb410c1a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxIZXdsZXR0LVBhY2thcmR8ZW58MHwwfHx8MTc5MTUxODg0N3ww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "brown and white concrete building under blue sky during daytime",
+    "photographer_name": "Gene Gallin",
+    "photographer_url": "https://unsplash.com/@genefoto",
+    "unsplash_url": "https://unsplash.com/photos/brown-and-white-concrete-building-under-blue-sky-during-daytime-sE01vAlblC0"
+   }
+  },
+  {
+   "id": "54cf492a99050383",
+   "type": "PLACE",
+   "text": "Apollo Alto Garage",
+   "start_sec": 161.387,
+   "end_sec": 162.507,
+   "chunk_id": 26,
+   "wikipedia": {
+    "title": "HP Garage",
+    "extract": "The HP Garage is a private museum where the company Hewlett-Packard (HP) was founded. It is located at 367 Addison Avenue in Palo Alto, California. It is considered to be the \"Birthplace of Silicon Valley\". In the 1930s, Stanford University and its Dean of Engineering Frederick Terman began encouraging faculty and graduates to stay in the area instead of leaving California, and develop a high-tech region. HP founders Bill Hewlett and David Packard are considered the first Stanford students who took Terman's advice.",
+    "url": "https://en.wikipedia.org/wiki/HP_Garage",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/HP_Garage.jpg/330px-HP_Garage.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1677484249700-be0b9043f52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxIUCUyMEdhcmFnZXxlbnwwfDB8fHwxNzkxNTE4ODQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1677484249700-be0b9043f52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxIUCUyMEdhcmFnZXxlbnwwfDB8fHwxNzkxNTE4ODQ4fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "a plaque on the side of a wooden fence",
+    "photographer_name": "Igor Shalyminov",
+    "photographer_url": "https://unsplash.com/@ishalyminov",
+    "unsplash_url": "https://unsplash.com/photos/a-plaque-on-the-side-of-a-wooden-fence-h-MlwKWcoyk"
+   }
+  },
+  {
+   "id": "5c4c30edd0fccf31",
+   "type": "MISC",
+   "text": "Traderus 8",
+   "start_sec": 163.44,
+   "end_sec": 164.075,
+   "chunk_id": 27,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "2dd7e39af113d88a",
+   "type": "COMPANY",
+   "text": "Fairchild Semiconductor",
+   "start_sec": 164.963,
+   "end_sec": 166.423,
+   "chunk_id": 27,
+   "wikipedia": {
+    "title": "Fairchild Semiconductor",
+    "extract": "Fairchild Semiconductor International, Inc. was an American semiconductor company based in San Jose, California. It was founded in 1957 as a division of Fairchild Camera and Instrument by the \"traitorous eight\" who defected from Shockley Semiconductor Laboratory. It became a pioneer in the manufacturing of transistors and of integrated circuits. Schlumberger bought the firm in 1979 and sold it to National Semiconductor in 1987; Fairchild was spun off as an independent company again in 1997. In September 2016, Fairchild was acquired by ON Semiconductor.",
+    "url": "https://en.wikipedia.org/wiki/Fairchild_Semiconductor",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Fairchild_Semiconductor_Logo.svg/330px-Fairchild_Semiconductor_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "3d61589b4d5a039d",
+   "type": "PLACE",
+   "text": "south bay",
+   "start_sec": 176.967,
+   "end_sec": 177.535,
+   "chunk_id": 29,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1588176319546-2adf850d70fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxzb3V0aCUyMGJheXxlbnwwfDB8fHwxNzkxNTE4ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1588176319546-2adf850d70fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxzb3V0aCUyMGJheXxlbnwwfDB8fHwxNzkxNTE4ODQ5fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "brown and green grass field near body of water during daytime",
+    "photographer_name": "Ranate Boni",
+    "photographer_url": "https://unsplash.com/@ranateboni007_",
+    "unsplash_url": "https://unsplash.com/photos/brown-and-green-grass-field-near-body-of-water-during-daytime-4nY1CQbUrF0"
+   }
+  },
+  {
+   "id": "182932f7e259fc49",
+   "type": "COMPANY",
+   "text": "Salesforce",
+   "start_sec": 187.811,
+   "end_sec": 188.419,
+   "chunk_id": 30,
+   "wikipedia": {
+    "title": "Salesforce",
+    "extract": "Salesforce, Inc. is an American enterprise software company headquartered in San Francisco, California. It is best known for customer relationship management software and related applications, which the corporation delivers through a software as a service subscription business model. It also provides software for sales, customer service, marketing automation, e-commerce, data analytics, artificial intelligence, agentic AI, and application development.",
+    "url": "https://en.wikipedia.org/wiki/Salesforce",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/330px-Salesforce.com_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1557804506-669a67965ba0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYWxlc2ZvcmNlfGVufDB8MHx8fDE3OTE1MTg4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1557804506-669a67965ba0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTYWxlc2ZvcmNlfGVufDB8MHx8fDE3OTE1MTg4NTB8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "three men sitting while using laptops and watching man beside whiteboard",
+    "photographer_name": "Austin Distel",
+    "photographer_url": "https://unsplash.com/@austindistel",
+    "unsplash_url": "https://unsplash.com/photos/three-men-sitting-while-using-laptops-and-watching-man-beside-whiteboard-wD1LRb9OeEo"
+   }
+  },
+  {
+   "id": "c1d245f6e11d2791",
+   "type": "COMPANY",
+   "text": "acts",
+   "start_sec": 194.137,
+   "end_sec": 194.447,
+   "chunk_id": 31,
+   "wikipedia": {
+    "title": "Acts of the Apostles",
+    "extract": "The Acts of the Apostles is the fifth book of the New Testament. It recounts the founding of the Christian Church and the spread of its message across the Roman Empire. Acts comprises the second part of a two-volume work known as Luke-Acts with its prequel, the Gospel of Luke.",
+    "url": "https://en.wikipedia.org/wiki/Acts_of_the_Apostles",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Berlin%2C_Staatliche_Museen_zu_Berlin_MS_Uncial_8683_verso_Acts_5%2C_12%E2%80%9321.jpg/330px-Berlin%2C_Staatliche_Museen_zu_Berlin_MS_Uncial_8683_verso_Acts_5%2C_12%E2%80%9321.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1578321271570-7ffef488946d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBY3RzJTIwb2YlMjB0aGUlMjBBcG9zdGxlc3xlbnwwfDB8fHwxNzkxNTE4ODUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1578321271570-7ffef488946d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBY3RzJTIwb2YlMjB0aGUlMjBBcG9zdGxlc3xlbnwwfDB8fHwxNzkxNTE4ODUwfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "gray scale photo of people",
+    "photographer_name": "Europeana",
+    "photographer_url": "https://unsplash.com/@europeana",
+    "unsplash_url": "https://unsplash.com/photos/gray-scale-photo-of-people-VW7BD3_As58"
+   }
+  },
+  {
+   "id": "54cfd2963a0d4328",
+   "type": "COMPANY",
+   "text": "Twitter",
+   "start_sec": 195.3,
+   "end_sec": 195.843,
+   "chunk_id": 31,
+   "wikipedia": {
+    "title": "X (social network)",
+    "extract": "X, formerly known as Twitter, is an American microblogging and social networking service owned by SpaceX's artificial intelligence subsidiary SpaceXAI. It is one of the world's largest social media platforms and one of the most-visited websites. Users can share short text messages, images, and videos in short posts and like other users' content. The platform also includes direct messaging, video and audio calling, bookmarks, lists, communities, Grok chatbot integration, job search, and a social audio feature. Users can vote on context added by approved users using the Community Notes feature.",
+    "url": "https://en.wikipedia.org/wiki/X_(social_network)",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/X_%28formerly_Twitter%29_logo_late_2025.svg/330px-X_%28formerly_Twitter%29_logo_late_2025.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1683721003111-070bcc053d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxYJTIwJTI4c29jaWFsJTIwbmV0d29yayUyOXxlbnwwfDB8fHwxNzkxNTE4ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1683721003111-070bcc053d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxYJTIwJTI4c29jaWFsJTIwbmV0d29yayUyOXxlbnwwfDB8fHwxNzkxNTE4ODUxfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "a group of different social media logos",
+    "photographer_name": "Mariia Berezovsky",
+    "photographer_url": "https://unsplash.com/@mariiaberezovsky",
+    "unsplash_url": "https://unsplash.com/photos/a-group-of-different-social-media-logos-HBkpnDVc_Ic"
+   }
+  },
+  {
+   "id": "5e079a71168aed13",
+   "type": "COMPANY",
+   "text": "Square",
+   "start_sec": 197.616,
+   "end_sec": 198.023,
+   "chunk_id": 32,
+   "wikipedia": {
+    "title": "Square",
+    "extract": "In geometry, a square is a regular quadrilateral. It has four straight sides of equal length and four equal angles. Squares are special cases of rectangles, which have four equal angles, and of rhombuses, which have four equal sides. As with all rectangles, a square's angles are right angles, making adjacent sides perpendicular. The area of a square is the side length multiplied by itself, and so in algebra, multiplying a number by itself is called squaring.",
+    "url": "https://en.wikipedia.org/wiki/Square",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Square_with_offset_tick_marks.svg/330px-Square_with_offset_tick_marks.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1556741533-f9cffe3ba641?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MXwxfHNlYXJjaHwxfHxTcXVhcmV8ZW58MHwwfHx8MTc5MTUxODg1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1556741533-f9cffe3ba641?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MXwxfHNlYXJjaHwxfHxTcXVhcmV8ZW58MHwwfHx8MTc5MTUxODg1Mnww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "woman using white device",
+    "photographer_name": "Christiann Koepke",
+    "photographer_url": "https://unsplash.com/@christiannkoepke",
+    "unsplash_url": "https://unsplash.com/photos/woman-using-white-device-yK1zLvFkXIQ"
+   }
+  },
+  {
+   "id": "f4959a89841bee98",
+   "type": "COMPANY",
+   "text": "Block",
+   "start_sec": 198.158,
+   "end_sec": 198.497,
+   "chunk_id": 32,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1541692641319-981cc79ee10a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxCbG9ja3xlbnwwfDB8fHwxNzkxNTE4ODUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1541692641319-981cc79ee10a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxCbG9ja3xlbnwwfDB8fHwxNzkxNTE4ODUyfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "person piling blocks",
+    "photographer_name": "La-Rel Easter",
+    "photographer_url": "https://unsplash.com/@lastnameeaster",
+    "unsplash_url": "https://unsplash.com/photos/person-piling-blocks-KuCGlBXjH_o"
+   }
+  },
+  {
+   "id": "5b91dbb401476aed",
+   "type": "COMPANY",
+   "text": "Stripe",
+   "start_sec": 198.904,
+   "end_sec": 199.311,
+   "chunk_id": 32,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1628699265231-97b2a3e7b9ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTdHJpcGV8ZW58MHwwfHx8MTc5MTUxODg1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1628699265231-97b2a3e7b9ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxTdHJpcGV8ZW58MHwwfHx8MTc5MTUxODg1M3ww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "blue and white striped textile",
+    "photographer_name": "Katie Rainbow 🏳️‍🌈",
+    "photographer_url": "https://unsplash.com/@katierainbow",
+    "unsplash_url": "https://unsplash.com/photos/blue-and-white-striped-textile-CBbXtCwBFjw"
+   }
+  },
+  {
+   "id": "a0ad69949c34a187",
+   "type": "COMPANY",
+   "text": "Airbnb",
+   "start_sec": 201.753,
+   "end_sec": 202.16,
+   "chunk_id": 32,
+   "wikipedia": {
+    "title": "Airbnb",
+    "extract": "Airbnb, Inc. is an American company operating an online marketplace for short-and-long-term homestays, experiences and services in various countries and regions. It acts as a broker and charges a commission from each booking. Airbnb was founded in 2008 by Brian Chesky, Nathan Blecharczyk, and Joe Gebbia.",
+    "url": "https://en.wikipedia.org/wiki/Airbnb",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/888_Brannan%2C_San_Francisco%2C_2016.jpg/330px-888_Brannan%2C_San_Francisco%2C_2016.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1657256031855-68029292ff34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBaXJibmJ8ZW58MHwwfHx8MTc5MTUxODg1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1657256031855-68029292ff34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBaXJibmJ8ZW58MHwwfHx8MTc5MTUxODg1M3ww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "graphical user interface, application",
+    "photographer_name": "Oberon Copeland @veryinformed.com",
+    "photographer_url": "https://unsplash.com/@veryinformed",
+    "unsplash_url": "https://unsplash.com/photos/graphical-user-interface-application-zq0K6AVDtu8"
+   }
+  },
+  {
+   "id": "bd35798727b2144a",
+   "type": "COMPANY",
+   "text": "Uber",
+   "start_sec": 202.419,
+   "end_sec": 202.678,
+   "chunk_id": 33,
+   "wikipedia": {
+    "title": "Uber",
+    "extract": "Uber Technologies, Inc. is an American multinational transportation company that provides ride-hailing services, courier services, food delivery, and freight transport. It is headquartered in San Francisco, California, and operates in approximately 70 countries and 15,000 cities worldwide. It is the largest ridesharing company worldwide with over 202 million monthly active users and 10 million active drivers and couriers. It coordinates an average of 42 million trips and delivery orders per day, and has coordinated 72 billion trips and delivery orders since its inception in 2010. In the fourth quarter of 2025, the company had a take rate of 29.9% for mobility services and 19.2% for food delivery.",
+    "url": "https://en.wikipedia.org/wiki/Uber",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Uber_offices%2C_Mission_Bay_%28July_2020%29_-2.jpg/330px-Uber_offices%2C_Mission_Bay_%28July_2020%29_-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1600320254374-ce2d293c324e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxVYmVyfGVufDB8MHx8fDE3OTE1MTg4NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1600320254374-ce2d293c324e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxVYmVyfGVufDB8MHx8fDE3OTE1MTg4NTR8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "A person driving a car with a smartphone navigation app mounted on the dashboard",
+    "photographer_name": "Paul Hanaoka",
+    "photographer_url": "https://unsplash.com/@plhnk",
+    "unsplash_url": "https://unsplash.com/photos/person-driving-car-with-navigation-app-D-qq7W751vs"
+   }
+  },
+  {
+   "id": "7a985cca0552fd5d",
+   "type": "COMPANY",
+   "text": "OpenAI",
+   "start_sec": 204.104,
+   "end_sec": 204.493,
+   "chunk_id": 33,
+   "wikipedia": {
+    "title": "OpenAI",
+    "extract": "OpenAI is an American artificial intelligence (AI) public benefit corporation (PBC) headquartered in San Francisco, California. It develops \"frontier\" generative AI models, particularly its generative pre-trained transformer (GPT) series of large language models. Its release of ChatGPT in November 2022 has been credited with catalyzing the AI boom, leading to widespread use of generative AI; as of September 2026, ChatGPT is the fifth-most-visited website globally. OpenAI also releases the GPT Image models and Codex, an AI coding agent. In March 2026, OpenAI closed a funding round with a post-money valuation of US$852 billion, making it one of the most valuable AI pure play companies in the world, rivalled only by Anthropic.",
+    "url": "https://en.wikipedia.org/wiki/OpenAI",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/1515_Third_Street.jpg/330px-1515_Third_Street.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1676299081847-824916de030a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxPcGVuQUl8ZW58MHwwfHx8MTc5MTUxODg1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1676299081847-824916de030a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxPcGVuQUl8ZW58MHwwfHx8MTc5MTUxODg1NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "a cell phone sitting on top of a laptop computer",
+    "photographer_name": "Levart_Photographer",
+    "photographer_url": "https://unsplash.com/@siva_photography",
+    "unsplash_url": "https://unsplash.com/photos/a-cell-phone-sitting-on-top-of-a-laptop-computer-7q-kE4SZzvQ"
+   }
+  },
+  {
+   "id": "4afc26e97e0267eb",
+   "type": "COMPANY",
+   "text": "Anthropic",
+   "start_sec": 204.817,
+   "end_sec": 205.4,
+   "chunk_id": 33,
+   "wikipedia": {
+    "title": "Anthropic",
+    "extract": "Anthropic, PBC is an American artificial intelligence (AI) public benefit corporation headquartered in San Francisco, California. Its flagship product is Claude, a series of \"frontier\" large language models (LLMs). In January 2021, with the goal of promoting AI safety, Anthropic was founded by former members of OpenAI, including siblings Daniela Amodei and Dario Amodei, who are president and CEO, respectively. The company is privately held but reportedly plans an initial public offering in 2026. Valued at US$965 billion in a May 2026 Series H funding round, Anthropic is one of the world's most valuable AI pure play companies, rivaled by OpenAI.",
+    "url": "https://en.wikipedia.org/wiki/Anthropic",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Slack_offices%2C_Howard_Street%2C_San_Francisco_%28viewed_from_the_south-west%2C_January_2020%29.jpg/330px-Slack_offices%2C_Howard_Street%2C_San_Francisco_%28viewed_from_the_south-west%2C_January_2020%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1782513927216-d1b4610439f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBbnRocm9waWN8ZW58MHwwfHx8MTc5MTUxODg1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1782513927216-d1b4610439f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBbnRocm9waWN8ZW58MHwwfHx8MTc5MTUxODg1NXww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "Abstract purple and gold elements within a reflective swirling structure",
+    "photographer_name": "Brecht Corbeel",
+    "photographer_url": "https://unsplash.com/@brechtcorbeel",
+    "unsplash_url": "https://unsplash.com/photos/abstract-purple-and-gold-elements-within-a-reflective-swirling-structure-flW2jQDeNM0"
+   }
+  },
+  {
+   "id": "247bee5210ffaabc",
+   "type": "MISC",
+   "text": "O'Loney",
+   "start_sec": 216.1,
+   "end_sec": 216.52,
+   "chunk_id": 35,
+   "wikipedia": {
+    "title": "Branches of the Cenél nEógain",
+    "extract": "\nThe Cenél nEógain or Kinel-Owen are a branch of the Northern Uí Néill, any of several dynasties in north-western medieval Ireland. They claim descent from Eógan mac Néill, son of Niall of the Nine Hostages. Originally their power-base was in Inishowen, with their capital at Ailech, in modern-day County Donegal in what is now the west of Ulster. Under pressure from the Cenél Conaill, they gradually spread their influence eastwards into modern counties Tyrone and Londonderry, pushing aside the Cruithin east of the River Bann, and encroaching on the Airgiallan tribes west of Lough Neagh. By the 11th century their power-base had moved from Ailech to Tullyhogue outside Cookstown, County Tyrone. By the 12th century the Cenél Conaill conquered Inishowen; however, it mattered little to the Cenél nEóghain as they had established a powerful over-kingdom in the east that had become known as Tír Eoghain, or the \"Land of Owen\", preserved in the modern-day name of County Tyrone.",
+    "url": "https://en.wikipedia.org/wiki/Branches_of_the_Cen%C3%A9l_nE%C3%B3gain",
+    "thumbnail": null
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "69eef3be2d6543ee",
+   "type": "MISC",
+   "text": "gold rush",
+   "start_sec": 217.36,
+   "end_sec": 217.9,
+   "chunk_id": 35,
+   "wikipedia": {
+    "title": "Gold rush",
+    "extract": "A gold rush or gold fever is a discovery of gold—sometimes accompanied by other precious metals and rare-earth minerals—that brings an onrush of miners seeking their fortune. Major gold rushes took place in the 19th century in Australia, Greece, Venezuela, New Zealand, Brazil, Chile, South Africa, the United States, and Canada while smaller gold rushes took place elsewhere.",
+    "url": "https://en.wikipedia.org/wiki/Gold_rush",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/California_Clipper_500.jpg/330px-California_Clipper_500.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1580822115965-0b2532068eff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxHb2xkJTIwcnVzaHxlbnwwfDB8fHwxNzkxNTE4ODU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1580822115965-0b2532068eff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxHb2xkJTIwcnVzaHxlbnwwfDB8fHwxNzkxNTE4ODU1fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "brown dried leaves on ground",
+    "photographer_name": "Alexander Grey",
+    "photographer_url": "https://unsplash.com/@sharonmccutcheon",
+    "unsplash_url": "https://unsplash.com/photos/brown-dried-leaves-on-ground-yoWkkoUbG4E"
+   }
+  }
+ ],
+ "unsplash_enabled": true,
+ "timeline": {
+  "model": "gpt-5.4-mini",
+  "events": [
+   {
+    "title": "San Francisco settlement founded as Yerba Buena",
+    "description": "Spanish colonizers arrived in the late 1700s and established Mission Dolores and a military presidio, founding the settlement called Yerba Buena. The episode frames this as the beginning of the city’s colonial-era history.",
+    "category": "EVENT",
+    "date_label": "late 1700s",
+    "year": 1700,
+    "month": null,
+    "mentioned_at_sec": 35.52,
+    "entities": [
+     "California",
+     "Mission Dolores",
+     "San Francisco",
+     "Spanish",
+     "Yerba Buena"
+    ],
+    "importance": 3,
+    "id": "ev0000"
+   },
+   {
+    "title": "Gold discovered at Sutter's Mill",
+    "description": "In 1848, gold was discovered at Sutter's Mill in the California foothills. The speakers present this as the spark that led directly to the California gold rush.",
+    "category": "EVENT",
+    "date_label": "1848",
+    "year": 1848,
+    "month": null,
+    "mentioned_at_sec": 48.879999999999995,
+    "entities": [
+     "1848",
+     "California",
+     "Sutter's Mill"
+    ],
+    "importance": 3,
+    "id": "ev0001"
+   },
+   {
+    "title": "California gold rush begins",
+    "description": "The episode says the 1849 California gold rush launched after the discovery at Sutter's Mill. It transformed Yerba Buena into San Francisco and caused the city’s population to explode.",
+    "category": "EVENT",
+    "date_label": "1849",
+    "year": 1849,
+    "month": null,
+    "mentioned_at_sec": 55.2,
+    "entities": [
+     "1849 California gold rush",
+     "San Francisco",
+     "gold rush"
+    ],
+    "importance": 3,
+    "id": "ev0002"
+   },
+   {
+    "title": "Yerba Buena renamed San Francisco",
+    "description": "After the gold discovery, Yerba Buena renamed itself San Francisco. The transcript links the renaming to the city’s rapid growth during the gold rush.",
+    "category": "EVENT",
+    "date_label": "1849",
+    "year": 1849,
+    "month": null,
+    "mentioned_at_sec": 55.2,
+    "entities": [
+     "San Francisco",
+     "Yerba Buena"
+    ],
+    "importance": 3,
+    "id": "ev0003"
+   },
+   {
+    "title": "1906 earthquake and fire devastate city",
+    "description": "The transcript says the 1906 earthquake and fire leveled three quarters of San Francisco. It is presented as a defining disaster that the city later rebuilt from.",
+    "category": "EVENT",
+    "date_label": "1906",
+    "year": 1906,
+    "month": null,
+    "mentioned_at_sec": 82.56,
+    "entities": [
+     "1906 earthquake and fire",
+     "San Francisco"
+    ],
+    "importance": 3,
+    "id": "ev0004"
+   },
+   {
+    "title": "San Francisco rebuilds after 1906",
+    "description": "The city rebuilt itself within a decade after the 1906 earthquake and fire, emerging bigger and bolder. The episode uses this as proof of San Francisco’s resilience.",
+    "category": "EVENT",
+    "date_label": "1910s",
+    "year": 1910,
+    "month": null,
+    "mentioned_at_sec": 88.16,
+    "entities": [
+     "1906 earthquake and fire",
+     "San Francisco"
+    ],
+    "importance": 2,
+    "id": "ev0005"
+   },
+   {
+    "title": "Golden Gate Bridge opens",
+    "description": "The Golden Gate Bridge opened in 1937 and quickly became an icon of San Francisco. The transcript emphasizes that critics doubted it could be built before chief engineer Joseph Strauss proved them wrong.",
+    "category": "EVENT",
+    "date_label": "1937",
+    "year": 1937,
+    "month": null,
+    "mentioned_at_sec": 105.84,
+    "entities": [
+     "Golden Gate Bridge",
+     "Joseph Strauss",
+     "San Francisco"
+    ],
+    "importance": 3,
+    "id": "ev0006"
+   },
+   {
+    "title": "Silicon Valley roots in Santa Clara Valley",
+    "description": "The episode says the tech story began just south of San Francisco in the Santa Clara Valley, now called Silicon Valley. This sets up the region’s later rise as a tech center.",
+    "category": "PLACE",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 141.35999999999999,
+    "entities": [
+     "Santa Clara Valley",
+     "Silicon Valley"
+    ],
+    "importance": 3,
+    "id": "ev0007"
+   },
+   {
+    "title": "Stanford encourages local electronics firms",
+    "description": "In the 1940s and 50s, Stanford University dean Frederick Turman encouraged graduates to build electronics companies locally instead of leaving for the East Coast. The speakers present this as an early driver of the region’s tech ecosystem.",
+    "category": "PERSON",
+    "date_label": "1940s and 50s",
+    "year": 1940,
+    "month": null,
+    "mentioned_at_sec": 146.95999999999998,
+    "entities": [
+     "Frederick Turman",
+     "Stanford University"
+    ],
+    "importance": 3,
+    "id": "ev0008"
+   },
+   {
+    "title": "Hewlett Packard starts in garage",
+    "description": "The transcript cites Hewlett Packard in a garage in Palo Alto as one of the early pioneers of Silicon Valley. It is mentioned as part of the local startup tradition.",
+    "category": "COMPANY",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 158.96,
+    "entities": [
+     "Hewlett Packard",
+     "Palo Alto Garage"
+    ],
+    "importance": 2,
+    "id": "ev0009"
+   },
+   {
+    "title": "Fairchild Semiconductor founded",
+    "description": "The speakers say Traderus 8 founded Fairchild Semiconductor, another key early company in the microchips revolution. This is part of the lineage leading to Silicon Valley’s growth.",
+    "category": "COMPANY",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 163.44,
+    "entities": [
+     "Fairchild Semiconductor",
+     "Traderus 8"
+    ],
+    "importance": 2,
+    "id": "ev0010"
+   },
+   {
+    "title": "Tech boom returns to San Francisco",
+    "description": "By the late 1990s dot-com boom and the mid-2000s app revolution, tech migrated back into San Francisco from the south bay. The episode presents this as the moment the city re-centered itself in the tech economy.",
+    "category": "EVENT",
+    "date_label": "late 1990s to mid-2000s",
+    "year": 2000,
+    "month": null,
+    "mentioned_at_sec": 170.0,
+    "entities": [
+     "San Francisco",
+     "south bay"
+    ],
+    "importance": 3,
+    "id": "ev0011"
+   },
+   {
+    "title": "Salesforce dominates San Francisco skyline",
+    "description": "The transcript highlights Salesforce as one of the influential corporate headquarters in San Francisco, noting its 1,070-foot skyscraper. It serves as an example of the city’s modern corporate power.",
+    "category": "COMPANY",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 182.64,
+    "entities": [
+     "Salesforce"
+    ],
+    "importance": 2,
+    "id": "ev0012"
+   },
+   {
+    "title": "Twitter becomes X",
+    "description": "The episode refers to social media giant acts, formerly Twitter, as one of San Francisco’s notable headquarters. This is a passing mention of the company’s name change.",
+    "category": "COMPANY",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 188.48,
+    "entities": [
+     "Twitter",
+     "X"
+    ],
+    "importance": 1,
+    "id": "ev0013"
+   },
+   {
+    "title": "Airbnb and Uber rise in San Francisco",
+    "description": "Airbnb and Uber are cited as sharing-economy pioneers with home bases in San Francisco. The mention underscores the city’s role in producing major startup companies.",
+    "category": "COMPANY",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 195.92,
+    "entities": [
+     "Airbnb",
+     "Uber"
+    ],
+    "importance": 1,
+    "id": "ev0014"
+   },
+   {
+    "title": "Stripe joins San Francisco fintech scene",
+    "description": "Stripe is mentioned alongside Square and Block as a fintech powerhouse headquartered in San Francisco. The speakers use it to illustrate the city’s concentration of major startups.",
+    "category": "COMPANY",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 195.92,
+    "entities": [
+     "Stripe"
+    ],
+    "importance": 1,
+    "id": "ev0015"
+   },
+   {
+    "title": "OpenAI and Anthropic base themselves in SF",
+    "description": "The episode says OpenAI and Anthropic call San Francisco home during the generative AI wave. This is presented as evidence that the city remains a hub for new technology companies.",
+    "category": "COMPANY",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 202.16,
+    "entities": [
+     "Anthropic",
+     "OpenAI",
+     "San Francisco"
+    ],
+    "importance": 2,
+    "id": "ev0016"
+   }
+  ],
+  "windows": 1,
+  "failed_windows": 0
+ },
+ "qa": [
+  {
+   "question": "Summarize this episode in 3 points.",
+   "response": {
+    "answer": "1. The episode traces San Francisco’s origins from Oloni land and Spanish settlement to Yerba Buena, then the 1848 gold discovery and 1849 gold rush that transformed it into San Francisco. 2. It highlights the city’s resilience and landmarks, especially the 1906 earthquake and fire, Alcatraz, cable cars, Fisherman’s Wharf, and the Golden Gate Bridge. 3. It explains how the region became a tech center, starting in the Santa Clara Valley/Silicon Valley and later drawing major companies like Salesforce, Uber, OpenAI, and Anthropic into San Francisco.",
+    "found": true,
+    "citations": [
+     {
+      "start_sec": 30.0,
+      "quote": "the San Francisco peninsula was the ancestral land of the Oloni people"
+     },
+     {
+      "start_sec": 48.879999999999995,
+      "quote": "Gold was discovered at Sutter's Mill"
+     },
+     {
+      "start_sec": 82.56,
+      "quote": "the devastating 1906 earthquake and fire"
+     },
+     {
+      "start_sec": 100.32000000000001,
+      "quote": "Golden Gate Bridge"
+     },
+     {
+      "start_sec": 141.35999999999999,
+      "quote": "It actually started just south of the city"
+     },
+     {
+      "start_sec": 176.4,
+      "quote": "tech wasn't just staying in the suburban south bay"
+     },
+     {
+      "start_sec": 182.64,
+      "quote": "home to some of the most influential corporate headquarters"
+     }
+    ],
+    "mode": "full",
+    "model": "gpt-5.4-mini",
+    "unverified": false
+   }
+  },
+  {
+   "question": "Who is Joseph Strauss and why are they mentioned?",
+   "response": {
+    "answer": "Joseph Strauss is identified as the chief engineer of the Golden Gate Bridge. He is mentioned because the episode says he proved critics wrong and helped build the bridge, which became a symbol of human ambition and design.",
+    "found": true,
+    "citations": [
+     {
+      "start_sec": 117.76,
+      "quote": "chief engineer Joseph Strauss proved"
+     },
+     {
+      "start_sec": 124.08000000000001,
+      "quote": "them wrong. Coded in its iconic, international orange"
+     },
+     {
+      "start_sec": 130.32,
+      "quote": "The suspension bridge instantly became a symbol"
+     }
+    ],
+    "mode": "full",
+    "model": "gpt-5.4-mini",
+    "unverified": false
+   }
+  },
+  {
+   "question": "What is said about Stanford University?",
+   "response": {
+    "answer": "Stanford University’s Dean Frederick Turman encouraged graduates in the 1940s and 50s to build electronics companies locally instead of heading east.",
+    "found": true,
+    "citations": [
+     {
+      "start_sec": 146.95999999999998,
+      "quote": "Stanford University Dean Frederick"
+     },
+     {
+      "start_sec": 153.44,
+      "quote": "encouraged graduates to build electronics companies locally"
+     }
+    ],
+    "mode": "full",
+    "model": "gpt-5.4-mini",
+    "unverified": false
+   }
+  },
+  {
+   "question": "What happens around San Francisco?",
+   "response": {
+    "answer": "Around San Francisco are the bay, Alcatraz Islands, historic cable cars climbing Knob Hill, and Fisherman’s Wharf. The episode also says the Golden Gate Bridge spans the area and was built to stand out against the fog.",
+    "found": true,
+    "citations": [
+     {
+      "start_sec": 94.0,
+      "quote": "you can't talk about SF without picturing its geography"
+     },
+     {
+      "start_sec": 100.32000000000001,
+      "quote": "Alcatraz Islands sitting in the bay"
+     },
+     {
+      "start_sec": 105.84,
+      "quote": "Fisherman's Wharf"
+     }
+    ],
+    "mode": "full",
+    "model": "gpt-5.4-mini",
+    "unverified": false
+   }
+  }
+ ]
+}

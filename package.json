@@ -12,6 +12,7 @@
     "typecheck": "tsc -b",
     "test:api": "cd server && ../venv/bin/python -m pytest",
     "check": "npm run typecheck && npm run lint && npm run test:api",
+    "demo:build": "venv/bin/python server/scripts/build_demo.py",
     "preview": "vite preview"
   },
   "dependencies": {

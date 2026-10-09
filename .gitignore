@@ -29,3 +29,6 @@ _backup/
 _to_delete/
 /*.mp3
 .pytest_cache/
+
+# Source audio for demo builds (the compressed copy goes to public/demo/)
+demo-audio/

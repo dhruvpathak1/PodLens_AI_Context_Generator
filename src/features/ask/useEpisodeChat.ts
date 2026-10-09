@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
 import { askEpisode } from '../../api/ask'
-import type { AskCitation, ChatTurn } from '../../types/ask'
+import type { AskCitation, AskResponse, ChatTurn } from '../../types/ask'
 import type { EntityRecord } from '../../types/entities'
 import type { TranscriptSegment } from '../../types/transcript'
 
@@ -24,6 +24,9 @@ type Context = {
   sourceLabel: string | null
 }
 
+/** Replaces the API call (demo mode answers from pre-computed results). */
+export type AnswerFn = (question: string, history: ChatTurn[], signal: AbortSignal) => Promise<AskResponse>
+
 let nextId = 0
 /** Unique React key for a message. */
 const mkId = () => `m${++nextId}`
@@ -31,14 +34,17 @@ const mkId = () => `m${++nextId}`
 /**
  * Chat state for "Ask the episode".
  * One question in flight at a time; `stop()` aborts it, `reset()` clears the conversation.
+ * Pass `answer` to answer without the API (demo mode).
  */
-export function useEpisodeChat(getContext: () => Context) {
+export function useEpisodeChat(getContext: () => Context, answer?: AnswerFn) {
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [busy, setBusy] = useState(false)
   const abortRef = useRef<AbortController | null>(null)
   const messagesRef = useRef<ChatMessage[]>([])
   const getContextRef = useRef(getContext)
   getContextRef.current = getContext
+  const answerRef = useRef(answer)
+  answerRef.current = answer
 
   /** Update messages in state and in a ref (the ref is read synchronously when building history). */
   const commit = (next: ChatMessage[]) => {
@@ -63,7 +69,9 @@ export function useEpisodeChat(getContext: () => Context) {
     abortRef.current = ctrl
     setBusy(true)
     try {
-      const res = await askEpisode({ question, history, signal: ctrl.signal, ...ctx })
+      const res = answerRef.current
+        ? await answerRef.current(question, history, ctrl.signal)
+        : await askEpisode({ question, history, signal: ctrl.signal, ...ctx })
       commit([
         ...messagesRef.current,
         {

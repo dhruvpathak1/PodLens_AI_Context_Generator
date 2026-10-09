@@ -1,0 +1,25 @@
+{
+ "schema_version": 1,
+ "episodes": [
+  {
+   "slug": "san-francisco",
+   "title": "San Francisco",
+   "description": "A short audio tour of the city's history and landmarks.",
+   "credit": "Audio: Dhruv Pathak",
+   "duration_sec": 247.2,
+   "entity_count": 40,
+   "has_timeline": true,
+   "question_count": 4
+  },
+  {
+   "slug": "the-history-of-earth",
+   "title": "The History of Earth",
+   "description": "4.5 billion years, from formation to the first humans.",
+   "credit": "Audio: Dhruv Pathak",
+   "duration_sec": 243.04,
+   "entity_count": 18,
+   "has_timeline": true,
+   "question_count": 2
+  }
+ ]
+}

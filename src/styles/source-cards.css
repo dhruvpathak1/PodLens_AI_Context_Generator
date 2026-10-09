@@ -71,6 +71,9 @@
   background: var(--purple-bg);
   color: var(--purple);
   border: 1px solid rgba(139, 92, 246, 0.3);
+  /* Never break the type name ("PERSO N") in narrow cards. */
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .entity-source-card__badge[data-entity-type='PERSON'] {

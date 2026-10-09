@@ -2,6 +2,8 @@
 
 PodLens is an AI-powered context engine for podcasts. It transcribes an episode, identifies the people, companies, places and technologies mentioned, and surfaces each one as a source card with a summary, map and image, timed to the moment it is spoken. It can also build a chronological timeline of the episode and answer questions about it, with citations that jump to the exact moment.
 
+**▶ Try the live demo:** https://dhruvpathak1.github.io/PodLens_AI_Context_Generator/ (no sign-up, no API keys; see [Live Demo](#-live-demo))
+
 ## 🧰 Built With
 
 | Category | Technologies |
@@ -41,6 +43,7 @@ https://github.com/user-attachments/assets/d97e2ba6-fbba-426e-b249-aaa80cc6fb22
 - [Project Structure](#%EF%B8%8F-project-structure)
 - [Installation and Setup](#-installation-and-setup)
 - [Running the App](#-running-the-app)
+- [Live Demo](#-live-demo)
 - [Configuration Reference](#%EF%B8%8F-configuration-reference)
 - [Roadmap](#%EF%B8%8F-roadmap)
 
@@ -367,9 +370,11 @@ curl http://127.0.0.1:8000/api/health
 │   │   ├── rail/                Right "Episode AI" panel (Timeline / Ask tabs)
 │   │   ├── timeline/            Episode timeline
 │   │   ├── ask/                 Ask the episode chat
+│   │   ├── demo/                Demo mode: episode picker, banner, pre-computed timeline/Ask
 │   │   ├── theme/ upload/       Theme toggle, drop zone
 │   │   └── live/                PARKED live microphone mode (not imported; see its README)
 │   └── styles/                  Global CSS split by area; index.css imports them in order
+├── public/demo/                 Pre-processed demo episodes served by the public site
 │
 └── server/                      FastAPI backend
     ├── main.py                  Entry point shim (`uvicorn main:app`)
@@ -381,6 +386,7 @@ curl http://127.0.0.1:8000/api/health
     │   │                        entities/ (spaCy or Claude NER), enrichment/ (Wikipedia,
     │   │                        Nominatim, Unsplash), timeline.py, ask.py
     │   └── live/                PARKED live endpoints, mounted only with ENABLE_LIVE_MODE=true
+    ├── scripts/build_demo.py    CLI: turn an audio file into a demo episode (npm run demo:build)
     └── tests/                   pytest suite
 ```
 
@@ -450,6 +456,51 @@ Open http://localhost:8080. One container serves the built UI and the API; data 
 
 ---
 
+## 🎧 Live Demo
+
+The public site runs on GitHub Pages in **demo mode**: it plays episodes that were processed once, ahead of time, so it needs **no server, no API keys, and costs nothing** to run. Visitors get the full experience (synced transcript, live source cards, timeline, and answers with clickable citations) instantly.
+
+**How it works**
+
+```
+ Your machine (once per episode)                    GitHub Pages (every visitor)
+ ─────────────────────────────────                  ────────────────────────────
+ npm run demo:build ─▶ Whisper ─▶ NER ─▶ cards      public/demo/index.json
+                   ─▶ timeline ─▶ preset Q&A  ───▶  public/demo/<slug>/episode.json
+                   ─▶ compressed audio              public/demo/<slug>/audio.mp3
+```
+
+- The demo build sets `VITE_DEMO_MODE=true`. The sidebar shows an episode picker instead of the upload box, and the Timeline and Ask tabs answer from the stored results. The rest of the UI is exactly the same.
+- The suggested Ask questions are the ones with pre-computed answers. Typed questions get a short note explaining how to run PodLens locally.
+- No request ever goes to an API, so there is nothing to abuse and no bill.
+
+**Add a demo episode**
+
+```bash
+npm run demo:build -- path/to/episode.mp3 \
+  --title "Apollo 11: The Landing" \
+  --description "Mission audio from the first crewed Moon landing." \
+  --credit "Audio: NASA (public domain)"
+
+git add public/demo && git commit -m "demo: add Apollo 11 episode" && git push
+```
+
+| Flag | Purpose |
+|---|---|
+| `--title` | Name shown in the picker (required) |
+| `--description` | One line under the title |
+| `--credit` | Audio attribution shown in the demo banner |
+| `--question "..."` | Preset Ask question (repeatable); default: generated from the top entities |
+| `--backend spacy\|claude` | Entity tagger for this build |
+| `--skip-timeline`, `--skip-ask` | Build without OpenAI (free, local tools only) |
+| `--bitrate 64k` | MP3 bitrate of the published audio (about 0.5 MB per minute) |
+
+The build uses your local `.env` keys **once**, on your machine; the keys are never written to the output. Without `OPENAI_API_KEY` the episode is still built, just without the timeline and preset answers.
+
+> **Only publish audio you own or that is licensed for redistribution** (your own recordings, public-domain sources such as NASA or LibriVox, or Creative Commons with attribution). The audio is served publicly from the site.
+
+---
+
 ## ⚙️ Configuration Reference
 
 All settings live in `.env` (see [`.env.example`](.env.example) for the full, commented list).
@@ -470,6 +521,7 @@ All settings live in `.env` (see [`.env.example`](.env.example) for the full, co
 | `CORS_EXTRA_ORIGINS` | none | Extra allowed browser origins (comma-separated) |
 | `VITE_TRANSCRIBE_URL` | dev proxy | API URL for production frontend builds |
 | `ENABLE_LIVE_MODE` | `false` | Mounts the parked live endpoints |
+| `VITE_DEMO_MODE` | `false` (`true` on GitHub Pages) | Play pre-processed episodes from `public/demo/`; no API calls |
 
 ---
 

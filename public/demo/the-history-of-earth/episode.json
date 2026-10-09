@@ -1,0 +1,1488 @@
+{
+ "schema_version": 1,
+ "slug": "the-history-of-earth",
+ "title": "The History of Earth",
+ "description": "4.5 billion years, from formation to the first humans.",
+ "credit": "Audio: Dhruv Pathak",
+ "audio": "audio.mp3",
+ "duration_sec": 243.04,
+ "generated_at": "2026-10-09",
+ "generated_with": {
+  "whisper_model": "base",
+  "entity_backend": "claude",
+  "timeline_model": "gpt-5.4-mini",
+  "ask_model": "gpt-5.4-mini"
+ },
+ "transcript": "Imagine compressing the entire history of our planet into a single 24-hour clock. Our story begins 4.5 billion years ago in a hot, chaotic solar system. Earth formed from swirling dust and rock left over from the birth of the sun. For millions of years, the young planet was a molten realm of lava oceans and endless volcanic eruptions. Then, around 3.8 billion years ago, as the surface cooled and oceans formed, something miraculous occurred, the first microscopic single-celled life emerged in deep-sea hydrothermal vents. For nearly 3 billion years, life remained simple in microscopic. But around 2.4 billion years ago, cyanobacteria began producing oxygen through photosynthesis, triggering the great oxidation event and forever changing the planet's atmosphere. Fast forward to 540 million years ago, the Cambrian explosion. Life dramatically diversified, spilling into ocean waters with complex creatures, shells, and early vertebrates. By 375 million years ago, early tetrapods crawled out of the sea and onto land. Around 252 million years ago, Earth suffered the Permian extinction. The worst mass extinction in planetary history, wiping out over 90% of all marine species. Out of this catastrophic reset, a new kingdom rose, the Mesozoic era, better known as the age of dinosaurs. Starting in the Triassic period roughly 245 million years ago, early reptiles evolved into the first dinosaurs. During the Jurassic period, around 200 million years ago, giant long-necked sauropods and terrifying predators roamed a supercontinent called Pangaea. By the Cretaceous period, 145 to 66 million years ago, iconic giants like Tyrannosaurus Rax and Triceratops ruled the lands, while flowering plants bloomed for the very first time. Then, 66 million years ago, everything changed in an instant. A six-mile wide asteroid slammed into modern-day Mexico, triggering wildfires, megasyunamis, and a global darkness that blocked out the sun. The era of non-Avean dinosaurs came to a catastrophic end. The loss of the dinosaurs cleared the stage for small, burrowing creatures that had spent millions of years living in the shadows, mammals. During the Mesozoic era, the past 66 million years, mammals exploded in size and diversity, giving rise to whales, primates, big cats, and vast grasslands. It wasn't until six million years ago that our hominin ancestors split from a common primate ancestor in Africa. Around 2.8 million years ago, the genus Homo emerged, learning to craft primitive stone tools. By 1.8 million years ago, Homo erectus mastered fire and migrated out of Africa into Eurasia. Then came our direct species, Homo sapiens. We emerged in Africa roughly 300,000 years ago, equipped with complex speech, language, and toolmaking abilities, our ancestors adapted to harsh ice age climates while coexisting alongside other human species like meanderthals and denisavans. Just 12,000 years ago, humans invented agriculture, transitioning from nomadic hunter gatherers into permanent settlements and built cities. Writing was invented 5,000 years ago, sparking recorded human history. The industrial revolution began just 250 years ago and space travel less than 70 years ago. If Earth's 4.5 billion year timeline were a 24 hour clock, non-avian dinosaurs rained for over 50 minutes. While all of human existence occupies less than the last four seconds before midnight. We are a young species on an ancient planet, a brief blip in Earth's deep history, yet the first species capable of exploring its vast past and shaping its future.",
+ "segments": [
+  {
+   "id": 0,
+   "start": 0.0,
+   "end": 4.96,
+   "text": "Imagine compressing the entire history of our planet into a single 24-hour clock."
+  },
+  {
+   "id": 1,
+   "start": 5.5200000000000005,
+   "end": 10.48,
+   "text": "Our story begins 4.5 billion years ago in a hot, chaotic solar system."
+  },
+  {
+   "id": 2,
+   "start": 11.200000000000001,
+   "end": 15.120000000000001,
+   "text": "Earth formed from swirling dust and rock left over from the birth of the sun."
+  },
+  {
+   "id": 3,
+   "start": 15.84,
+   "end": 21.28,
+   "text": "For millions of years, the young planet was a molten realm of lava oceans and endless volcanic"
+  },
+  {
+   "id": 4,
+   "start": 21.28,
+   "end": 27.68,
+   "text": "eruptions. Then, around 3.8 billion years ago, as the surface cooled and oceans formed,"
+  },
+  {
+   "id": 5,
+   "start": 27.68,
+   "end": 32.8,
+   "text": "something miraculous occurred, the first microscopic single-celled life emerged in deep-sea"
+  },
+  {
+   "id": 6,
+   "start": 32.8,
+   "end": 38.8,
+   "text": "hydrothermal vents. For nearly 3 billion years, life remained simple in microscopic."
+  },
+  {
+   "id": 7,
+   "start": 38.8,
+   "end": 45.519999999999996,
+   "text": "But around 2.4 billion years ago, cyanobacteria began producing oxygen through photosynthesis,"
+  },
+  {
+   "id": 8,
+   "start": 45.519999999999996,
+   "end": 49.84,
+   "text": "triggering the great oxidation event and forever changing the planet's atmosphere."
+  },
+  {
+   "id": 9,
+   "start": 50.480000000000004,
+   "end": 54.72,
+   "text": "Fast forward to 540 million years ago, the Cambrian explosion."
+  },
+  {
+   "id": 10,
+   "start": 55.44,
+   "end": 60.4,
+   "text": "Life dramatically diversified, spilling into ocean waters with complex creatures,"
+  },
+  {
+   "id": 11,
+   "start": 60.4,
+   "end": 67.84,
+   "text": "shells, and early vertebrates. By 375 million years ago, early tetrapods crawled out of the sea"
+  },
+  {
+   "id": 12,
+   "start": 67.84,
+   "end": 74.4,
+   "text": "and onto land. Around 252 million years ago, Earth suffered the Permian extinction."
+  },
+  {
+   "id": 13,
+   "start": 74.4,
+   "end": 80.16,
+   "text": "The worst mass extinction in planetary history, wiping out over 90% of all marine species."
+  },
+  {
+   "id": 14,
+   "start": 80.8,
+   "end": 86.8,
+   "text": "Out of this catastrophic reset, a new kingdom rose, the Mesozoic era, better known as the age of"
+  },
+  {
+   "id": 15,
+   "start": 86.8,
+   "end": 94.16,
+   "text": "dinosaurs. Starting in the Triassic period roughly 245 million years ago, early reptiles evolved"
+  },
+  {
+   "id": 16,
+   "start": 94.16,
+   "end": 100.0,
+   "text": "into the first dinosaurs. During the Jurassic period, around 200 million years ago,"
+  },
+  {
+   "id": 17,
+   "start": 100.0,
+   "end": 105.52,
+   "text": "giant long-necked sauropods and terrifying predators roamed a supercontinent called Pangaea."
+  },
+  {
+   "id": 18,
+   "start": 106.08,
+   "end": 113.03999999999999,
+   "text": "By the Cretaceous period, 145 to 66 million years ago, iconic giants like Tyrannosaurus"
+  },
+  {
+   "id": 19,
+   "start": 113.03999999999999,
+   "end": 118.39999999999999,
+   "text": "Rax and Triceratops ruled the lands, while flowering plants bloomed for the very first time."
+  },
+  {
+   "id": 20,
+   "start": 119.11999999999999,
+   "end": 125.92,
+   "text": "Then, 66 million years ago, everything changed in an instant. A six-mile wide asteroid slammed"
+  },
+  {
+   "id": 21,
+   "start": 125.92,
+   "end": 132.0,
+   "text": "into modern-day Mexico, triggering wildfires, megasyunamis, and a global darkness that blocked out"
+  },
+  {
+   "id": 22,
+   "start": 132.16,
+   "end": 138.8,
+   "text": "the sun. The era of non-Avean dinosaurs came to a catastrophic end. The loss of the dinosaurs"
+  },
+  {
+   "id": 23,
+   "start": 138.8,
+   "end": 144.4,
+   "text": "cleared the stage for small, burrowing creatures that had spent millions of years living in the shadows,"
+  },
+  {
+   "id": 24,
+   "start": 144.4,
+   "end": 151.2,
+   "text": "mammals. During the Mesozoic era, the past 66 million years, mammals exploded in size and"
+  },
+  {
+   "id": 25,
+   "start": 151.2,
+   "end": 157.92000000000002,
+   "text": "diversity, giving rise to whales, primates, big cats, and vast grasslands. It wasn't until"
+  },
+  {
+   "id": 26,
+   "start": 157.92,
+   "end": 163.6,
+   "text": "six million years ago that our hominin ancestors split from a common primate ancestor in Africa."
+  },
+  {
+   "id": 27,
+   "start": 164.16,
+   "end": 170.39999999999998,
+   "text": "Around 2.8 million years ago, the genus Homo emerged, learning to craft primitive stone tools."
+  },
+  {
+   "id": 28,
+   "start": 171.11999999999998,
+   "end": 177.51999999999998,
+   "text": "By 1.8 million years ago, Homo erectus mastered fire and migrated out of Africa into Eurasia."
+  },
+  {
+   "id": 29,
+   "start": 178.16,
+   "end": 185.27999999999997,
+   "text": "Then came our direct species, Homo sapiens. We emerged in Africa roughly 300,000 years ago,"
+  },
+  {
+   "id": 30,
+   "start": 185.28,
+   "end": 190.8,
+   "text": "equipped with complex speech, language, and toolmaking abilities, our ancestors adapted to"
+  },
+  {
+   "id": 31,
+   "start": 190.8,
+   "end": 196.8,
+   "text": "harsh ice age climates while coexisting alongside other human species like meanderthals and denisavans."
+  },
+  {
+   "id": 32,
+   "start": 197.44,
+   "end": 203.04,
+   "text": "Just 12,000 years ago, humans invented agriculture, transitioning from nomadic hunter"
+  },
+  {
+   "id": 33,
+   "start": 203.04,
+   "end": 208.88,
+   "text": "gatherers into permanent settlements and built cities. Writing was invented 5,000 years ago,"
+  },
+  {
+   "id": 34,
+   "start": 208.96,
+   "end": 216.24,
+   "text": "sparking recorded human history. The industrial revolution began just 250 years ago and space travel"
+  },
+  {
+   "id": 35,
+   "start": 216.24,
+   "end": 223.35999999999999,
+   "text": "less than 70 years ago. If Earth's 4.5 billion year timeline were a 24 hour clock, non-avian"
+  },
+  {
+   "id": 36,
+   "start": 223.35999999999999,
+   "end": 229.35999999999999,
+   "text": "dinosaurs rained for over 50 minutes. While all of human existence occupies less than the last four"
+  },
+  {
+   "id": 37,
+   "start": 229.35999999999999,
+   "end": 235.28,
+   "text": "seconds before midnight. We are a young species on an ancient planet, a brief blip in Earth's deep"
+  },
+  {
+   "id": 38,
+   "start": 235.28,
+   "end": 243.04,
+   "text": "history, yet the first species capable of exploring its vast past and shaping its future."
+  }
+ ],
+ "document": {
+  "schema_version": 1,
+  "extracted_at": "2026-10-09T04:08:22.014717+00:00",
+  "backend": "claude",
+  "source_label": "The History of Earth",
+  "chunks": [
+   {
+    "id": 0,
+    "start_sec": 0.0,
+    "end_sec": 4.96,
+    "text_raw": "Imagine compressing the entire history of our planet into a single 24-hour clock.",
+    "text_clean": "Imagine compressing the entire history of our planet into a single 24-hour clock."
+   },
+   {
+    "id": 1,
+    "start_sec": 5.52,
+    "end_sec": 10.48,
+    "text_raw": "Our story begins 4.5 billion years ago in a hot, chaotic solar system.",
+    "text_clean": "Our story begins 4.5 billion years ago in a hot, chaotic solar system."
+   },
+   {
+    "id": 2,
+    "start_sec": 11.2,
+    "end_sec": 15.12,
+    "text_raw": "Earth formed from swirling dust and rock left over from the birth of the sun.",
+    "text_clean": "Earth formed from swirling dust and rock left over from the birth of the sun."
+   },
+   {
+    "id": 3,
+    "start_sec": 15.84,
+    "end_sec": 21.28,
+    "text_raw": "For millions of years, the young planet was a molten realm of lava oceans and endless volcanic",
+    "text_clean": "For millions of years, the young planet was a molten realm of lava oceans and endless volcanic"
+   },
+   {
+    "id": 4,
+    "start_sec": 21.28,
+    "end_sec": 27.68,
+    "text_raw": "eruptions. Then, around 3.8 billion years ago, as the surface cooled and oceans formed,",
+    "text_clean": "eruptions. Then, around 3.8 billion years ago, as the surface cooled and oceans formed,"
+   },
+   {
+    "id": 5,
+    "start_sec": 27.68,
+    "end_sec": 32.8,
+    "text_raw": "something miraculous occurred, the first microscopic single-celled life emerged in deep-sea",
+    "text_clean": "something miraculous occurred, the first microscopic single-celled life emerged in deep-sea"
+   },
+   {
+    "id": 6,
+    "start_sec": 32.8,
+    "end_sec": 38.8,
+    "text_raw": "hydrothermal vents. For nearly 3 billion years, life remained simple in microscopic.",
+    "text_clean": "hydrothermal vents. For nearly 3 billion years, life remained simple in microscopic."
+   },
+   {
+    "id": 7,
+    "start_sec": 38.8,
+    "end_sec": 45.52,
+    "text_raw": "But around 2.4 billion years ago, cyanobacteria began producing oxygen through photosynthesis,",
+    "text_clean": "But around 2.4 billion years ago, cyanobacteria began producing oxygen through photosynthesis,"
+   },
+   {
+    "id": 8,
+    "start_sec": 45.52,
+    "end_sec": 49.84,
+    "text_raw": "triggering the great oxidation event and forever changing the planet's atmosphere.",
+    "text_clean": "triggering the great oxidation event and forever changing the planet's atmosphere."
+   },
+   {
+    "id": 9,
+    "start_sec": 50.48,
+    "end_sec": 54.72,
+    "text_raw": "Fast forward to 540 million years ago, the Cambrian explosion.",
+    "text_clean": "Fast forward to 540 million years ago, the Cambrian explosion."
+   },
+   {
+    "id": 10,
+    "start_sec": 55.44,
+    "end_sec": 60.4,
+    "text_raw": "Life dramatically diversified, spilling into ocean waters with complex creatures,",
+    "text_clean": "Life dramatically diversified, spilling into ocean waters with complex creatures,"
+   },
+   {
+    "id": 11,
+    "start_sec": 60.4,
+    "end_sec": 67.84,
+    "text_raw": "shells, and early vertebrates. By 375 million years ago, early tetrapods crawled out of the sea",
+    "text_clean": "shells, and early vertebrates. By 375 million years ago, early tetrapods crawled out of the sea"
+   },
+   {
+    "id": 12,
+    "start_sec": 67.84,
+    "end_sec": 74.4,
+    "text_raw": "and onto land. Around 252 million years ago, Earth suffered the Permian extinction.",
+    "text_clean": "and onto land. Around 252 million years ago, Earth suffered the Permian extinction."
+   },
+   {
+    "id": 13,
+    "start_sec": 74.4,
+    "end_sec": 80.16,
+    "text_raw": "The worst mass extinction in planetary history, wiping out over 90% of all marine species.",
+    "text_clean": "The worst mass extinction in planetary history, wiping out over 90% of all marine species."
+   },
+   {
+    "id": 14,
+    "start_sec": 80.8,
+    "end_sec": 86.8,
+    "text_raw": "Out of this catastrophic reset, a new kingdom rose, the Mesozoic era, better known as the age of",
+    "text_clean": "Out of this catastrophic reset, a new kingdom rose, the Mesozoic era, better known as the age of"
+   },
+   {
+    "id": 15,
+    "start_sec": 86.8,
+    "end_sec": 94.16,
+    "text_raw": "dinosaurs. Starting in the Triassic period roughly 245 million years ago, early reptiles evolved",
+    "text_clean": "dinosaurs. Starting in the Triassic period roughly 245 million years ago, early reptiles evolved"
+   },
+   {
+    "id": 16,
+    "start_sec": 94.16,
+    "end_sec": 100.0,
+    "text_raw": "into the first dinosaurs. During the Jurassic period, around 200 million years ago,",
+    "text_clean": "into the first dinosaurs. During the Jurassic period, around 200 million years ago,"
+   },
+   {
+    "id": 17,
+    "start_sec": 100.0,
+    "end_sec": 105.52,
+    "text_raw": "giant long-necked sauropods and terrifying predators roamed a supercontinent called Pangaea.",
+    "text_clean": "giant long-necked sauropods and terrifying predators roamed a supercontinent called Pangaea."
+   },
+   {
+    "id": 18,
+    "start_sec": 106.08,
+    "end_sec": 113.04,
+    "text_raw": "By the Cretaceous period, 145 to 66 million years ago, iconic giants like Tyrannosaurus",
+    "text_clean": "By the Cretaceous period, 145 to 66 million years ago, iconic giants like Tyrannosaurus"
+   },
+   {
+    "id": 19,
+    "start_sec": 113.04,
+    "end_sec": 118.4,
+    "text_raw": "Rax and Triceratops ruled the lands, while flowering plants bloomed for the very first time.",
+    "text_clean": "Rax and Triceratops ruled the lands, while flowering plants bloomed for the very first time."
+   },
+   {
+    "id": 20,
+    "start_sec": 119.12,
+    "end_sec": 125.92,
+    "text_raw": "Then, 66 million years ago, everything changed in an instant. A six-mile wide asteroid slammed",
+    "text_clean": "Then, 66 million years ago, everything changed in an instant. A six-mile wide asteroid slammed"
+   },
+   {
+    "id": 21,
+    "start_sec": 125.92,
+    "end_sec": 132.0,
+    "text_raw": "into modern-day Mexico, triggering wildfires, megasyunamis, and a global darkness that blocked out",
+    "text_clean": "into modern-day Mexico, triggering wildfires, megasyunamis, and a global darkness that blocked out"
+   },
+   {
+    "id": 22,
+    "start_sec": 132.16,
+    "end_sec": 138.8,
+    "text_raw": "the sun. The era of non-Avean dinosaurs came to a catastrophic end. The loss of the dinosaurs",
+    "text_clean": "the sun. The era of non-Avean dinosaurs came to a catastrophic end. The loss of the dinosaurs"
+   },
+   {
+    "id": 23,
+    "start_sec": 138.8,
+    "end_sec": 144.4,
+    "text_raw": "cleared the stage for small, burrowing creatures that had spent millions of years living in the shadows,",
+    "text_clean": "cleared the stage for small, burrowing creatures that had spent millions of years living in the shadows,"
+   },
+   {
+    "id": 24,
+    "start_sec": 144.4,
+    "end_sec": 151.2,
+    "text_raw": "mammals. During the Mesozoic era, the past 66 million years, mammals exploded in size and",
+    "text_clean": "mammals. During the Mesozoic era, the past 66 million years, mammals exploded in size and"
+   },
+   {
+    "id": 25,
+    "start_sec": 151.2,
+    "end_sec": 157.92,
+    "text_raw": "diversity, giving rise to whales, primates, big cats, and vast grasslands. It wasn't until",
+    "text_clean": "diversity, giving rise to whales, primates, big cats, and vast grasslands. It wasn't until"
+   },
+   {
+    "id": 26,
+    "start_sec": 157.92,
+    "end_sec": 163.6,
+    "text_raw": "six million years ago that our hominin ancestors split from a common primate ancestor in Africa.",
+    "text_clean": "six million years ago that our hominin ancestors split from a common primate ancestor in Africa."
+   },
+   {
+    "id": 27,
+    "start_sec": 164.16,
+    "end_sec": 170.4,
+    "text_raw": "Around 2.8 million years ago, the genus Homo emerged, learning to craft primitive stone tools.",
+    "text_clean": "Around 2.8 million years ago, the genus Homo emerged, learning to craft primitive stone tools."
+   },
+   {
+    "id": 28,
+    "start_sec": 171.12,
+    "end_sec": 177.52,
+    "text_raw": "By 1.8 million years ago, Homo erectus mastered fire and migrated out of Africa into Eurasia.",
+    "text_clean": "By 1.8 million years ago, Homo erectus mastered fire and migrated out of Africa into Eurasia."
+   },
+   {
+    "id": 29,
+    "start_sec": 178.16,
+    "end_sec": 185.28,
+    "text_raw": "Then came our direct species, Homo sapiens. We emerged in Africa roughly 300,000 years ago,",
+    "text_clean": "Then came our direct species, Homo sapiens. We emerged in Africa roughly 300,000 years ago,"
+   },
+   {
+    "id": 30,
+    "start_sec": 185.28,
+    "end_sec": 190.8,
+    "text_raw": "equipped with complex speech, language, and toolmaking abilities, our ancestors adapted to",
+    "text_clean": "equipped with complex speech, language, and toolmaking abilities, our ancestors adapted to"
+   },
+   {
+    "id": 31,
+    "start_sec": 190.8,
+    "end_sec": 196.8,
+    "text_raw": "harsh ice age climates while coexisting alongside other human species like meanderthals and denisavans.",
+    "text_clean": "harsh ice age climates while coexisting alongside other human species like meanderthals and denisavans."
+   },
+   {
+    "id": 32,
+    "start_sec": 197.44,
+    "end_sec": 203.04,
+    "text_raw": "Just 12,000 years ago, humans invented agriculture, transitioning from nomadic hunter",
+    "text_clean": "Just 12,000 years ago, humans invented agriculture, transitioning from nomadic hunter"
+   },
+   {
+    "id": 33,
+    "start_sec": 203.04,
+    "end_sec": 208.88,
+    "text_raw": "gatherers into permanent settlements and built cities. Writing was invented 5,000 years ago,",
+    "text_clean": "gatherers into permanent settlements and built cities. Writing was invented 5,000 years ago,"
+   },
+   {
+    "id": 34,
+    "start_sec": 208.96,
+    "end_sec": 216.24,
+    "text_raw": "sparking recorded human history. The industrial revolution began just 250 years ago and space travel",
+    "text_clean": "sparking recorded human history. The industrial revolution began just 250 years ago and space travel"
+   },
+   {
+    "id": 35,
+    "start_sec": 216.24,
+    "end_sec": 223.36,
+    "text_raw": "less than 70 years ago. If Earth's 4.5 billion year timeline were a 24 hour clock, non-avian",
+    "text_clean": "less than 70 years ago. If Earth's 4.5 billion year timeline were a 24 hour clock, non-avian"
+   },
+   {
+    "id": 36,
+    "start_sec": 223.36,
+    "end_sec": 229.36,
+    "text_raw": "dinosaurs rained for over 50 minutes. While all of human existence occupies less than the last four",
+    "text_clean": "dinosaurs rained for over 50 minutes. While all of human existence occupies less than the last four"
+   },
+   {
+    "id": 37,
+    "start_sec": 229.36,
+    "end_sec": 235.28,
+    "text_raw": "seconds before midnight. We are a young species on an ancient planet, a brief blip in Earth's deep",
+    "text_clean": "seconds before midnight. We are a young species on an ancient planet, a brief blip in Earth's deep"
+   },
+   {
+    "id": 38,
+    "start_sec": 235.28,
+    "end_sec": 243.04,
+    "text_raw": "history, yet the first species capable of exploring its vast past and shaping its future.",
+    "text_clean": "history, yet the first species capable of exploring its vast past and shaping its future."
+   }
+  ],
+  "entities": [
+   {
+    "type": "PLACE",
+    "text": "Earth",
+    "start_sec": 11.2,
+    "end_sec": 11.455,
+    "chunk_id": 2,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "great oxidation event",
+    "start_sec": 46.31,
+    "end_sec": 47.417,
+    "chunk_id": 8,
+    "source": "claude"
+   },
+   {
+    "type": "MISC",
+    "text": "Cambrian explosion",
+    "start_sec": 53.421,
+    "end_sec": 54.652,
+    "chunk_id": 9,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Earth",
+    "start_sec": 71.397,
+    "end_sec": 71.792,
+    "chunk_id": 12,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "Permian extinction",
+    "start_sec": 72.898,
+    "end_sec": 74.321,
+    "chunk_id": 12,
+    "source": "claude"
+   },
+   {
+    "type": "MISC",
+    "text": "Mesozoic era",
+    "start_sec": 84.3,
+    "end_sec": 85.05,
+    "chunk_id": 14,
+    "source": "claude"
+   },
+   {
+    "type": "MISC",
+    "text": "Triassic period",
+    "start_sec": 88.87,
+    "end_sec": 90.02,
+    "chunk_id": 15,
+    "source": "claude"
+   },
+   {
+    "type": "MISC",
+    "text": "Jurassic period",
+    "start_sec": 96.763,
+    "end_sec": 97.819,
+    "chunk_id": 16,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Pangaea",
+    "start_sec": 105.04,
+    "end_sec": 105.46,
+    "chunk_id": 17,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "Cretaceous period",
+    "start_sec": 106.64,
+    "end_sec": 108.0,
+    "chunk_id": 18,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Mexico",
+    "start_sec": 126.913,
+    "end_sec": 127.285,
+    "chunk_id": 21,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "Mesozoic era",
+    "start_sec": 145.928,
+    "end_sec": 146.845,
+    "chunk_id": 24,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Africa",
+    "start_sec": 163.186,
+    "end_sec": 163.541,
+    "chunk_id": 26,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "Homo",
+    "start_sec": 166.815,
+    "end_sec": 167.081,
+    "chunk_id": 27,
+    "source": "claude"
+   },
+   {
+    "type": "MISC",
+    "text": "Homo erectus",
+    "start_sec": 172.909,
+    "end_sec": 173.735,
+    "chunk_id": 28,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Africa",
+    "start_sec": 176.144,
+    "end_sec": 176.557,
+    "chunk_id": 28,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "Eurasia",
+    "start_sec": 176.969,
+    "end_sec": 177.451,
+    "chunk_id": 28,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "Homo sapiens",
+    "start_sec": 180.507,
+    "end_sec": 181.446,
+    "chunk_id": 29,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Africa",
+    "start_sec": 182.698,
+    "end_sec": 183.167,
+    "chunk_id": 29,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "MISC",
+    "text": "meanderthals",
+    "start_sec": 195.169,
+    "end_sec": 195.868,
+    "chunk_id": 31,
+    "source": "claude"
+   },
+   {
+    "type": "MISC",
+    "text": "denisavans",
+    "start_sec": 196.159,
+    "end_sec": 196.742,
+    "chunk_id": 31,
+    "source": "claude"
+   },
+   {
+    "type": "MISC",
+    "text": "industrial revolution",
+    "start_sec": 211.654,
+    "end_sec": 213.182,
+    "chunk_id": 34,
+    "source": "claude"
+   },
+   {
+    "type": "PLACE",
+    "text": "Earth",
+    "start_sec": 218.33,
+    "end_sec": 218.717,
+    "chunk_id": 35,
+    "source": "claude",
+    "original_label": "LOC"
+   },
+   {
+    "type": "PLACE",
+    "text": "Earth",
+    "start_sec": 234.555,
+    "end_sec": 234.857,
+    "chunk_id": 37,
+    "source": "claude",
+    "original_label": "LOC"
+   }
+  ]
+ },
+ "cards": [
+  {
+   "id": "8b04090016a27070",
+   "type": "PLACE",
+   "text": "Earth",
+   "start_sec": 11.2,
+   "end_sec": 234.857,
+   "chunk_id": 2,
+   "wikipedia": {
+    "title": "Earth",
+    "extract": "Earth is the third planet from the Sun and the only astronomical object known to harbor life. This is made possible by Earth being an ocean world, the only one in the Solar System sustaining liquid surface water. Almost all of Earth's water is contained in its ocean, which covers 70.8% of Earth's crust. The remaining 29.2% of Earth's crust is dry land, which is predominantly located within Earth's land hemisphere in the form of continental landmasses. Most of Earth's land is at least somewhat humid and covered by vegetation, while large ice sheets at Earth's polar deserts retain more water than Earth's groundwater, lakes, rivers, and atmospheric water combined. Earth's crust consists of slowly moving tectonic plates, which interact to produce mountain ranges, volcanoes, and earthquakes. Earth has a liquid outer core that generates a magnetosphere capable of deflecting most of the destructive solar winds and cosmic radiation.",
+    "url": "https://en.wikipedia.org/wiki/Earth",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Meteosat-12-fci-march-equinox-2025-noon.jpg/330px-Meteosat-12-fci-march-equinox-2025-noon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxFYXJ0aHxlbnwwfDB8fHwxNzkxNTE4OTAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxFYXJ0aHxlbnwwfDB8fHwxNzkxNTE4OTAyfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "Earth with clouds above the African continent",
+    "photographer_name": "NASA",
+    "photographer_url": "https://unsplash.com/@nasa",
+    "unsplash_url": "https://unsplash.com/photos/earth-with-clouds-above-the-african-continent-vhSz50AaFAs"
+   }
+  },
+  {
+   "id": "d848126175abfc23",
+   "type": "MISC",
+   "text": "great oxidation event",
+   "start_sec": 46.31,
+   "end_sec": 47.417,
+   "chunk_id": 8,
+   "wikipedia": {
+    "title": "Great Oxidation Event",
+    "extract": "The Great Oxidation Event (GOE) or Great Oxygenation Event, also called the Oxygen Catastrophe, Oxygen Revolution, Oxygen Crisis, or Oxygen Holocaust, was a time interval during the Earth's Paleoproterozoic era when the Earth's atmosphere and shallow seas first experienced a rise in the concentration of free oxygen. This began approximately 2.46–2.426 billion years ago (Ga) during the Siderian period and ended around 2.06 billion years ago during the Rhyacian. Geological, isotopic, and chemical evidence suggests that biologically produced molecular oxygen (dioxygen or O2) started to accumulate in the Archean prebiotic atmosphere by microbial photosynthesis. It changed the atmosphere from a weakly reducing state practically devoid of oxygen into an oxidizing one containing abundant free oxygen, with oxygen levels being as high as 10% of the modern atmospheric level by the end of the GOE.",
+    "url": "https://en.wikipedia.org/wiki/Great_Oxidation_Event",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Precambrian_Evolution_of_Life.png/330px-Precambrian_Evolution_of_Life.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1783646080254-d1dd44a6eef8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxHcmVhdCUyME94aWRhdGlvbiUyMEV2ZW50fGVufDB8MHx8fDE3OTE1MTg5MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1783646080254-d1dd44a6eef8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxHcmVhdCUyME94aWRhdGlvbiUyMEV2ZW50fGVufDB8MHx8fDE3OTE1MTg5MDN8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "Pink sphere with a wavy line and \"quantum\" text background",
+    "photographer_name": "Brecht Corbeel",
+    "photographer_url": "https://unsplash.com/@brechtcorbeel",
+    "unsplash_url": "https://unsplash.com/photos/pink-sphere-with-a-wavy-line-and-quantum-text-background-BWIHrCj5P5g"
+   }
+  },
+  {
+   "id": "5f0b54b60229ab60",
+   "type": "MISC",
+   "text": "Cambrian explosion",
+   "start_sec": 53.421,
+   "end_sec": 54.652,
+   "chunk_id": 9,
+   "wikipedia": {
+    "title": "Cambrian explosion",
+    "extract": "\nThe Cambrian explosion is an interval of time beginning approximately 538.8 million years ago in the Cambrian period of the early Paleozoic, during which a sudden radiation of complex life occurred. The fossil record of this period contains the first appearances of practically every animal phyla, implying that nearly all animal life has its origin during this radiation. It lasted between 13 and 25 million years and resulted in the divergence of most modern metazoan phyla. The event was accompanied by major diversification in other groups of organisms as well.",
+    "url": "https://en.wikipedia.org/wiki/Cambrian_explosion",
+    "thumbnail": null
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1588281345136-9893252095bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDYW1icmlhbiUyMGV4cGxvc2lvbnxlbnwwfDB8fHwxNzkxNTE4OTA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1588281345136-9893252095bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDYW1icmlhbiUyMGV4cGxvc2lvbnxlbnwwfDB8fHwxNzkxNTE4OTA0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "A series of large orange and yellow fireballs erupting against a clear blue sky",
+    "photographer_name": "Luke Jernejcic",
+    "photographer_url": "https://unsplash.com/@jernejcic",
+    "unsplash_url": "https://unsplash.com/photos/fireballs-erupting-against-blue-sky-Oi31uKsnM1Q"
+   }
+  },
+  {
+   "id": "3a51d281d606684f",
+   "type": "MISC",
+   "text": "Permian extinction",
+   "start_sec": 72.898,
+   "end_sec": 74.321,
+   "chunk_id": 12,
+   "wikipedia": {
+    "title": "Permian–Triassic extinction event",
+    "extract": "The Permian–Triassic extinction event, colloquially known as the Great Dying, was an extinction event that occurred around the boundary between the Permian and Triassic geologic periods, and with them the Paleozoic and Mesozoic eras. It is Earth's most severe known extinction event, with the extinction of 57% of biological families, 62% of genera, 81% of marine species, and 70% of terrestrial vertebrate species. It is also the greatest known mass extinction of insects. It is the greatest of the \"Big Five\" mass extinctions of the Phanerozoic. There is evidence for one to three distinct pulses, or phases, of extinction, with the major pulse of marine extinction occurring in a 60,000-100,000 year interval around 251.902 million years ago (mya) marking the boundary between the Permian and Triassic periods. There is some controversy regarding the chronology of the extinctions on land and whether they are synchronous with the main marine extinction event.",
+    "url": "https://en.wikipedia.org/wiki/Permian%E2%80%93Triassic_extinction_event",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/330px-Extinction_intensity.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "d9fbd285c468eeb1",
+   "type": "MISC",
+   "text": "Mesozoic era",
+   "start_sec": 84.3,
+   "end_sec": 146.845,
+   "chunk_id": 14,
+   "wikipedia": {
+    "title": "Mesozoic",
+    "extract": "The Mesozoic Era is an era of Earth's geological history, lasting from about 252 to 66 million years ago, comprising the Triassic, Jurassic and Cretaceous Periods. It is characterized by the dominance of archosaurian reptiles such as the dinosaurs, and of gymnosperms such as cycads, ginkgoaceae and araucarian conifers; a hot greenhouse climate; and the tectonic break-up of Pangaea. The Mesozoic is the middle of the three eras since complex life evolved: the Paleozoic, the Mesozoic, and the Cenozoic.",
+    "url": "https://en.wikipedia.org/wiki/Mesozoic",
+    "thumbnail": null
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1583307359900-dbefeb18e3cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXNvem9pY3xlbnwwfDB8fHwxNzkxNTE4OTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1583307359900-dbefeb18e3cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXNvem9pY3xlbnwwfDB8fHwxNzkxNTE4OTA2fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "brown horse running on brown field during daytime",
+    "photographer_name": "Leo_Visions",
+    "photographer_url": "https://unsplash.com/@leo_visions_",
+    "unsplash_url": "https://unsplash.com/photos/brown-horse-running-on-brown-field-during-daytime-XqzLUKzg49c"
+   }
+  },
+  {
+   "id": "b575acac9b5aec72",
+   "type": "MISC",
+   "text": "Triassic period",
+   "start_sec": 88.87,
+   "end_sec": 90.02,
+   "chunk_id": 15,
+   "wikipedia": {
+    "title": "Triassic",
+    "extract": "The Triassic ( try-A-sik) is a geologic period and a stratigraphic system that spans 50.5 million years from the end of the Permian Period 251.902 Ma to the beginning of the Jurassic Period 201.4 Ma. The Triassic Period is the first and shortest geologic period of the Mesozoic Era, and the seventh period of the Phanerozoic Eon. The start and the end of the Triassic Period featured major extinction events.",
+    "url": "https://en.wikipedia.org/wiki/Triassic",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png/330px-Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1606108631580-78be7884b0f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxUcmlhc3NpY3xlbnwwfDB8fHwxNzkxNTE4OTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1606108631580-78be7884b0f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxUcmlhc3NpY3xlbnwwfDB8fHwxNzkxNTE4OTA2fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "green and brown dinosaur statue",
+    "photographer_name": "Nico Smit",
+    "photographer_url": "https://unsplash.com/@nicosmit99",
+    "unsplash_url": "https://unsplash.com/photos/green-and-brown-dinosaur-statue-u8v_PQbZk1o"
+   }
+  },
+  {
+   "id": "7e276e5ce1ccbd8f",
+   "type": "MISC",
+   "text": "Jurassic period",
+   "start_sec": 96.763,
+   "end_sec": 97.819,
+   "chunk_id": 16,
+   "wikipedia": {
+    "title": "Jurassic",
+    "extract": "The Jurassic is a geologic period and stratigraphic system that lasted about 58.3 million years, spanning from the end of the Triassic Period 201.4 Ma to the beginning of the Cretaceous Period, 143.1 Ma. The Jurassic constitutes the second and middle period of the Mesozoic Era as well as the eighth period of the Phanerozoic Eon and is named after the Jura Mountains, where limestone strata from the period were first identified.",
+    "url": "https://en.wikipedia.org/wiki/Jurassic",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mollweide_Paleographic_Map_of_Earth%2C_170_Ma_%28Bajocian_Age%29.png/330px-Mollweide_Paleographic_Map_of_Earth%2C_170_Ma_%28Bajocian_Age%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1525877442103-5ddb2089b2bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxKdXJhc3NpY3xlbnwwfDB8fHwxNzkxNTE4OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1525877442103-5ddb2089b2bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxKdXJhc3NpY3xlbnwwfDB8fHwxNzkxNTE4OTA3fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "A Tyrannosaurus rex model in a misty forest with tall eucalyptus trees",
+    "photographer_name": "Fausto García-Menéndez",
+    "photographer_url": "https://unsplash.com/@faustogarmen",
+    "unsplash_url": "https://unsplash.com/photos/tyrannosaurus-rex-model-in-misty-forest-hYKG311mff8"
+   }
+  },
+  {
+   "id": "3407b5de4cce8ddc",
+   "type": "PLACE",
+   "text": "Pangaea",
+   "start_sec": 105.04,
+   "end_sec": 105.46,
+   "chunk_id": 17,
+   "wikipedia": {
+    "title": "Pangaea",
+    "extract": "Pangaea or Pangea was a supercontinent that existed during the late Paleozoic and early Mesozoic eras. It assembled from the earlier continental units of Gondwana, Euramerica and Siberia during the Carboniferous period approximately 335 million years ago, and began to break apart about 175 million years ago, at the beginning of the Jurassic. Pangaea was C-shaped, with the bulk of its mass stretching between Earth's northern and southern polar regions and surrounded by the superocean Panthalassa and the Paleo-Tethys and subsequent Tethys Oceans. Pangaea is the most recent supercontinent to have existed and was the first to be reconstructed by geologists.",
+    "url": "https://en.wikipedia.org/wiki/Pangaea",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png/330px-Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "72edaf3ad81fa889",
+   "type": "MISC",
+   "text": "Cretaceous period",
+   "start_sec": 106.64,
+   "end_sec": 108.0,
+   "chunk_id": 18,
+   "wikipedia": {
+    "title": "Cretaceous",
+    "extract": "The Cretaceous is a geological period that lasted from about 143.1 to 66 Ma. It is the third and final period of the Mesozoic Era, as well as the longest. At around 77.1 million years, it is the ninth and longest geological period of the entire Phanerozoic. The name is derived from the Latin creta, 'chalk', which is abundant in deposits from the latter half of the period. It is usually abbreviated K, for its German translation Kreide.",
+    "url": "https://en.wikipedia.org/wiki/Cretaceous",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png/330px-Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1787061673826-7da45911713c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDcmV0YWNlb3VzfGVufDB8MHx8fDE3OTE1MTg5MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1787061673826-7da45911713c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxDcmV0YWNlb3VzfGVufDB8MHx8fDE3OTE1MTg5MDh8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "A sculpted model of a Stegosaurus with large dorsal plates on a wooden base",
+    "photographer_name": "Smithsonian",
+    "photographer_url": "https://unsplash.com/@smithsonian",
+    "unsplash_url": "https://unsplash.com/photos/stegosaurus-model-on-wooden-base-K5OOLK7NfBM"
+   }
+  },
+  {
+   "id": "988ce61b29359d4c",
+   "type": "PLACE",
+   "text": "Mexico",
+   "start_sec": 126.913,
+   "end_sec": 127.285,
+   "chunk_id": 21,
+   "wikipedia": {
+    "title": "Mexico",
+    "extract": "Mexico, officially the United Mexican States, is a country in North America. It is the northernmost country in Latin America, bordering the United States of America to the north and Guatemala and Belize to the southeast, while having maritime boundaries with the Pacific Ocean to the west, the Caribbean Sea to the southeast, and the Gulf of Mexico to the east. Mexico covers 1,972,550 km2, and is the thirteenth-largest country in the world by land area. With a population around 131 million as of 2025, Mexico is the tenth-most populous country in the world and is home to the largest number of native Spanish speakers. Mexico City is the capital and largest city in Mexico, which ranks among the most populous metropolitan areas in the world.",
+    "url": "https://en.wikipedia.org/wiki/Mexico",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/330px-Flag_of_Mexico.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXhpY298ZW58MHwwfHx8MTc5MTUxODkwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxNZXhpY298ZW58MHwwfHx8MTc5MTUxODkwOXww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "people standing on corner road near concrete buildings during daytime",
+    "photographer_name": "Jezael Melgoza",
+    "photographer_url": "https://unsplash.com/@jezar",
+    "unsplash_url": "https://unsplash.com/photos/people-standing-on-corner-road-near-concrete-buildings-during-daytime-3snKY0XMKwg"
+   }
+  },
+  {
+   "id": "e7347ffef21acb65",
+   "type": "PLACE",
+   "text": "Africa",
+   "start_sec": 163.186,
+   "end_sec": 183.167,
+   "chunk_id": 26,
+   "wikipedia": {
+    "title": "Africa",
+    "extract": "Africa is the world's second-largest and second-most populous continent after Asia. At about 30.3 million km2 including adjacent islands, it covers around 20% of Earth's land area and 6% of its total surface area. With nearly 1.4 billion of the world population, Africa's population is the youngest among the continents; the median age in 2012 was 19.7, when the worldwide median age was 30.4. Based on 2024 projections, Africa's population will exceed 3.8 billion people by 2100. Africa is the least wealthy inhabited continent per capita and second-least wealthy by total wealth, ahead of Oceania. Scholars have attributed this to various factors including geography, climate, corruption, colonialism, the Cold War, and neocolonialism. Despite this low concentration of wealth, the African economy is home to many of the world's fastest-growing economies.",
+    "url": "https://en.wikipedia.org/wiki/Africa",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Africa_%28orthographic_projection%29.svg/330px-Africa_%28orthographic_projection%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": {
+    "image_url": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBZnJpY2F8ZW58MHwwfHx8MTc5MTUxODkxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "thumb_url": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTM4ODF8MHwxfHNlYXJjaHwxfHxBZnJpY2F8ZW58MHwwfHx8MTc5MTUxODkxMHww&ixlib=rb-4.1.0&q=80&w=400",
+    "alt": "tree between green land during golden hour",
+    "photographer_name": "Damian Patkowski",
+    "photographer_url": "https://unsplash.com/@damianpatkowski",
+    "unsplash_url": "https://unsplash.com/photos/tree-between-green-land-during-golden-hour-T-LfvX-7IVg"
+   }
+  },
+  {
+   "id": "f3c2806f67cc47ab",
+   "type": "MISC",
+   "text": "Homo",
+   "start_sec": 166.815,
+   "end_sec": 167.081,
+   "chunk_id": 27,
+   "wikipedia": {
+    "title": "Homo",
+    "extract": "Homo is a genus of great ape that emerged from the genus Australopithecus, encompassing a single extant species, Homo sapiens, along with a number of extinct species classified as either ancestral or closely related to modern humans, collectively called archaic humans. Homo, together with the genus Paranthropus, is probably most closely related to the species Australopithecus africanus within Australopithecus. The closest living relatives of Homo are of the hominin genus Pan, with the ancestors of Pan and Homo estimated to have diverged around 5.7–11 million years ago during the Late Miocene.",
+    "url": "https://en.wikipedia.org/wiki/Homo",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Members_of_Genus_Homo_2.png/330px-Members_of_Genus_Homo_2.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "98fa47ca655d400d",
+   "type": "MISC",
+   "text": "Homo erectus",
+   "start_sec": 172.909,
+   "end_sec": 173.735,
+   "chunk_id": 28,
+   "wikipedia": {
+    "title": "Homo erectus",
+    "extract": "Homo erectus is an extinct species of archaic human from the Pleistocene, spanning nearly 2 million years. It is the first human species to evolve a humanlike body plan and gait, to leave Africa and colonize Asia and Europe, and to wield fire. Some populations of H. erectus were ancestors of later human species, including H. heidelbergensis—the last common ancestor of modern humans, Neanderthals, and Denisovans. As such a widely distributed species both geographically and temporally, H. erectus anatomy varies considerably. Subspecies are sometimes recognized: H. e. erectus, H. e. pekinensis, H. e. soloensis, H. e. ergaster, H. e. georgicus, and H. e. tautavelensis.",
+    "url": "https://en.wikipedia.org/wiki/Homo_erectus",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Java_Man_holotype.jpg/330px-Java_Man_holotype.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "1672ed432a20b4b3",
+   "type": "PLACE",
+   "text": "Eurasia",
+   "start_sec": 176.969,
+   "end_sec": 177.451,
+   "chunk_id": 28,
+   "wikipedia": {
+    "title": "Eurasia",
+    "extract": "Eurasia, is the largest continental area on Earth, comprising all of Europe and Asia. According to some models of the world, physio-graphically, Eurasia is a single continent. The concept of Europe and Asia as distinct continents dates back to antiquity, and is largely cultural, but their borders have historically been subject to change. For example, the ancient Greeks originally included Africa in Asia but classified Europe as separate land. Eurasia is connected to Africa at the Suez Canal, and the two are sometimes combined to describe the largest contiguous landmass on Earth, Afro-Eurasia.",
+    "url": "https://en.wikipedia.org/wiki/Eurasia",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Eurasia_%28orthographic_projection%29.svg/330px-Eurasia_%28orthographic_projection%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "59a6f2a1c368ed9c",
+   "type": "MISC",
+   "text": "Homo sapiens",
+   "start_sec": 180.507,
+   "end_sec": 181.446,
+   "chunk_id": 29,
+   "wikipedia": {
+    "title": "Human",
+    "extract": "Humans are the most abundant and widespread species of primates, characterized by bipedalism, minimal body hair, and large, complex brains enabling the development of advanced technology, culture, and language. Humans are highly social beings and tend to live in complex social structures composed of many cooperating and competing groups, from families and kinship networks to political states. Social interactions between humans have established a wide variety of values, social norms, and rituals, which bolster human society. Curiosity and the human desire to understand and influence the environment have motivated humanity's development of art, science, philosophy, religion, mythology, and other fields of knowledge.",
+    "url": "https://en.wikipedia.org/wiki/Human",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Akha_cropped_hires.JPG/330px-Akha_cropped_hires.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "04e69b6364683744",
+   "type": "MISC",
+   "text": "meanderthals",
+   "start_sec": 195.169,
+   "end_sec": 195.868,
+   "chunk_id": 31,
+   "wikipedia": {
+    "title": "Meanderthal",
+    "extract": "Meanderthal is the second full-length studio album by American heavy metal band Torche. It was released on April 8, 2008.",
+    "url": "https://en.wikipedia.org/wiki/Meanderthal",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/52/Torche_Meanderthal.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+   },
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "1091808bd011e8a3",
+   "type": "MISC",
+   "text": "denisavans",
+   "start_sec": 196.159,
+   "end_sec": 196.742,
+   "chunk_id": 31,
+   "wikipedia": null,
+   "location": null,
+   "unsplash": null
+  },
+  {
+   "id": "634caea43f3ff8a6",
+   "type": "MISC",
+   "text": "industrial revolution",
+   "start_sec": 211.654,
+   "end_sec": 213.182,
+   "chunk_id": 34,
+   "wikipedia": {
+    "title": "Industrial Revolution",
+    "extract": "The Industrial Revolution, sometimes called the First Industrial Revolution in contrast to the subsequent Second Industrial Revolution, was a transitional period of the global economy toward more widespread, efficient and stable manufacturing processes, succeeding the Second Agricultural Revolution. Beginning in Great Britain around 1760, the Industrial Revolution had spread to continental Europe and the United States by about 1840. Economic historians agree that the onset of the Industrial Revolution is the most important event in human history, comparable only to the adoption of agriculture for material advancement.",
+    "url": "https://en.wikipedia.org/wiki/Industrial_Revolution",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Powerloom_weaving_in_1835.jpg/330px-Powerloom_weaving_in_1835.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+   },
+   "location": null,
+   "unsplash": null
+  }
+ ],
+ "unsplash_enabled": true,
+ "timeline": {
+  "model": "gpt-5.4-mini",
+  "events": [
+   {
+    "title": "Earth's deep history overview",
+    "description": "The episode frames Earth's 4.5-billion-year history as a 24-hour clock, emphasizing how brief human existence is by comparison. This is the central framing concept for the whole excerpt.",
+    "category": "OTHER",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 0.0,
+    "entities": [
+     "Earth"
+    ],
+    "importance": 2,
+    "id": "ev0000"
+   },
+   {
+    "title": "Earth forms from solar dust",
+    "description": "Earth formed from swirling dust and rock left over from the birth of the sun in the early solar system. The speaker places this at the beginning of the planet's history, 4.5 billion years ago.",
+    "category": "EVENT",
+    "date_label": "4.5 billion years ago",
+    "year": -4500000000,
+    "month": null,
+    "mentioned_at_sec": 11.200000000000001,
+    "entities": [
+     "Earth"
+    ],
+    "importance": 3,
+    "id": "ev0001"
+   },
+   {
+    "title": "First life emerges",
+    "description": "Around 3.8 billion years ago, the young planet cooled enough for oceans to form and the first microscopic single-celled life appeared in deep-sea hydrothermal vents. This is described as the start of life on Earth.",
+    "category": "EVENT",
+    "date_label": "around 3.8 billion years ago",
+    "year": -3800000000,
+    "month": null,
+    "mentioned_at_sec": 21.28,
+    "entities": [
+     "Earth"
+    ],
+    "importance": 3,
+    "id": "ev0002"
+   },
+   {
+    "title": "Great oxidation event begins",
+    "description": "Cyanobacteria started producing oxygen through photosynthesis around 2.4 billion years ago, triggering the great oxidation event. The transcript says this permanently changed Earth's atmosphere.",
+    "category": "EVENT",
+    "date_label": "around 2.4 billion years ago",
+    "year": -2400000000,
+    "month": null,
+    "mentioned_at_sec": 38.8,
+    "entities": [
+     "Earth",
+     "great oxidation event"
+    ],
+    "importance": 3,
+    "id": "ev0003"
+   },
+   {
+    "title": "Cambrian explosion diversifies life",
+    "description": "Around 540 million years ago, the Cambrian explosion dramatically diversified life in the oceans. Complex creatures, shells, and early vertebrates appeared.",
+    "category": "EVENT",
+    "date_label": "540 million years ago",
+    "year": -540000000,
+    "month": null,
+    "mentioned_at_sec": 50.480000000000004,
+    "entities": [
+     "Cambrian explosion",
+     "Earth"
+    ],
+    "importance": 3,
+    "id": "ev0004"
+   },
+   {
+    "title": "Early tetrapods move onto land",
+    "description": "By 375 million years ago, early tetrapods crawled out of the sea and onto land. The transcript presents this as an important step in vertebrate evolution.",
+    "category": "EVENT",
+    "date_label": "375 million years ago",
+    "year": -375000000,
+    "month": null,
+    "mentioned_at_sec": 60.4,
+    "entities": [
+     "Earth"
+    ],
+    "importance": 2,
+    "id": "ev0005"
+   },
+   {
+    "title": "Permian extinction wipes out marine species",
+    "description": "Around 252 million years ago, Earth suffered the Permian extinction, described as the worst mass extinction in planetary history. More than 90% of marine species were wiped out.",
+    "category": "EVENT",
+    "date_label": "around 252 million years ago",
+    "year": -252000000,
+    "month": null,
+    "mentioned_at_sec": 67.84,
+    "entities": [
+     "Earth",
+     "Permian extinction"
+    ],
+    "importance": 3,
+    "id": "ev0006"
+   },
+   {
+    "title": "Mesozoic era begins",
+    "description": "After the Permian extinction, the Mesozoic era rose as a new age of dinosaurs. The transcript frames it as the era that followed the catastrophic reset.",
+    "category": "EVENT",
+    "date_label": "after 252 million years ago",
+    "year": -252000000,
+    "month": null,
+    "mentioned_at_sec": 80.8,
+    "entities": [
+     "Mesozoic era"
+    ],
+    "importance": 3,
+    "id": "ev0007"
+   },
+   {
+    "title": "Dinosaurs arise in Triassic",
+    "description": "Starting in the Triassic period, roughly 245 million years ago, early reptiles evolved into the first dinosaurs. This marks the start of the dinosaur age in the transcript.",
+    "category": "EVENT",
+    "date_label": "roughly 245 million years ago",
+    "year": -245000000,
+    "month": null,
+    "mentioned_at_sec": 86.8,
+    "entities": [
+     "Triassic period"
+    ],
+    "importance": 3,
+    "id": "ev0008"
+   },
+   {
+    "title": "Jurassic giants roam Pangaea",
+    "description": "During the Jurassic period, around 200 million years ago, giant sauropods and predators roamed the supercontinent Pangaea. The speaker uses this to describe dinosaur life on the ancient supercontinent.",
+    "category": "EVENT",
+    "date_label": "around 200 million years ago",
+    "year": -200000000,
+    "month": null,
+    "mentioned_at_sec": 94.16,
+    "entities": [
+     "Jurassic period",
+     "Pangaea"
+    ],
+    "importance": 3,
+    "id": "ev0009"
+   },
+   {
+    "title": "Cretaceous dinosaurs dominate",
+    "description": "In the Cretaceous period, from 145 to 66 million years ago, iconic dinosaurs like Tyrannosaurus rex and Triceratops ruled the land while flowering plants first bloomed. The transcript highlights this as the last great dinosaur era before extinction.",
+    "category": "EVENT",
+    "date_label": "145 to 66 million years ago",
+    "year": -105500000,
+    "month": null,
+    "mentioned_at_sec": 106.08,
+    "entities": [
+     "Cretaceous period"
+    ],
+    "importance": 3,
+    "id": "ev0010"
+   },
+   {
+    "title": "Asteroid strikes Mexico",
+    "description": "Sixty-six million years ago, a six-mile-wide asteroid slammed into modern-day Mexico. The impact triggered wildfires, megatsunamis, and darkness that ended the era of non-avian dinosaurs.",
+    "category": "EVENT",
+    "date_label": "66 million years ago",
+    "year": -66000000,
+    "month": null,
+    "mentioned_at_sec": 119.11999999999999,
+    "entities": [
+     "Mexico"
+    ],
+    "importance": 3,
+    "id": "ev0011"
+   },
+   {
+    "title": "Mammals diversify after dinosaur extinction",
+    "description": "After the dinosaurs disappeared, mammals expanded in size and diversity over the last 66 million years. The transcript says this led to whales, primates, big cats, and grasslands.",
+    "category": "EVENT",
+    "date_label": "after 66 million years ago",
+    "year": -66000000,
+    "month": null,
+    "mentioned_at_sec": 144.4,
+    "entities": [
+     "Earth"
+    ],
+    "importance": 2,
+    "id": "ev0012"
+   },
+   {
+    "title": "Hominin split in Africa",
+    "description": "About six million years ago, the speaker says human ancestors split from a common primate ancestor in Africa. This is presented as the beginning of the hominin line.",
+    "category": "EVENT",
+    "date_label": "six million years ago",
+    "year": -6000000,
+    "month": null,
+    "mentioned_at_sec": 157.92,
+    "entities": [
+     "Africa"
+    ],
+    "importance": 3,
+    "id": "ev0013"
+   },
+   {
+    "title": "Genus Homo emerges",
+    "description": "Around 2.8 million years ago, the genus Homo emerged and began making primitive stone tools. This is a key step in human evolution.",
+    "category": "PERSON",
+    "date_label": "around 2.8 million years ago",
+    "year": -2800000,
+    "month": null,
+    "mentioned_at_sec": 164.16,
+    "entities": [
+     "Homo"
+    ],
+    "importance": 3,
+    "id": "ev0014"
+   },
+   {
+    "title": "Homo erectus spreads out of Africa",
+    "description": "By 1.8 million years ago, Homo erectus had mastered fire and migrated from Africa into Eurasia. The transcript presents this as an early human expansion beyond Africa.",
+    "category": "PERSON",
+    "date_label": "by 1.8 million years ago",
+    "year": -1800000,
+    "month": null,
+    "mentioned_at_sec": 171.11999999999998,
+    "entities": [
+     "Africa",
+     "Eurasia",
+     "Homo erectus"
+    ],
+    "importance": 3,
+    "id": "ev0015"
+   },
+   {
+    "title": "Homo sapiens emerges in Africa",
+    "description": "Roughly 300,000 years ago, Homo sapiens emerged in Africa with speech, language, and toolmaking abilities. The speakers identify this as the origin of our direct species.",
+    "category": "PERSON",
+    "date_label": "roughly 300,000 years ago",
+    "year": -300000,
+    "month": null,
+    "mentioned_at_sec": 178.16,
+    "entities": [
+     "Africa",
+     "Homo sapiens"
+    ],
+    "importance": 3,
+    "id": "ev0016"
+   },
+   {
+    "title": "Neanderthals and Denisovans coexist with humans",
+    "description": "The speaker says Homo sapiens coexisted with other human species such as meanderthals and denisavans. This is presented as part of Ice Age human evolution.",
+    "category": "OTHER",
+    "date_label": null,
+    "year": null,
+    "month": null,
+    "mentioned_at_sec": 190.8,
+    "entities": [
+     "Homo sapiens",
+     "denisavans",
+     "meanderthals"
+    ],
+    "importance": 2,
+    "id": "ev0017"
+   },
+   {
+    "title": "Human agricultural revolution begins",
+    "description": "About 12,000 years ago, humans invented agriculture and shifted from nomadic hunter-gatherers into permanent settlements and cities. The transcript treats this as a major transition in human society.",
+    "category": "EVENT",
+    "date_label": "12,000 years ago",
+    "year": -12000,
+    "month": null,
+    "mentioned_at_sec": 197.44,
+    "entities": [
+     "Earth"
+    ],
+    "importance": 3,
+    "id": "ev0018"
+   },
+   {
+    "title": "Writing is invented",
+    "description": "Writing was invented about 5,000 years ago, which the speaker says sparked recorded human history. This marks the start of historical records in the narrative.",
+    "category": "EVENT",
+    "date_label": "5,000 years ago",
+    "year": -5000,
+    "month": null,
+    "mentioned_at_sec": 203.04,
+    "entities": [
+     "Earth"
+    ],
+    "importance": 3,
+    "id": "ev0019"
+   },
+   {
+    "title": "Industrial revolution begins",
+    "description": "The industrial revolution began about 250 years ago, according to the transcript. It is paired with the later arrival of space travel as a recent development in human history.",
+    "category": "EVENT",
+    "date_label": "about 250 years ago",
+    "year": 1776,
+    "month": null,
+    "mentioned_at_sec": 208.96,
+    "entities": [
+     "industrial revolution"
+    ],
+    "importance": 3,
+    "id": "ev0020"
+   },
+   {
+    "title": "Space travel begins",
+    "description": "Space travel began less than 70 years ago. The transcript mentions it as one of the most recent major human advancements.",
+    "category": "EVENT",
+    "date_label": "less than 70 years ago",
+    "year": 1956,
+    "month": null,
+    "mentioned_at_sec": 208.96,
+    "entities": [
+     "Earth"
+    ],
+    "importance": 2,
+    "id": "ev0021"
+   }
+  ],
+  "windows": 1,
+  "failed_windows": 0
+ },
+ "qa": [
+  {
+   "question": "Summarize this episode in 3 points.",
+   "response": {
+    "answer": "1. The episode traces Earth’s formation and early biological milestones, from a molten young planet to the first single-celled life and the rise of oxygen through the great oxidation event. 2. It then covers major turning points in complex life, including the Cambrian explosion, the Permian extinction, and the rise and fall of dinosaurs across the Triassic, Jurassic, and Cretaceous periods. 3. Finally, it brings the story to humans, from the emergence of Homo and Homo erectus to Homo sapiens, agriculture, writing, and the industrial revolution.",
+    "found": true,
+    "citations": [
+     {
+      "start_sec": 11.200000000000001,
+      "quote": "Earth formed from swirling dust and rock"
+     },
+     {
+      "start_sec": 27.68,
+      "quote": "the first microscopic single-celled life emerged"
+     },
+     {
+      "start_sec": 45.519999999999996,
+      "quote": "triggering the great oxidation event"
+     },
+     {
+      "start_sec": 50.480000000000004,
+      "quote": "the Cambrian explosion"
+     },
+     {
+      "start_sec": 67.84,
+      "quote": "Earth suffered the Permian extinction"
+     },
+     {
+      "start_sec": 86.8,
+      "quote": "the Triassic period"
+     },
+     {
+      "start_sec": 94.16,
+      "quote": "During the Jurassic period"
+     },
+     {
+      "start_sec": 106.08,
+      "quote": "By the Cretaceous period"
+     },
+     {
+      "start_sec": 164.16,
+      "quote": "the genus Homo emerged"
+     },
+     {
+      "start_sec": 171.11999999999998,
+      "quote": "Homo erectus mastered fire"
+     },
+     {
+      "start_sec": 178.16,
+      "quote": "our direct species, Homo sapiens"
+     },
+     {
+      "start_sec": 197.44,
+      "quote": "humans invented agriculture"
+     },
+     {
+      "start_sec": 208.96,
+      "quote": "The industrial revolution began"
+     }
+    ],
+    "mode": "full",
+    "model": "gpt-5.4-mini",
+    "unverified": false
+   }
+  },
+  {
+   "question": "What happens around Earth?",
+   "response": {
+    "answer": "It is not discussed in this episode what happens around Earth in the sense of events around the planet beyond its own history.",
+    "found": false,
+    "citations": [],
+    "mode": "full",
+    "model": "gpt-5.4-mini",
+    "unverified": false
+   }
+  }
+ ]
+}
