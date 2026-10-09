@@ -4,7 +4,7 @@
 
 PodLens is an AI-powered context engine for podcasts. It transcribes an episode, identifies the people, companies, places and technologies mentioned, and surfaces each one as a source card with a summary, map and image, timed to the moment it is spoken. It can also build a chronological timeline of the episode and answer questions about it, with citations that jump to the exact moment.
 
-**▶ Try the live demo:** https://podlens.dhruvpathak.com (no sign-up, no API keys; see [Live Demo](#-live-demo))
+**▶ Try the live demo:** https://podlens.dhruvpathak.com
 
 ## 🧰 Built With
 
