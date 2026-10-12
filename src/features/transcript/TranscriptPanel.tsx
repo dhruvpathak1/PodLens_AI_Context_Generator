@@ -1,10 +1,8 @@
 import type { RefObject } from 'react'
 import { ErrorAlert } from '../../shared/components/Alert'
 import { Panel } from '../../shared/components/Panel'
-import { SearchIcon } from '../../shared/icons'
 import type { EpisodeState } from '../episode/useEpisodeProcessing'
 import { MiniAudioPlayer, type MiniAudioPlayerHandle } from '../playback/MiniAudioPlayer'
-import { ThemeToggle } from '../theme/ThemeToggle'
 import { TranscriptFeed } from './TranscriptFeed'
 import type { TranscriptView } from './useTranscriptView'
 
@@ -25,7 +23,7 @@ function statusLabel(episode: EpisodeState): string {
 
 /**
  * Left column, top: audio player with waveform scrubber, then the transcript that follows
- * playback. Theme and search controls live in the header.
+ * playback. Its search box sits in the Live cards header (`LiveGrid`).
  */
 export function TranscriptPanel({ episode, view, playerRef, audioUrl, onPlaybackTick }: Props) {
   const { busy } = episode
@@ -39,37 +37,9 @@ export function TranscriptPanel({ episode, view, playerRef, audioUrl, onPlayback
           {statusLabel(episode)}
         </span>
       }
-      actions={
-        <>
-          <button
-            type="button"
-            className="icon-btn"
-            aria-expanded={view.searchOpen}
-            aria-label={view.searchOpen ? 'Close search' : 'Search transcript'}
-            onClick={view.toggleSearch}
-          >
-            <SearchIcon size={16} />
-          </button>
-          <ThemeToggle />
-        </>
-      }
       toolbar={
         <div className="transcript-toolbar">
           <MiniAudioPlayer key={audioUrl ?? 'no-audio'} ref={playerRef} src={audioUrl} onPlaybackTick={onPlaybackTick} />
-          {view.searchOpen && (
-            <label className="transcript-search">
-              <span className="sr-only">Filter transcript</span>
-              <input
-                type="search"
-                className="field"
-                placeholder="Filter sentences"
-                value={view.searchQuery}
-                onChange={(e) => view.setSearchQuery(e.target.value)}
-                autoComplete="off"
-                autoFocus
-              />
-            </label>
-          )}
           <ErrorAlert>{episode.error}</ErrorAlert>
           <ErrorAlert>{episode.entityError}</ErrorAlert>
           <ErrorAlert>{episode.enrichError}</ErrorAlert>

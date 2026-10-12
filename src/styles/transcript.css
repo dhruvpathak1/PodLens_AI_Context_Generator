@@ -93,8 +93,50 @@
 }
 
 /* ---- Search ------------------------------------------------------------------------------- */
-.transcript-search {
-  display: block;
+/* Transcript search: fills the Live cards header edge to edge (the panel's rounded corners clip
+   its top; the header's bottom border gives the square bottom). Filters the transcript on the left. */
+.panel--live .panel__head {
+  padding: 0;
+  background: var(--panel-2);
+}
+
+.panel--live .panel__head:focus-within {
+  background: var(--panel-3);
+}
+
+.panel--live .panel__actions {
+  flex: 1;
+  min-width: 0;
+  align-self: stretch;
+  margin-left: 0;
+  padding-right: 0.9rem;
+}
+
+.panel-search {
+  flex: 1;
+  min-width: 0;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.9rem;
+  color: var(--text-3);
+  cursor: text;
+}
+
+.panel-search__input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.84rem;
+}
+
+.panel-search__input::placeholder {
+  color: var(--text-3);
 }
 
 /* ---- Sentence feed ------------------------------------------------------------------------ */

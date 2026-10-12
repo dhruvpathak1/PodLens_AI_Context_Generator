@@ -1,5 +1,6 @@
 import { Panel } from '../../shared/components/Panel'
 import { formatClock } from '../../shared/format'
+import { SearchIcon } from '../../shared/icons'
 import type { EnrichedEntityCard } from '../../types/entities'
 import { entityMatchKey } from './entityKeys'
 import { IntroCards } from './IntroCards'
@@ -12,21 +13,45 @@ type Props = {
   hasAudio: boolean
   playbackTime: number
   playbackDuration: number
+  /** Transcript filter text (the search box replaces this panel's title). */
+  searchQuery: string
+  onSearchChange: (query: string) => void
 }
 
 /**
  * Middle column, top: a 2 x 2 grid of source cards for the latest mentions up to the playhead.
  * The newest card takes the first slot; older ones move along and drop off after four.
  * Before any mention (first load, or before playback reaches a name) it shows four intro cards.
+ * Its header is the transcript search box, with the playback clock on the right.
  */
-export function LiveGrid({ cards, hasAudio, playbackTime, playbackDuration }: Props) {
+export function LiveGrid({ cards, hasAudio, playbackTime, playbackDuration, searchQuery, onSearchChange }: Props) {
   const newestFirst = [...cards].reverse()
   const slots = Array.from({ length: LIVE_QUEUE_MAX }, (_, i) => newestFirst[i] ?? null)
   return (
     <Panel
       className="panel--live"
-      title="Live cards"
-      meta={hasAudio ? <span className="num">{formatClock(playbackTime)} / {formatClock(playbackDuration)}</span> : null}
+      label="Live cards"
+      actions={
+        <>
+          <label className="panel-search">
+            <SearchIcon size={15} />
+            <span className="sr-only">Search transcript</span>
+            <input
+              type="search"
+              className="panel-search__input"
+              placeholder="Search transcript"
+              value={searchQuery}
+              onChange={(e) => onSearchChange(e.target.value)}
+              autoComplete="off"
+            />
+          </label>
+          {hasAudio ? (
+            <span className="panel__meta num">
+              {formatClock(playbackTime)} / {formatClock(playbackDuration)}
+            </span>
+          ) : null}
+        </>
+      }
       bodyClassName="panel__body--grid"
     >
       <div className="live-grid" aria-live="polite" aria-label="Source cards for the latest mentions">

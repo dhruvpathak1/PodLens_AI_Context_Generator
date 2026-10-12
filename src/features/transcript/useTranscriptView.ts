@@ -19,7 +19,6 @@ type Params = {
 export function useTranscriptView({ transcript, segments, playbackTime, playbackDuration, audioUrl, seekTo }: Params) {
   const feedRef = useRef<HTMLDivElement>(null)
   const lastScrolledIdRef = useRef<string | null>(null)
-  const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedSentence, setSelectedSentence] = useState<TimestampedSentence | null>(null)
 
@@ -59,12 +58,6 @@ export function useTranscriptView({ transcript, segments, playbackTime, playback
     }
   }, [activeSentenceId])
 
-  /** Open/close the search box; closing clears the filter. */
-  const toggleSearch = useCallback(() => {
-    if (searchOpen) setSearchQuery('')
-    setSearchOpen(!searchOpen)
-  }, [searchOpen])
-
   /** Click on a sentence: highlight it and play from its start. */
   const selectSentence = useCallback(
     (s: TimestampedSentence) => {
@@ -94,10 +87,8 @@ export function useTranscriptView({ transcript, segments, playbackTime, playback
     hasTimedSentences,
     activeSentenceId,
     selectedSentence,
-    searchOpen,
     searchQuery,
     setSearchQuery,
-    toggleSearch,
     selectSentence,
     jumpToCitation,
     clearSelection,

@@ -24,7 +24,7 @@ import { DeployHint } from './DeployHint'
  * Root component. Owns no UI logic of its own: it wires the feature hooks together and lays
  * out the dashboard as three columns, each split vertically:
  *
- *   | Transcript (player + text) | Live cards (2 x 2)  | Timeline        |
+ *   | Transcript (player + text) | Search + Live cards | Timeline        |
  *   | PodLens (about + samples)  | Entities (NER)      | Ask the episode |
  *
  * Data flow: upload -> useEpisodeProcessing (transcript, entities, cards) -> playback time drives
@@ -199,6 +199,8 @@ export default function App() {
             hasAudio={!!playback.audioUrl}
             playbackTime={playback.playbackTime}
             playbackDuration={playback.playbackDuration}
+            searchQuery={transcriptView.searchQuery}
+            onSearchChange={transcriptView.setSearchQuery}
           />
           <EntitiesPanel
             entityDoc={episode.entityDoc}
