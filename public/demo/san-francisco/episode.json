@@ -1996,12 +1996,16 @@
   {
    "question": "Summarize this episode in 3 points.",
    "response": {
-    "answer": "1. The episode traces San Francisco’s origins from Ohlone land to a Spanish settlement called Yerba Buena, then its explosive growth during the 1849 California gold rush after gold was found at Sutter’s Mill. 2. It highlights major city landmarks and resilience, including the 1906 earthquake and fire, Alcatraz Island, Fisherman’s Wharf, and the Golden Gate Bridge, which Joseph Strauss helped bring to life. 3. It explains how the city and nearby Silicon Valley became a tech hub, from Stanford’s Frederick Turman and early electronics firms to modern companies like Salesforce, Square, Airbnb, Uber, OpenAI, and Anthropic.",
+    "answer": "1. The episode traces San Francisco from its Indigenous roots and Spanish colonization through the Gold Rush, when Yerba Buena became San Francisco and the city rapidly expanded.\n2. It highlights how the city rebuilt after the 1906 earthquake and fire and became defined by landmarks like Alcatraz, Fisherman’s Wharf, and the Golden Gate Bridge.\n3. It explains how the region south of the city helped launch Silicon Valley and how San Francisco later became a headquarters hub for major tech companies and startups.",
     "found": true,
     "citations": [
      {
       "start_sec": 35.52,
-      "quote": "was the ancestral land of the Oloni people"
+      "quote": "ancestral land of the Oloni people"
+     },
+     {
+      "start_sec": 42.480000000000004,
+      "quote": "establishing Mission Dolores... founding a quiet settlement called Yerba Buena"
      },
      {
       "start_sec": 48.879999999999995,
@@ -2009,27 +2013,23 @@
      },
      {
       "start_sec": 82.56,
-      "quote": "the devastating 1906 earthquake and fire"
+      "quote": "devastating 1906 earthquake and fire"
+     },
+     {
+      "start_sec": 100.32000000000001,
+      "quote": "Alcatraz Islands... Fisherman's Wharf"
      },
      {
       "start_sec": 117.76,
-      "quote": "chief engineer Joseph Strauss proved"
-     },
-     {
-      "start_sec": 141.35999999999999,
-      "quote": "It actually started just south of the city in the Santa Clara Valley"
+      "quote": "chief engineer Joseph Strauss proved them wrong"
      },
      {
       "start_sec": 146.95999999999998,
-      "quote": "Stanford University Dean Frederick"
+      "quote": "what we now call Silicon Valley"
      },
      {
       "start_sec": 182.64,
       "quote": "home to some of the most influential corporate headquarters"
-     },
-     {
-      "start_sec": 195.92,
-      "quote": "Square, Block, and Stripe"
      }
     ],
     "mode": "full",
@@ -2040,20 +2040,16 @@
   {
    "question": "Who is Joseph Strauss and why are they mentioned?",
    "response": {
-    "answer": "Joseph Strauss is identified as the chief engineer of the Golden Gate Bridge. He is mentioned because the episode says he proved critics wrong by successfully building the bridge, which opened in 1937 and became a symbol of human ambition and design.",
+    "answer": "Joseph Strauss is identified as the chief engineer of the Golden Gate Bridge. He is mentioned because he proved critics wrong and helped make the bridge a reality.",
     "found": true,
     "citations": [
      {
-      "start_sec": 105.84,
-      "quote": "the Golden Gate Bridge."
+      "start_sec": 112.96000000000001,
+      "quote": "the Golden Gate Bridge"
      },
      {
       "start_sec": 117.76,
-      "quote": "chief engineer Joseph Strauss proved"
-     },
-     {
-      "start_sec": 130.32,
-      "quote": "The suspension bridge instantly became a symbol"
+      "quote": "chief engineer Joseph Strauss proved them wrong"
      }
     ],
     "mode": "full",
@@ -2064,16 +2060,20 @@
   {
    "question": "What is said about X?",
    "response": {
-    "answer": "X is mentioned as the company formerly known as Twitter, described as a social media giant based in San Francisco. The episode does not say more about it beyond that.",
+    "answer": "X is described as a social media giant, formerly Twitter, and part of the group of major tech companies based in San Francisco.",
     "found": true,
     "citations": [
      {
-      "start_sec": 182.64,
-      "quote": "Take Salesforce"
+      "start_sec": 176.4,
+      "quote": "home to some of the most influential corporate headquarters"
      },
      {
-      "start_sec": 188.48,
-      "quote": "Or social media giant acts, formerly Twitter"
+      "start_sec": 182.64,
+      "quote": "social media giant acts, formerly Twitter"
+     },
+     {
+      "start_sec": 208.95999999999998,
+      "quote": "the city remains a magnetic hub"
      }
     ],
     "mode": "full",
@@ -2082,22 +2082,26 @@
    }
   },
   {
-   "question": "What happens around San Francisco?",
+   "question": "What does the episode say about San Francisco?",
    "response": {
-    "answer": "Around San Francisco, the episode says there are Alcatraz Island, cable cars climbing Nob Hill, and Fisherman’s Wharf. It also mentions the Golden Gate Bridge as a major landmark in the bay area.",
+    "answer": "The episode says San Francisco is a city defined by reinvention, resilience, and innovation. It grew from an Indigenous homeland and a small settlement into a boomtown during the Gold Rush, rebuilt after the 1906 earthquake and fire, and later became a major center of technology and influential startups. It also highlights landmarks like the Golden Gate Bridge, Fisherman’s Wharf, and Alcatraz, and says the city continues to attract venture capital and engineering talent.",
     "found": true,
     "citations": [
      {
-      "start_sec": 94.0,
-      "quote": "You can't talk about SF without picturing its geography"
+      "start_sec": 16.8,
+      "quote": "SF is a city defined by reinvention"
      },
      {
-      "start_sec": 100.32000000000001,
-      "quote": "Alcatraz Islands sitting in the bay"
+      "start_sec": 48.879999999999995,
+      "quote": "Gold was discovered at Sutter's Mill"
      },
      {
-      "start_sec": 105.84,
-      "quote": "Fisherman's Wharf. But the undisputed Crown Jewel opened in 1937, the Golden Gate Bridge."
+      "start_sec": 82.56,
+      "quote": "San Francisco rebuilt itself within a decade"
+     },
+     {
+      "start_sec": 176.4,
+      "quote": "migrated straight back into the heart of San Francisco"
      }
     ],
     "mode": "full",

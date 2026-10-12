@@ -95,7 +95,7 @@ def default_questions(entities: list[dict[str, Any]]) -> list[str]:
     if org := pick(("COMPANY", "TECHNOLOGY")):
         out.append(f"What is said about {org}?")
     if (place := pick(("PLACE", "EVENT"))) and len(out) < 4:
-        out.append(f"What happens around {place}?")
+        out.append(f"What does the episode say about {place}?")
     return out[:4]
 
 

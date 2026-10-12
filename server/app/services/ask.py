@@ -19,6 +19,7 @@ from __future__ import annotations
 import hashlib
 import logging
 import math
+import re
 from collections import OrderedDict
 from dataclasses import dataclass
 from typing import Any
@@ -58,8 +59,9 @@ class AskAnswer(BaseModel):
 
     found: bool = Field(description="True only if the transcript excerpts actually answer the question.")
     answer: str = Field(
-        description="Direct answer in 1-5 sentences of plain text. If found is false, say it is not discussed "
-        "in this episode and, if useful, mention the closest related thing that is."
+        description="Direct answer in 1-5 sentences of plain prose. No [t=...] markers, timestamps or quoted "
+        "excerpts here; those go in citations only. If found is false, say it is not discussed in this episode "
+        "and, if useful, mention the closest related thing that is."
     )
     citations: list[Citation] = Field(
         description="1-4 transcript lines that support the answer, in episode order. Empty if found is false."
@@ -70,7 +72,9 @@ SYSTEM_PROMPT = """You answer questions about one podcast episode using ONLY the
 
 Rules:
 - Ground every claim in the excerpts. Do not use outside knowledge, even if you know the answer.
-- Cite the [t=...] value of each line you rely on, copied exactly.
+- Put supporting lines in the citations field only, copying their [t=...] value exactly. The answer
+  text itself must never contain [t=...] markers, timestamps or quoted excerpts; the app shows
+  citations separately.
 - If the excerpts do not answer the question, set found=false and say it is not discussed in this
   episode. Never guess.
 - Be direct and concise. Plain text, no markdown headings.
@@ -258,6 +262,16 @@ def _render_history(history: list[dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
+# `[t=12.3]` markers, optionally followed by a quoted excerpt, that the model leaked into the answer.
+_INLINE_CITATION = re.compile(r"""\s*\[t=\d+(?:\.\d+)?\]\s*(?:["“][^"”]*["”])?[,;]?""")
+
+
+def strip_inline_citations(answer: str) -> str:
+    """Remove `[t=..] "quote"` markers from the answer text (citations are shown separately)."""
+    cleaned = _INLINE_CITATION.sub("", answer)
+    return re.sub(r"\s{2,}", " ", cleaned).strip()
+
+
 def validate_citations(raw: list[Citation], context_segments: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Keep only citations that point at a line actually sent to the model; snap to its start."""
     starts = [float(s["start"]) for s in context_segments]
@@ -363,7 +377,7 @@ async def answer_question(
 
     citations = validate_citations(result.citations, context_segments) if result.found else []
     return {
-        "answer": result.answer.strip(),
+        "answer": strip_inline_citations(result.answer),
         "found": bool(result.found),
         "citations": citations,
         "mode": mode,

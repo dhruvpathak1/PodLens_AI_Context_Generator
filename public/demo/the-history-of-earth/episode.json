@@ -1464,24 +1464,40 @@
   {
    "question": "Summarize this episode in 3 points.",
    "response": {
-    "answer": "1) The episode compresses Earth’s 4.5-billion-year history into a 24-hour timeline, beginning with Earth’s formation, early oceans, and the first life, then major biological turning points like the Great Oxidation Event and Cambrian explosion. 2) It traces the rise and fall of dinosaurs through the Permian extinction, the Mesozoic era, and the Triassic, Jurassic, and Cretaceous periods, ending with the asteroid impact in Mexico that wiped out non-avian dinosaurs. 3) It finishes with the story of mammals and humans, from primate ancestors in Africa to Homo, Homo erectus, and Homo sapiens, and notes recent milestones like agriculture, writing, and the Industrial Revolution. [t=0.0] “entire history of our planet into a single 24-hour clock” [t=45.5] “great oxidation event” [t=50.5] “Cambrian explosion” [t=67.8] “Permian extinction” [t=80.8] “Mesozoic era” [t=86.8] “Triassic period” [t=94.2] “Jurassic period” [t=106.1] “Cretaceous period” [t=125.9] “modern-day Mexico” [t=157.9] “split from a common primate ancestor in Africa” [t=164.2] “genus Homo emerged” [t=171.1] “Homo erectus” [t=178.2] “Homo sapiens” [t=209.0] “industrial revolution began just 250 years ago”",
+    "answer": "1. The episode traces Earth’s formation, early molten history, the first life, and major biological turning points like the Great Oxidation Event and the Cambrian explosion.\n2. It covers the rise and fall of dinosaurs across the Triassic, Jurassic, and Cretaceous periods, ending with the asteroid impact and the extinction that followed.\n3. It then follows mammal and human evolution, from early hominins to Homo sapiens, and compresses modern human history into a tiny fraction of Earth’s 4.5-billion-year timeline.",
     "found": true,
     "citations": [
      {
-      "start_sec": 0.0,
-      "quote": "entire history of our planet into a single 24-hour clock"
+      "start_sec": 5.5200000000000005,
+      "quote": "Our story begins 4.5 billion years ago"
      },
      {
-      "start_sec": 45.519999999999996,
-      "quote": "great oxidation event"
+      "start_sec": 38.8,
+      "quote": "cyanobacteria began producing oxygen"
      },
      {
       "start_sec": 50.480000000000004,
-      "quote": "Cambrian explosion"
+      "quote": "the Cambrian explosion"
      },
      {
-      "start_sec": 67.84,
-      "quote": "Permian extinction"
+      "start_sec": 80.8,
+      "quote": "a new kingdom rose, the Mesozoic era"
+     },
+     {
+      "start_sec": 119.11999999999999,
+      "quote": "A six-mile wide asteroid slammed"
+     },
+     {
+      "start_sec": 144.4,
+      "quote": "mammals exploded in size and diversity"
+     },
+     {
+      "start_sec": 157.92,
+      "quote": "our hominin ancestors split"
+     },
+     {
+      "start_sec": 178.16,
+      "quote": "our direct species, Homo sapiens"
      }
     ],
     "mode": "full",
@@ -1490,58 +1506,26 @@
    }
   },
   {
-   "question": "What happens around Earth?",
+   "question": "What does the episode say about Earth?",
    "response": {
-    "answer": "Around Earth’s history, the planet forms from dust and rock, cools enough for oceans and the first single-celled life, oxygen rises, life diversifies, dinosaurs dominate and then go extinct, mammals and humans emerge, and much later humans invent agriculture, writing, and industry. The episode frames all of this as Earth’s 4.5-billion-year story on a 24-hour clock. [t=11.2], [t=21.3], [t=27.7], [t=45.5], [t=50.5], [t=67.8], [t=119.1], [t=144.4], [t=157.9], [t=178.2], [t=197.4], [t=209.0], [t=0.0]",
+    "answer": "The episode says Earth formed 4.5 billion years ago from dust and rock left over from the sun’s birth. It describes early Earth as hot and chaotic, with molten lava oceans and volcanic eruptions, before the surface cooled and oceans formed. From there, the episode traces Earth’s history through the emergence of life, major extinctions, dinosaurs, mammals, and humans.",
     "found": true,
     "citations": [
+     {
+      "start_sec": 5.5200000000000005,
+      "quote": "Our story begins 4.5 billion years ago"
+     },
      {
       "start_sec": 11.200000000000001,
       "quote": "Earth formed from swirling dust and rock"
      },
      {
+      "start_sec": 15.84,
+      "quote": "molten realm of lava oceans"
+     },
+     {
       "start_sec": 21.28,
       "quote": "the surface cooled and oceans formed"
-     },
-     {
-      "start_sec": 27.68,
-      "quote": "the first microscopic single-celled life emerged"
-     },
-     {
-      "start_sec": 45.519999999999996,
-      "quote": "triggering the great oxidation event"
-     },
-     {
-      "start_sec": 50.480000000000004,
-      "quote": "the Cambrian explosion"
-     },
-     {
-      "start_sec": 67.84,
-      "quote": "Earth suffered the Permian extinction"
-     },
-     {
-      "start_sec": 119.11999999999999,
-      "quote": "everything changed in an instant"
-     },
-     {
-      "start_sec": 144.4,
-      "quote": "mammals exploded in size and diversity"
-     },
-     {
-      "start_sec": 157.92,
-      "quote": "our hominin ancestors split from a common primate ancestor"
-     },
-     {
-      "start_sec": 178.16,
-      "quote": "our direct species, Homo sapiens"
-     },
-     {
-      "start_sec": 197.44,
-      "quote": "humans invented agriculture"
-     },
-     {
-      "start_sec": 208.96,
-      "quote": "The industrial revolution began"
      }
     ],
     "mode": "full",

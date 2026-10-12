@@ -93,3 +93,13 @@ def test_chunks_overlap() -> None:
     long = [{"id": i, "start": i * 10.0, "end": i * 10.0 + 10, "text": "x"} for i in range(60)]
     chunks = ask.build_chunks(long)
     assert [(c.start, c.end) for c in chunks[:2]] == [(0.0, 60.0), (40.0, 100.0)]
+
+
+def test_inline_citation_markers_are_stripped() -> None:
+    """`[t=..] "quote"` markers the model leaks into the answer text are removed."""
+    leaked = ('Earth formed early. [t=0.0] “single 24-hour clock” [t=45.5] "great oxidation event" '
+              'Then dinosaurs. [t=11.2], [t=21.3], [t=0.0]')
+    assert ask.strip_inline_citations(leaked) == "Earth formed early. Then dinosaurs."
+    chain = RunnableLambda(lambda _: ask.AskAnswer(found=True, answer="In 1972. [t=50.0] “in 1972”",
+                                                   citations=[ask.Citation(start_sec=50.0, quote="in 1972")]))
+    assert run("When?", chain=chain)["answer"] == "In 1972."
