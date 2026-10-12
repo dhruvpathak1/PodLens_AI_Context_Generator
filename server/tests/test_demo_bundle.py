@@ -79,7 +79,7 @@ def test_default_questions_match_frontend_rules() -> None:
         "Summarize this episode in 3 points.",
         "Who is Neil Armstrong and why are they mentioned?",
         "What is said about NASA?",
-        "What happens around Sea of Tranquility?",
+        "What does the episode say about Sea of Tranquility?",
     ]
     assert default_questions([]) == ["Summarize this episode in 3 points."]
 
