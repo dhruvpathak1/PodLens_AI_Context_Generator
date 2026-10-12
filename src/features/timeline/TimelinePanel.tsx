@@ -1,6 +1,7 @@
 import { ErrorAlert } from '../../shared/components/Alert'
 import { Panel } from '../../shared/components/Panel'
 import { Skeleton } from '../../shared/components/Skeleton'
+import { ThemeToggle } from '../theme/ThemeToggle'
 import { EpisodeTimeline } from './EpisodeTimeline'
 import type { EpisodeTimelineState } from './useEpisodeTimeline'
 
@@ -13,7 +14,7 @@ type Props = {
   onSeek: (sec: number) => void
 }
 
-/** Right column, top: "Create timeline", then every dated event in order. */
+/** Right column, top: "Create timeline", then every dated event in order. The theme toggle sits in its header. */
 export function TimelinePanel({ timeline, ready, unavailableReason, onSeek }: Props) {
   const data = timeline.timeline
   return (
@@ -22,11 +23,14 @@ export function TimelinePanel({ timeline, ready, unavailableReason, onSeek }: Pr
       title="Timeline"
       meta={data ? `${data.events.length} events` : null}
       actions={
-        data ? (
-          <button type="button" className="link-quiet" onClick={() => void timeline.create()} disabled={timeline.busy || !ready}>
-            {timeline.busy ? 'Rebuilding…' : 'Rebuild'}
-          </button>
-        ) : null
+        <>
+          {data ? (
+            <button type="button" className="link-quiet" onClick={() => void timeline.create()} disabled={timeline.busy || !ready}>
+              {timeline.busy ? 'Rebuilding…' : 'Rebuild'}
+            </button>
+          ) : null}
+          <ThemeToggle />
+        </>
       }
     >
       {data ? (

@@ -127,21 +127,26 @@
 }
 
 /* ---- Question bar (pinned under the conversation) ----------------------------------------- */
+/* Fills the panel's bottom edge to edge: the top border gives a square top and the panel's
+   rounded corners clip the bottom, mirroring the search bar in the Live cards header. */
 .ask-bar {
   display: flex;
-  align-items: flex-end;
-  gap: 0.5rem;
-  padding: 0.6rem 0.7rem 0.7rem;
+  align-items: stretch;
   border-top: 1px solid var(--line);
+  background: var(--panel-2);
+}
+
+.ask-bar:focus-within {
+  background: var(--panel-3);
 }
 
 .ask-bar__input {
   flex: 1;
-  min-height: 38px;
+  min-height: 46px;
   max-height: 120px;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--line-2);
-  border-radius: 999px;
+  padding: 0.75rem 0.9rem;
+  border: 0;
+  outline: none;
   background: transparent;
   color: var(--text);
   font: inherit;
@@ -163,17 +168,15 @@
   flex: none;
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
+  width: 52px;
   border: 0;
-  border-radius: 50%;
-  background: var(--accent);
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--accent); /* same as the play/pause button, also when disabled */
   color: var(--accent-ink);
   cursor: pointer;
 }
 
 .ask-bar__send:disabled {
-  background: var(--panel-3);
-  color: var(--text-3);
   cursor: not-allowed;
 }
