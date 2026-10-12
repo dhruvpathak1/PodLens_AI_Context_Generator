@@ -77,8 +77,11 @@ export function useTranscriptView({ transcript, segments, playbackTime, playback
     [allSentences, seekTo]
   )
 
-  /** Clear the highlighted sentence (new run). */
-  const clearSelection = useCallback(() => setSelectedSentence(null), [])
+  /** New episode or run: clear the highlighted sentence and the search, so no old filter hides the new transcript. */
+  const resetView = useCallback(() => {
+    setSelectedSentence(null)
+    setSearchQuery('')
+  }, [])
 
   return {
     feedRef,
@@ -91,7 +94,7 @@ export function useTranscriptView({ transcript, segments, playbackTime, playback
     setSearchQuery,
     selectSentence,
     jumpToCitation,
-    clearSelection,
+    resetView,
   }
 }
 

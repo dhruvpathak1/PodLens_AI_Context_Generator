@@ -89,7 +89,7 @@ export default function App() {
   const { reset: resetTimeline } = timeline
   const { reset: resetChat } = chat
   const { resetFilter } = entityFilter
-  const { clearSelection } = transcriptView
+  const { resetView } = transcriptView
   const { selectFile, run, loadPrepared } = episode
 
   /** A different file invalidates the timeline and conversation. */
@@ -109,9 +109,9 @@ export default function App() {
     resetTimeline()
     resetChat()
     resetFilter()
-    clearSelection()
+    resetView()
     void run()
-  }, [resetTimeline, resetChat, resetFilter, clearSelection, run])
+  }, [resetTimeline, resetChat, resetFilter, resetView, run])
 
   /** Demo episode picked: clear per-episode views, then show its pre-computed results. */
   const handleDemoLoaded = useCallback(
@@ -119,7 +119,7 @@ export default function App() {
       resetTimeline()
       resetChat()
       resetFilter()
-      clearSelection()
+      resetView()
       setDemoEpisode(demo)
       loadPrepared({
         name: demo.title,
@@ -131,7 +131,7 @@ export default function App() {
         review: demo.review ?? null,
       })
     },
-    [resetTimeline, resetChat, resetFilter, clearSelection, loadPrepared]
+    [resetTimeline, resetChat, resetFilter, resetView, loadPrepared]
   )
   const demoCatalog = useDemoCatalog(DEMO_MODE, handleDemoLoaded)
 
