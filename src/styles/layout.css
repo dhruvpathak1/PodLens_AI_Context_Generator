@@ -183,9 +183,15 @@
   .board__col--left,
   .board__col--mid,
   .board__col--right {
+    flex: none; /* stacked columns must not shrink, or their panels collapse to zero height */
     height: auto;
     flex-direction: column;
     gap: 10px;
+  }
+
+  /* Fixed heights only: the desktop flex percentages resolve to nothing in a stacked column */
+  .board__col > .panel {
+    flex: none;
   }
 
   .panel--transcript {
