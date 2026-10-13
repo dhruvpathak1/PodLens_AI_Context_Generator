@@ -25,12 +25,9 @@ Also used: asyncio, python-multipart, `typescript-eslint`, `eslint-plugin-react-
 
 ### See it in Action
 
-https://github.com/user-attachments/assets/69667151-380c-4a41-8769-7c90edd57607
 
-https://github.com/user-attachments/assets/017fa7c5-2ab0-4b7d-9cb8-aaf127f4bfd0
 
-<img width="1913" height="1301" alt="Snippet 1" src="https://github.com/user-attachments/assets/65175728-d985-477e-957b-aec1e02ac6d9" >
-
+<img width="1512" height="982" alt="5" src="https://github.com/user-attachments/assets/24e31d68-d7e2-4eb6-9c99-da026f28f172" />
 ---
 
 ## Contents
