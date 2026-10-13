@@ -1,4 +1,0 @@
-touch .nojekyll
-git add .nojekyll
-git commit -m "chore: disable Jekyll auto-builder"
-git push
